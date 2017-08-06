@@ -1,0 +1,59 @@
+body {
+	font-size: 100%;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+textarea:focus, 
+input:focus, 
+button:focus {
+    outline: none;
+}
+
+#App {
+	overflow: hidden;
+}
+
+.screen {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-content: space-between;
+	align-items: center;
+	min-height: 100vh;
+}
+.screen > * {
+	width: 100%;
+}
+
+.container {
+	position: relative;
+	max-width: 1040px;
+	margin: 0 auto;
+	padding: 0 3vw;
+}
+
+.float-right {
+	margin-left: 36%;
+	background-color: rgba(0, 0, 0, .36);
+}
+
+
+
+
+
+@media (max-width: 1000px) {
+	.float-right {
+		margin-left: 0;
+		text-align: center;
+	}	
+}
+
+
+@media (max-width: 600px) {
+	.screen__header_social-link {
+		display: none;
+	}
+}
