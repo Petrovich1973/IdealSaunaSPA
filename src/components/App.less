@@ -1,5 +1,6 @@
 body {
 	font-size: 100%;
+	font-family: 'Roboto', sans-serif;
 }
 
 * {
@@ -35,6 +36,14 @@ button:focus {
 	padding: 0 3vw;
 }
 
+.title-screen {
+	font-size: 220%;
+	font-weight: 900;
+	text-transform: uppercase;
+	padding-left: 5px;
+	border-left: 3px solid #fcbe02;
+}
+
 .float-right {
 	margin-left: 36%;
 	background-color: rgba(0, 0, 0, .36);
@@ -55,5 +64,8 @@ button:focus {
 @media (max-width: 600px) {
 	.screen__header_social-link {
 		display: none;
+	}
+	.title-screen {
+		font-size: 180%;
 	}
 }

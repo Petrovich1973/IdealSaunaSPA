@@ -22858,7 +22858,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  font-size: 100%;\n}\n* {\n  box-sizing: border-box;\n}\ntextarea:focus,\ninput:focus,\nbutton:focus {\n  outline: none;\n}\n#App {\n  overflow: hidden;\n}\n.screen {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -ms-flex-line-pack: justify;\n      align-content: space-between;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  min-height: 100vh;\n}\n.screen > * {\n  width: 100%;\n}\n.container {\n  position: relative;\n  max-width: 1040px;\n  margin: 0 auto;\n  padding: 0 3vw;\n}\n.float-right {\n  margin-left: 36%;\n  background-color: rgba(0, 0, 0, 0.36);\n}\n@media (max-width: 1000px) {\n  .float-right {\n    margin-left: 0;\n    text-align: center;\n  }\n}\n@media (max-width: 600px) {\n  .screen__header_social-link {\n    display: none;\n  }\n}\n", ""]);
+	exports.push([module.id, "body {\n  font-size: 100%;\n  font-family: 'Roboto', sans-serif;\n}\n* {\n  box-sizing: border-box;\n}\ntextarea:focus,\ninput:focus,\nbutton:focus {\n  outline: none;\n}\n#App {\n  overflow: hidden;\n}\n.screen {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -ms-flex-line-pack: justify;\n      align-content: space-between;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  min-height: 100vh;\n}\n.screen > * {\n  width: 100%;\n}\n.container {\n  position: relative;\n  max-width: 1040px;\n  margin: 0 auto;\n  padding: 0 3vw;\n}\n.title-screen {\n  font-size: 220%;\n  font-weight: 900;\n  text-transform: uppercase;\n  padding-left: 5px;\n  border-left: 3px solid #fcbe02;\n}\n.float-right {\n  margin-left: 36%;\n  background-color: rgba(0, 0, 0, 0.36);\n}\n@media (max-width: 1000px) {\n  .float-right {\n    margin-left: 0;\n    text-align: center;\n  }\n}\n@media (max-width: 600px) {\n  .screen__header_social-link {\n    display: none;\n  }\n  .title-screen {\n    font-size: 180%;\n  }\n}\n", ""]);
 
 	// exports
 
@@ -23414,7 +23414,7 @@
 
 
 	// module
-	exports.push([module.id, "#ScreenFirst {\n  background-image: url('/assets/screen_backgrounds/screen_first.jpg');\n  background-size: cover;\n  background-position: center;\n  color: #fff;\n}\n.screen__header {\n  background-color: rgba(0, 0, 0, 0.5);\n}\n.screen__header .container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.screen__header_social-link a {\n  display: inline-block;\n  font-size: 120%;\n  color: #fff;\n  text-decoration: none;\n  margin: 0 4px;\n}\n.screen__header_social-link a:last-child {\n  margin-right: 0;\n}\n.screen__header_phone {\n  text-align: right;\n}\n.screen__header_phone a {\n  display: inline-block;\n  color: #fff;\n  text-decoration: none;\n  margin-left: 4px;\n}\n.screen__header_phone_back-call {\n  font-weight: bold;\n  color: #fcbe02;\n  border-bottom: 2px dashed #fff;\n  cursor: pointer;\n}\n#ScreenFirst .float-right {\n  padding: 1vw 3vw;\n}\n#ScreenFirst .title-page {\n  font-size: 350%;\n  line-height: 1;\n  text-transform: uppercase;\n  margin: 0;\n}\n#ScreenFirst .title-page small {\n  color: #fcbe02;\n}\n#ScreenFirst .float-right .description {\n  font-size: 150%;\n  line-height: 1;\n  text-transform: uppercase;\n}\n.screen__footer .container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n}\n#ScreenFirst .feature {\n  width: 17vw;\n  text-align: center;\n  padding: 0 3vw;\n}\n#ScreenFirst .feature img {\n  max-width: 100%;\n}\n#ScreenFirst .what-price {\n  display: block;\n  background-color: transparent;\n  padding: 5px 18px;\n  margin: 7vh 0;\n  border: 2px solid #fcbe02;\n  border-radius: 20px;\n  font-size: 150%;\n  font-family: inherit;\n  color: #fff;\n  cursor: pointer;\n}\n#ScreenFirst .mouse {\n  display: block;\n  cursor: pointer;\n  margin-bottom: 3vh;\n}\n@media (max-width: 1000px) {\n  #ScreenFirst .title-page {\n    font-size: 210%;\n  }\n  #ScreenFirst .float-right .description {\n    font-size: 140%;\n  }\n}\n@media (max-width: 600px) {\n  #ScreenFirst .feature {\n    width: 33%;\n  }\n}\n", ""]);
+	exports.push([module.id, "#ScreenFirst {\n  background-image: url('/assets/screen_backgrounds/screen_first.jpg');\n  background-size: cover;\n  background-position: center;\n  color: #fff;\n}\n.screen__header {\n  background-color: rgba(0, 0, 0, 0.5);\n}\n.screen__header .container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.screen__header_social-link a {\n  display: inline-block;\n  font-size: 130%;\n  color: #fff;\n  text-decoration: none;\n  margin: 0 4px;\n}\n.screen__header_social-link a:last-child {\n  margin-right: 0;\n}\n.screen__header_phone {\n  text-align: right;\n}\n.screen__header_phone a {\n  display: inline-block;\n  color: #fff;\n  text-decoration: none;\n  margin-left: 4px;\n}\n.screen__header_phone_back-call {\n  font-weight: bold;\n  color: #fcbe02;\n  border-bottom: 2px dashed #fff;\n  cursor: pointer;\n}\n#ScreenFirst .float-right {\n  padding: 1vw 3vw;\n}\n#ScreenFirst .title-page {\n  font-size: 350%;\n  line-height: 1;\n  text-transform: uppercase;\n  margin: 0;\n}\n#ScreenFirst .title-page small {\n  color: #fcbe02;\n}\n#ScreenFirst .float-right .description {\n  font-size: 150%;\n  line-height: 1;\n  text-transform: uppercase;\n}\n.screen__footer .container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n}\n#ScreenFirst .feature {\n  width: 17vw;\n  text-align: center;\n  padding: 0 3vw;\n}\n#ScreenFirst .feature img {\n  max-width: 100%;\n}\n#ScreenFirst .what-price {\n  display: block;\n  background-color: transparent;\n  padding: 5px 18px;\n  margin: 7vh 0;\n  border: 2px solid #fcbe02;\n  border-radius: 20px;\n  font-size: 150%;\n  font-family: inherit;\n  color: #fff;\n  cursor: pointer;\n}\n#ScreenFirst .mouse {\n  display: block;\n  cursor: pointer;\n  margin-bottom: 3vh;\n}\n@media (max-width: 1000px) {\n  #ScreenFirst .title-page {\n    font-size: 210%;\n  }\n  #ScreenFirst .float-right .description {\n    font-size: 140%;\n  }\n}\n@media (max-width: 600px) {\n  #ScreenFirst .feature {\n    width: 33%;\n  }\n  .screen__header_phone a {\n    font-size: 86%;\n  }\n}\n", ""]);
 
 	// exports
 
@@ -23423,25 +23423,27 @@
 /* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
-	Object.defineProperty(exports, "__esModule", {
+	Object.defineProperty(exports, '__esModule', {
 	    value: true
 	});
 
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(204);
 
 	var OurRealizedProjects = (function (_React$Component) {
 	    _inherits(OurRealizedProjects, _React$Component);
@@ -23449,35 +23451,280 @@
 	    function OurRealizedProjects(props) {
 	        _classCallCheck(this, OurRealizedProjects);
 
-	        _get(Object.getPrototypeOf(OurRealizedProjects.prototype), "constructor", this).call(this, props);
+	        _get(Object.getPrototypeOf(OurRealizedProjects.prototype), 'constructor', this).call(this, props);
 
 	        this.state = this.initialState = {
-	            scrollTop: 0
+	            gallery: [1, 2, 3, 4, 5],
+	            galleryView: 1
 	        };
 	    }
 
 	    _createClass(OurRealizedProjects, [{
-	        key: "render",
-	        value: function render() {
-	            var scrollTop = this.state.scrollTop;
+	        key: 'handleClickGalleryView',
+	        value: function handleClickGalleryView() {
+	            var current = this.state.galleryView + 1;
+	            if (this.state.galleryView + 1 > 5) {
+	                current = 1;
+	            }
+	            this.setState({
+	                galleryView: current
+	            });
+	        }
+	    }, {
+	        key: 'handleClickNavigationItem',
+	        value: function handleClickNavigationItem(item) {
+	            this.setState({
+	                galleryView: item
+	            });
+	        }
+	    }, {
+	        key: 'galleryNavigation',
+	        value: function galleryNavigation() {
+	            var _this = this;
 
-	            return _react2["default"].createElement(
-	                "div",
-	                { className: "screen", id: "OurRealizedProjects" },
-	                _react2["default"].createElement(
-	                    "div",
-	                    { className: "container" },
-	                    "OurRealizedProjects"
+	            return this.state.gallery.map(function (m) {
+	                return _react2['default'].createElement('li', {
+	                    key: m,
+	                    className: _this.state.galleryView === m ? 'active' : null,
+	                    onClick: function () {
+	                        return _this.handleClickNavigationItem(m);
+	                    } });
+	            });
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            var _this2 = this;
+
+	            var galleryView = this.state.galleryView;
+
+	            return _react2['default'].createElement(
+	                'div',
+	                { className: 'screen', id: 'OurRealizedProjects' },
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'container' },
+	                    _react2['default'].createElement(
+	                        'h2',
+	                        { className: 'title-screen' },
+	                        'наши',
+	                        _react2['default'].createElement('br', null),
+	                        'реализованные',
+	                        _react2['default'].createElement('br', null),
+	                        'проекты'
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'container' },
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'social-link' },
+	                        _react2['default'].createElement('a', { href: '#', className: 'fa fa-vk', title: 'vk' }),
+	                        _react2['default'].createElement('a', { href: '#', className: 'fa fa-facebook-square', title: 'facebook' }),
+	                        _react2['default'].createElement('a', { href: '#', className: 'fa fa-instagram', title: 'instagram' }),
+	                        _react2['default'].createElement('a', { href: '#', className: 'fa fa-google-plus-square', title: 'google plus' })
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'container' },
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'gallery' },
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'gallery_info' },
+	                            _react2['default'].createElement(
+	                                'h3',
+	                                { className: 'gallery_info_title' },
+	                                'Сауны'
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'gallery_info_item' },
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'gallery_info_item_icon' },
+	                                    _react2['default'].createElement('img', { src: '/assets/gallery_info_item_icons/01.png' })
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    null,
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'gallery_info_item_name' },
+	                                        'Высота'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'gallery_info_item_value' },
+	                                        'от 1,9 м - 2,5 м'
+	                                    )
+	                                )
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'gallery_info_item' },
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'gallery_info_item_icon' },
+	                                    _react2['default'].createElement('img', { src: '/assets/gallery_info_item_icons/02.png' })
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    null,
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'gallery_info_item_name' },
+	                                        'Площадь'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'gallery_info_item_value' },
+	                                        'от 2 м2 - 16 м2'
+	                                    )
+	                                )
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'gallery_info_item' },
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'gallery_info_item_icon' },
+	                                    _react2['default'].createElement('img', { src: '/assets/gallery_info_item_icons/03.png' })
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    null,
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'gallery_info_item_name' },
+	                                        'Срок'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'gallery_info_item_value' },
+	                                        'от 7 до 20 дней'
+	                                    )
+	                                )
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'gallery_info_item' },
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'gallery_info_item_icon' },
+	                                    _react2['default'].createElement('img', { src: '/assets/gallery_info_item_icons/04.png' })
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    null,
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'gallery_info_item_name' },
+	                                        'Стоимость'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'gallery_info_item_value' },
+	                                        'от 50 т.руб/м2'
+	                                    )
+	                                )
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'gallery_info_link' },
+	                                _react2['default'].createElement('img', { src: '/assets/icons/icon_gallery.png' }),
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    null,
+	                                    'фотогалерея проектов'
+	                                )
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'gallery_info_link' },
+	                                _react2['default'].createElement('img', { src: '/assets/icons/icon_3d.png' }),
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    null,
+	                                    'панорамы проектов'
+	                                )
+	                            )
+	                        ),
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'gallery_view' },
+	                            _react2['default'].createElement('img', { src: '/assets/OurRealizedProjects/0' + galleryView + '.jpg', onClick: function () {
+	                                    return _this2.handleClickGalleryView();
+	                                } }),
+	                            _react2['default'].createElement(
+	                                'ul',
+	                                { className: 'gallery_navigation' },
+	                                this.galleryNavigation()
+	                            )
+	                        )
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'container' },
+	                    _react2['default'].createElement(
+	                        'button',
+	                        { className: 'receive-an-estimate' },
+	                        'Получить смету'
+	                    )
 	                )
 	            );
 	        }
 	    }]);
 
 	    return OurRealizedProjects;
-	})(_react2["default"].Component);
+	})(_react2['default'].Component);
 
-	exports["default"] = OurRealizedProjects;
-	module.exports = exports["default"];
+	exports['default'] = OurRealizedProjects;
+	module.exports = exports['default'];
+
+/***/ }),
+/* 204 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(205);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(199)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/autoprefixer-loader/index.js!../../../node_modules/less-loader/index.js!./OurRealizedProjects.less", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/autoprefixer-loader/index.js!../../../node_modules/less-loader/index.js!./OurRealizedProjects.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ }),
+/* 205 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(198)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "#OurRealizedProjects {\n  background-image: url('/assets/screen_backgrounds/OurRealizedProjects.jpg');\n  background-size: cover;\n  background-position: center;\n  color: #020100;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -ms-flex-line-pack: center;\n      align-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  min-height: 100vh;\n}\n#OurRealizedProjects .container {\n  max-width: 1200px;\n}\n#OurRealizedProjects .receive-an-estimate {\n  display: block;\n  background-color: transparent;\n  padding: 5px 18px;\n  margin: 4vh auto;\n  border: 2px solid #fcbe02;\n  border-radius: 20px;\n  font-size: 150%;\n  font-family: inherit;\n  color: inherit;\n  cursor: pointer;\n}\n#OurRealizedProjects .gallery {\n  /* display: flex; */\n}\n#OurRealizedProjects .gallery:after {\n  display: block;\n  content: \"\";\n  clear: both;\n}\n#OurRealizedProjects .gallery_info {\n  width: 25%;\n  float: left;\n  padding-right: 1%;\n}\n#OurRealizedProjects .gallery_info_title {\n  font-size: 200%;\n  font-weight: 900;\n  margin-top: 0;\n}\n#OurRealizedProjects .gallery_info_item {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  margin-bottom: 15px;\n}\n#OurRealizedProjects .gallery_info_item_icon {\n  /* width: 20%; */\n}\n#OurRealizedProjects .gallery_info_item_icon img {\n  width: 100%;\n}\n#OurRealizedProjects .gallery_info_item_name,\n#OurRealizedProjects .gallery_info_item_value {\n  display: block;\n  padding: 0 10px;\n  margin: 4px 0;\n}\n#OurRealizedProjects .gallery_info_item_value {\n  font-size: 120%;\n  margin-bottom: 0;\n}\n#OurRealizedProjects .gallery_info_link {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  padding: 2px 6px;\n  margin: 8px 0;\n  background-color: #fcbe02;\n  -webkit-user-select: none;\n  cursor: pointer;\n}\n#OurRealizedProjects .gallery_info_link span {\n  padding: 0 8px;\n}\n#OurRealizedProjects .gallery_view {\n  position: relative;\n  width: 75%;\n  float: left;\n  margin-bottom: 30px;\n}\n#OurRealizedProjects .gallery_view img {\n  display: block;\n  width: 100%;\n  max-height: 500px;\n}\n#OurRealizedProjects .gallery_navigation {\n  position: absolute;\n  top: 100%;\n  left: 0;\n  right: 0;\n  margin: 0;\n  padding: 0;\n  margin-top: 10px;\n  text-align: center;\n}\n#OurRealizedProjects .gallery_navigation li {\n  display: inline-block;\n  width: 12px;\n  height: 12px;\n  margin: 5px;\n  border: 2px solid #fcbe02;\n  border-radius: 100%;\n  cursor: pointer;\n}\n#OurRealizedProjects .gallery_navigation li.active {\n  background-color: #fcbe02;\n}\n#OurRealizedProjects .social-link {\n  text-align: right;\n  margin-bottom: 10px;\n}\n#OurRealizedProjects .social-link a {\n  display: inline-block;\n  font-size: 150%;\n  text-decoration: none;\n  margin: 4px;\n}\n#OurRealizedProjects .social-link a:last-child {\n  margin-right: 0;\n}\n#OurRealizedProjects .social-link a.fa-vk {\n  color: #507299;\n}\n#OurRealizedProjects .social-link a.fa-facebook-square {\n  color: #3b5998;\n}\n#OurRealizedProjects .social-link a.fa-instagram {\n  color: #8a3ab9;\n}\n#OurRealizedProjects .social-link a.fa-google-plus-square {\n  color: #d34836;\n}\n@media (max-width: 1000px) {\n  #OurRealizedProjects .gallery_info {\n    width: 100%;\n    float: none;\n    padding-right: 0;\n  }\n  #OurRealizedProjects .gallery_info_item {\n    display: none;\n  }\n  #OurRealizedProjects .gallery_view {\n    width: 100%;\n    float: none;\n  }\n}\n", ""]);
+
+	// exports
+
 
 /***/ })
 /******/ ]);
