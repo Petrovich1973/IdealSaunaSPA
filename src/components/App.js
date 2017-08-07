@@ -4,6 +4,7 @@ import './App.less';
 
 import ScreenFirst from './ScreenFirst';
 import OurRealizedProjects from './OurRealizedProjects';
+import MainThingForUsInSaunas from './MainThingForUsInSaunas';
 
 class App extends React.Component {
     constructor(props) {
@@ -19,6 +20,7 @@ class App extends React.Component {
             <div id="App">
                 <ScreenFirst />
                 <OurRealizedProjects />
+                <MainThingForUsInSaunas />
             </div>          
         )
     }

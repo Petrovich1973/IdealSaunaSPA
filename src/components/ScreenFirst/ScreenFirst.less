@@ -7,6 +7,7 @@
 
 .screen__header {
 	background-color: rgba(0, 0, 0, .5);
+	padding: 5px 0;
 }
 .screen__header .container {
 	display: flex;
@@ -88,11 +89,7 @@
 	cursor: pointer;
 }
 
-#ScreenFirst .mouse {
-	display: block;
-	cursor: pointer;
-	margin-bottom: 3vh;
-}
+
 
 
 @media (max-width: 1000px) {
@@ -108,6 +105,13 @@
 @media (max-width: 600px) {
 	#ScreenFirst .feature {
 		width: 33%;
+	}
+	.screen__header .container {
+		justify-content: center;
+	}
+	.screen__header_social-link,
+	.screen__header_phone {
+		display: none;
 	}
 	.screen__header_phone a {
 		font-size: 86%;
