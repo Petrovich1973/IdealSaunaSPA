@@ -5,45 +5,49 @@
 	color: #fff;
 }
 
-.screen__header {
+#ScreenFirst .screen__header {
 	background-color: rgba(0, 0, 0, .5);
 	padding: 5px 0;
 }
-.screen__header .container {
+#ScreenFirst .screen__header .container {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 }
-.screen__header_social-link a {
+#ScreenFirst .screen__header_social-link a {
 	display: inline-block;
 	font-size: 130%;
 	color: #fff;
 	text-decoration: none;
 	margin: 0 4px;
 }
-.screen__header_social-link a:last-child {
+#ScreenFirst .screen__header_social-link a:last-child {
 	margin-right: 0;
 }
-.screen__header_phone {
+#ScreenFirst .screen__header_phone {
 	text-align: right;
 }
-.screen__header_phone a {
+#ScreenFirst .screen__header_phone a {
 	display: inline-block;
 	color: #fff;
 	text-decoration: none;
 	margin-left:4px;
 }
-.screen__header_phone_back-call {
+#ScreenFirst .screen__header_phone_back-call {
 	font-weight: bold;
 	color: #fcbe02;
 	border-bottom: 2px dashed #fff;
 	cursor: pointer;
 }
 
+
 #ScreenFirst .float-right {
+	margin-left: 36%;
+	background-color: rgba(0, 0, 0, .36);
 	padding: 1vw 3vw;
 }
+
 #ScreenFirst .title-page {
 	font-size: 350%;
 	line-height: 1;
@@ -60,7 +64,7 @@
 }
 
 
-.screen__footer .container {
+#ScreenFirst .screen__footer .container {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -96,6 +100,10 @@
 	#ScreenFirst .title-page {
 		font-size: 210%;
 	}
+	#ScreenFirst .float-right {
+		margin-left: 0;
+		text-align: center;
+	}	
 	#ScreenFirst .float-right .description {
 		font-size: 140%;
 	}
@@ -106,14 +114,14 @@
 	#ScreenFirst .feature {
 		width: 33%;
 	}
-	.screen__header .container {
+	#ScreenFirst .screen__header .container {
 		justify-content: center;
 	}
-	.screen__header_social-link,
-	.screen__header_phone {
+	#ScreenFirst .screen__header_social-link,
+	#ScreenFirst .screen__header_phone {
 		display: none;
 	}
-	.screen__header_phone a {
+	#ScreenFirst .screen__header_phone a {
 		font-size: 86%;
 	}
 }

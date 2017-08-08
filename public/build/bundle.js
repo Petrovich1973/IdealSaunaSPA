@@ -22792,6 +22792,14 @@
 
 	var _OurRealizedProjects2 = _interopRequireDefault(_OurRealizedProjects);
 
+	var _MainThingForUsInSaunas = __webpack_require__(206);
+
+	var _MainThingForUsInSaunas2 = _interopRequireDefault(_MainThingForUsInSaunas);
+
+	var _ScreenCalculator = __webpack_require__(209);
+
+	var _ScreenCalculator2 = _interopRequireDefault(_ScreenCalculator);
+
 	var App = (function (_React$Component) {
 	    _inherits(App, _React$Component);
 
@@ -22812,7 +22820,9 @@
 	                'div',
 	                { id: 'App' },
 	                _react2['default'].createElement(_ScreenFirst2['default'], null),
-	                _react2['default'].createElement(_OurRealizedProjects2['default'], null)
+	                _react2['default'].createElement(_OurRealizedProjects2['default'], null),
+	                _react2['default'].createElement(_MainThingForUsInSaunas2['default'], null),
+	                _react2['default'].createElement(_ScreenCalculator2['default'], null)
 	            );
 	        }
 	    }]);
@@ -22858,7 +22868,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  font-size: 100%;\n  font-family: 'Roboto', sans-serif;\n}\n* {\n  box-sizing: border-box;\n}\ntextarea:focus,\ninput:focus,\nbutton:focus {\n  outline: none;\n}\n#App {\n  overflow: hidden;\n}\n.screen {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -ms-flex-line-pack: justify;\n      align-content: space-between;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  min-height: 100vh;\n}\n.screen > * {\n  width: 100%;\n}\n.container {\n  position: relative;\n  max-width: 1040px;\n  margin: 0 auto;\n  padding: 0 3vw;\n}\n.title-screen {\n  font-size: 220%;\n  font-weight: 900;\n  text-transform: uppercase;\n  padding-left: 5px;\n  border-left: 3px solid #fcbe02;\n}\n.float-right {\n  margin-left: 36%;\n  background-color: rgba(0, 0, 0, 0.36);\n}\n@media (max-width: 1000px) {\n  .float-right {\n    margin-left: 0;\n    text-align: center;\n  }\n}\n@media (max-width: 600px) {\n  .screen__header_social-link {\n    display: none;\n  }\n  .title-screen {\n    font-size: 180%;\n  }\n}\n", ""]);
+	exports.push([module.id, "body {\n  font-size: 100%;\n  font-family: 'Roboto', sans-serif;\n}\n* {\n  box-sizing: border-box;\n}\ntextarea:focus,\ninput:focus,\nbutton:focus {\n  outline: none;\n}\n#App {\n  overflow: hidden;\n}\n.screen {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -ms-flex-line-pack: justify;\n      align-content: space-between;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  min-height: 100vh;\n}\n.screen > * {\n  width: 100%;\n}\n.container {\n  position: relative;\n  max-width: 1040px;\n  margin: 0 auto;\n  padding: 0 3vw;\n}\n.title-screen {\n  font-size: 220%;\n  font-weight: 900;\n  text-transform: uppercase;\n  padding-left: 5px;\n  border-left: 3px solid #fcbe02;\n}\nh3 {\n  font-size: 170%;\n  font-weight: 900;\n  line-height: 1;\n}\n.center {\n  text-align: center;\n}\n.mouse {\n  display: block;\n  cursor: pointer;\n  margin: 0 auto;\n  margin-bottom: 3vh;\n}\n@media (max-width: 600px) {\n  .title-screen {\n    font-size: 180%;\n  }\n}\n", ""]);
 
 	// exports
 
@@ -23414,7 +23424,7 @@
 
 
 	// module
-	exports.push([module.id, "#ScreenFirst {\n  background-image: url('/assets/screen_backgrounds/screen_first.jpg');\n  background-size: cover;\n  background-position: center;\n  color: #fff;\n}\n.screen__header {\n  background-color: rgba(0, 0, 0, 0.5);\n}\n.screen__header .container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.screen__header_social-link a {\n  display: inline-block;\n  font-size: 130%;\n  color: #fff;\n  text-decoration: none;\n  margin: 0 4px;\n}\n.screen__header_social-link a:last-child {\n  margin-right: 0;\n}\n.screen__header_phone {\n  text-align: right;\n}\n.screen__header_phone a {\n  display: inline-block;\n  color: #fff;\n  text-decoration: none;\n  margin-left: 4px;\n}\n.screen__header_phone_back-call {\n  font-weight: bold;\n  color: #fcbe02;\n  border-bottom: 2px dashed #fff;\n  cursor: pointer;\n}\n#ScreenFirst .float-right {\n  padding: 1vw 3vw;\n}\n#ScreenFirst .title-page {\n  font-size: 350%;\n  line-height: 1;\n  text-transform: uppercase;\n  margin: 0;\n}\n#ScreenFirst .title-page small {\n  color: #fcbe02;\n}\n#ScreenFirst .float-right .description {\n  font-size: 150%;\n  line-height: 1;\n  text-transform: uppercase;\n}\n.screen__footer .container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n}\n#ScreenFirst .feature {\n  width: 17vw;\n  text-align: center;\n  padding: 0 3vw;\n}\n#ScreenFirst .feature img {\n  max-width: 100%;\n}\n#ScreenFirst .what-price {\n  display: block;\n  background-color: transparent;\n  padding: 5px 18px;\n  margin: 7vh 0;\n  border: 2px solid #fcbe02;\n  border-radius: 20px;\n  font-size: 150%;\n  font-family: inherit;\n  color: #fff;\n  cursor: pointer;\n}\n#ScreenFirst .mouse {\n  display: block;\n  cursor: pointer;\n  margin-bottom: 3vh;\n}\n@media (max-width: 1000px) {\n  #ScreenFirst .title-page {\n    font-size: 210%;\n  }\n  #ScreenFirst .float-right .description {\n    font-size: 140%;\n  }\n}\n@media (max-width: 600px) {\n  #ScreenFirst .feature {\n    width: 33%;\n  }\n  .screen__header_phone a {\n    font-size: 86%;\n  }\n}\n", ""]);
+	exports.push([module.id, "#ScreenFirst {\n  background-image: url('/assets/screen_backgrounds/screen_first.jpg');\n  background-size: cover;\n  background-position: center;\n  color: #fff;\n}\n#ScreenFirst .screen__header {\n  background-color: rgba(0, 0, 0, 0.5);\n  padding: 5px 0;\n}\n#ScreenFirst .screen__header .container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n#ScreenFirst .screen__header_social-link a {\n  display: inline-block;\n  font-size: 130%;\n  color: #fff;\n  text-decoration: none;\n  margin: 0 4px;\n}\n#ScreenFirst .screen__header_social-link a:last-child {\n  margin-right: 0;\n}\n#ScreenFirst .screen__header_phone {\n  text-align: right;\n}\n#ScreenFirst .screen__header_phone a {\n  display: inline-block;\n  color: #fff;\n  text-decoration: none;\n  margin-left: 4px;\n}\n#ScreenFirst .screen__header_phone_back-call {\n  font-weight: bold;\n  color: #fcbe02;\n  border-bottom: 2px dashed #fff;\n  cursor: pointer;\n}\n#ScreenFirst .float-right {\n  margin-left: 36%;\n  background-color: rgba(0, 0, 0, 0.36);\n  padding: 1vw 3vw;\n}\n#ScreenFirst .title-page {\n  font-size: 350%;\n  line-height: 1;\n  text-transform: uppercase;\n  margin: 0;\n}\n#ScreenFirst .title-page small {\n  color: #fcbe02;\n}\n#ScreenFirst .float-right .description {\n  font-size: 150%;\n  line-height: 1;\n  text-transform: uppercase;\n}\n#ScreenFirst .screen__footer .container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n}\n#ScreenFirst .feature {\n  width: 17vw;\n  text-align: center;\n  padding: 0 3vw;\n}\n#ScreenFirst .feature img {\n  max-width: 100%;\n}\n#ScreenFirst .what-price {\n  display: block;\n  background-color: transparent;\n  padding: 5px 18px;\n  margin: 7vh 0;\n  border: 2px solid #fcbe02;\n  border-radius: 20px;\n  font-size: 150%;\n  font-family: inherit;\n  color: #fff;\n  cursor: pointer;\n}\n@media (max-width: 1000px) {\n  #ScreenFirst .title-page {\n    font-size: 210%;\n  }\n  #ScreenFirst .float-right {\n    margin-left: 0;\n    text-align: center;\n  }\n  #ScreenFirst .float-right .description {\n    font-size: 140%;\n  }\n}\n@media (max-width: 600px) {\n  #ScreenFirst .feature {\n    width: 33%;\n  }\n  #ScreenFirst .screen__header .container {\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n  }\n  #ScreenFirst .screen__header_social-link,\n  #ScreenFirst .screen__header_phone {\n    display: none;\n  }\n  #ScreenFirst .screen__header_phone a {\n    font-size: 86%;\n  }\n}\n", ""]);
 
 	// exports
 
@@ -23721,7 +23731,669 @@
 
 
 	// module
-	exports.push([module.id, "#OurRealizedProjects {\n  background-image: url('/assets/screen_backgrounds/OurRealizedProjects.jpg');\n  background-size: cover;\n  background-position: center;\n  color: #020100;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -ms-flex-line-pack: center;\n      align-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  min-height: 100vh;\n}\n#OurRealizedProjects .container {\n  max-width: 1200px;\n}\n#OurRealizedProjects .receive-an-estimate {\n  display: block;\n  background-color: transparent;\n  padding: 5px 18px;\n  margin: 4vh auto;\n  border: 2px solid #fcbe02;\n  border-radius: 20px;\n  font-size: 150%;\n  font-family: inherit;\n  color: inherit;\n  cursor: pointer;\n}\n#OurRealizedProjects .gallery {\n  /* display: flex; */\n}\n#OurRealizedProjects .gallery:after {\n  display: block;\n  content: \"\";\n  clear: both;\n}\n#OurRealizedProjects .gallery_info {\n  width: 25%;\n  float: left;\n  padding-right: 1%;\n}\n#OurRealizedProjects .gallery_info_title {\n  font-size: 200%;\n  font-weight: 900;\n  margin-top: 0;\n}\n#OurRealizedProjects .gallery_info_item {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  margin-bottom: 15px;\n}\n#OurRealizedProjects .gallery_info_item_icon {\n  /* width: 20%; */\n}\n#OurRealizedProjects .gallery_info_item_icon img {\n  width: 100%;\n}\n#OurRealizedProjects .gallery_info_item_name,\n#OurRealizedProjects .gallery_info_item_value {\n  display: block;\n  padding: 0 10px;\n  margin: 4px 0;\n}\n#OurRealizedProjects .gallery_info_item_value {\n  font-size: 120%;\n  margin-bottom: 0;\n}\n#OurRealizedProjects .gallery_info_link {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  padding: 2px 6px;\n  margin: 8px 0;\n  background-color: #fcbe02;\n  -webkit-user-select: none;\n  cursor: pointer;\n}\n#OurRealizedProjects .gallery_info_link span {\n  padding: 0 8px;\n}\n#OurRealizedProjects .gallery_view {\n  position: relative;\n  width: 75%;\n  float: left;\n  margin-bottom: 30px;\n}\n#OurRealizedProjects .gallery_view img {\n  display: block;\n  width: 100%;\n  max-height: 500px;\n}\n#OurRealizedProjects .gallery_navigation {\n  position: absolute;\n  top: 100%;\n  left: 0;\n  right: 0;\n  margin: 0;\n  padding: 0;\n  margin-top: 10px;\n  text-align: center;\n}\n#OurRealizedProjects .gallery_navigation li {\n  display: inline-block;\n  width: 12px;\n  height: 12px;\n  margin: 5px;\n  border: 2px solid #fcbe02;\n  border-radius: 100%;\n  cursor: pointer;\n}\n#OurRealizedProjects .gallery_navigation li.active {\n  background-color: #fcbe02;\n}\n#OurRealizedProjects .social-link {\n  text-align: right;\n  margin-bottom: 10px;\n}\n#OurRealizedProjects .social-link a {\n  display: inline-block;\n  font-size: 150%;\n  text-decoration: none;\n  margin: 4px;\n}\n#OurRealizedProjects .social-link a:last-child {\n  margin-right: 0;\n}\n#OurRealizedProjects .social-link a.fa-vk {\n  color: #507299;\n}\n#OurRealizedProjects .social-link a.fa-facebook-square {\n  color: #3b5998;\n}\n#OurRealizedProjects .social-link a.fa-instagram {\n  color: #8a3ab9;\n}\n#OurRealizedProjects .social-link a.fa-google-plus-square {\n  color: #d34836;\n}\n@media (max-width: 1000px) {\n  #OurRealizedProjects .gallery_info {\n    width: 100%;\n    float: none;\n    padding-right: 0;\n  }\n  #OurRealizedProjects .gallery_info_item {\n    display: none;\n  }\n  #OurRealizedProjects .gallery_view {\n    width: 100%;\n    float: none;\n  }\n}\n", ""]);
+	exports.push([module.id, "#OurRealizedProjects {\n  background-image: url('/assets/screen_backgrounds/OurRealizedProjects.jpg');\n  background-size: cover;\n  background-position: center;\n  color: #020100;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -ms-flex-line-pack: center;\n      align-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  min-height: 70vh;\n}\n#OurRealizedProjects .container {\n  max-width: 1200px;\n}\n#OurRealizedProjects .receive-an-estimate {\n  display: block;\n  background-color: transparent;\n  padding: 5px 18px;\n  margin: 4vh auto;\n  border: 2px solid #fcbe02;\n  border-radius: 20px;\n  font-size: 150%;\n  font-family: inherit;\n  color: inherit;\n  cursor: pointer;\n}\n#OurRealizedProjects .gallery {\n  /* display: flex; */\n}\n#OurRealizedProjects .gallery:after {\n  display: block;\n  content: \"\";\n  clear: both;\n}\n#OurRealizedProjects .gallery_info {\n  width: 25%;\n  float: left;\n  padding-right: 1%;\n}\n#OurRealizedProjects .gallery_info_title {\n  font-size: 200%;\n  font-weight: 900;\n  margin-top: 0;\n}\n#OurRealizedProjects .gallery_info_item {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  margin-bottom: 15px;\n}\n#OurRealizedProjects .gallery_info_item_icon {\n  /* width: 20%; */\n}\n#OurRealizedProjects .gallery_info_item_icon img {\n  width: 100%;\n}\n#OurRealizedProjects .gallery_info_item_name,\n#OurRealizedProjects .gallery_info_item_value {\n  display: block;\n  padding: 0 10px;\n  margin: 4px 0;\n}\n#OurRealizedProjects .gallery_info_item_value {\n  font-size: 120%;\n  margin-bottom: 0;\n}\n#OurRealizedProjects .gallery_info_link {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  padding: 2px 6px;\n  margin: 8px 0;\n  background-color: #fcbe02;\n  -webkit-user-select: none;\n  cursor: pointer;\n}\n#OurRealizedProjects .gallery_info_link span {\n  padding: 0 8px;\n}\n#OurRealizedProjects .gallery_view {\n  position: relative;\n  width: 75%;\n  float: left;\n  margin-bottom: 30px;\n}\n#OurRealizedProjects .gallery_view img {\n  display: block;\n  width: 100%;\n  max-height: 500px;\n}\n#OurRealizedProjects .gallery_navigation {\n  position: absolute;\n  top: 100%;\n  left: 0;\n  right: 0;\n  margin: 0;\n  padding: 0;\n  margin-top: 10px;\n  text-align: center;\n}\n#OurRealizedProjects .gallery_navigation li {\n  display: inline-block;\n  width: 12px;\n  height: 12px;\n  margin: 5px;\n  border: 2px solid #fcbe02;\n  border-radius: 100%;\n  cursor: pointer;\n}\n#OurRealizedProjects .gallery_navigation li.active {\n  background-color: #fcbe02;\n}\n#OurRealizedProjects .social-link {\n  text-align: right;\n  margin-bottom: 10px;\n}\n#OurRealizedProjects .social-link a {\n  display: inline-block;\n  font-size: 150%;\n  text-decoration: none;\n  margin: 4px;\n}\n#OurRealizedProjects .social-link a:last-child {\n  margin-right: 0;\n}\n#OurRealizedProjects .social-link a.fa-vk {\n  color: #507299;\n}\n#OurRealizedProjects .social-link a.fa-facebook-square {\n  color: #3b5998;\n}\n#OurRealizedProjects .social-link a.fa-instagram {\n  color: #8a3ab9;\n}\n#OurRealizedProjects .social-link a.fa-google-plus-square {\n  color: #d34836;\n}\n@media (max-width: 1000px) {\n  #OurRealizedProjects .gallery_info {\n    width: 100%;\n    float: none;\n    padding-right: 0;\n  }\n  #OurRealizedProjects .gallery_info_item {\n    display: none;\n  }\n  #OurRealizedProjects .gallery_view {\n    width: 100%;\n    float: none;\n  }\n}\n", ""]);
+
+	// exports
+
+
+/***/ }),
+/* 206 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(207);
+
+	var MainThingForUsInSaunas = (function (_React$Component) {
+	    _inherits(MainThingForUsInSaunas, _React$Component);
+
+	    function MainThingForUsInSaunas(props) {
+	        _classCallCheck(this, MainThingForUsInSaunas);
+
+	        _get(Object.getPrototypeOf(MainThingForUsInSaunas.prototype), 'constructor', this).call(this, props);
+
+	        this.state = this.initialState = {
+	            galleryView: 1
+	        };
+	    }
+
+	    _createClass(MainThingForUsInSaunas, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2['default'].createElement(
+	                'div',
+	                { className: 'screen', id: 'MainThingForUsInSaunas' },
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'container' },
+	                    _react2['default'].createElement(
+	                        'h2',
+	                        { className: 'title-screen' },
+	                        'главное',
+	                        _react2['default'].createElement('br', null),
+	                        'для нас в саунах'
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'container' },
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'us-in-saunas' },
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'us-in-saunas_item' },
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'us-in-saunas_item_decor' },
+	                                '1'
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'us-in-saunas_item_icon' },
+	                                _react2['default'].createElement('img', { src: '/assets/us-in-saunas_item_icons/01.png' })
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                null,
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'us-in-saunas_item_name' },
+	                                    'Безопасность'
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'us-in-saunas_item_description' },
+	                                    'Монтируем только проверенное оборудование известных производителей'
+	                                )
+	                            )
+	                        ),
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'us-in-saunas_item' },
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'us-in-saunas_item_decor' },
+	                                '2'
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'us-in-saunas_item_icon' },
+	                                _react2['default'].createElement('img', { src: '/assets/us-in-saunas_item_icons/02.png' })
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                null,
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'us-in-saunas_item_name' },
+	                                    'Надежность'
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'us-in-saunas_item_description' },
+	                                    'Соблюдаем все нормы и правила при строительстве'
+	                                )
+	                            )
+	                        ),
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'us-in-saunas_item' },
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'us-in-saunas_item_decor' },
+	                                '3'
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'us-in-saunas_item_icon' },
+	                                _react2['default'].createElement('img', { src: '/assets/us-in-saunas_item_icons/03.png' })
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                null,
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'us-in-saunas_item_name' },
+	                                    'Качество'
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'us-in-saunas_item_description' },
+	                                    'У нас работают только профессиональные строители'
+	                                )
+	                            )
+	                        ),
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'us-in-saunas_item' },
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'us-in-saunas_item_decor' },
+	                                '4'
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'us-in-saunas_item_icon' },
+	                                _react2['default'].createElement('img', { src: '/assets/us-in-saunas_item_icons/04.png' })
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                null,
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'us-in-saunas_item_name' },
+	                                    'Комфорт'
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    { className: 'us-in-saunas_item_description' },
+	                                    'Продумываем все мелочи на этапе проектирования сауны'
+	                                )
+	                            )
+	                        )
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'container' },
+	                    _react2['default'].createElement('img', { src: '/libs/img/icon-mouse.png', className: 'mouse' })
+	                )
+	            );
+	        }
+	    }]);
+
+	    return MainThingForUsInSaunas;
+	})(_react2['default'].Component);
+
+	exports['default'] = MainThingForUsInSaunas;
+	module.exports = exports['default'];
+
+/***/ }),
+/* 207 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(208);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(199)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/autoprefixer-loader/index.js!../../../node_modules/less-loader/index.js!./MainThingForUsInSaunas.less", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/autoprefixer-loader/index.js!../../../node_modules/less-loader/index.js!./MainThingForUsInSaunas.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ }),
+/* 208 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(198)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "#MainThingForUsInSaunas {\n  background-image: url('/assets/screen_backgrounds/MainThingForUsInSaunas.jpg');\n  background-size: cover;\n  background-position: center;\n  color: #fff;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -ms-flex-line-pack: center;\n      align-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  min-height: 50vh;\n}\n#MainThingForUsInSaunas .container {\n  max-width: 1200px;\n}\n#MainThingForUsInSaunas .us-in-saunas {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: distribute;\n      justify-content: space-around;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n}\n#MainThingForUsInSaunas .us-in-saunas_item {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: nowrap;\n      flex-wrap: nowrap;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n  width: 50%;\n  padding: 60px 10%;\n  position: relative;\n}\n#MainThingForUsInSaunas .us-in-saunas_item_decor {\n  position: absolute;\n  top: 10%;\n  right: 70%;\n  font-size: 1300%;\n  font-weight: 900;\n  opacity: .2;\n}\n#MainThingForUsInSaunas .us-in-saunas_item_icon {\n  width: 50%;\n  padding-right: 10px;\n}\n#MainThingForUsInSaunas .us-in-saunas_item_icon img {\n  width: 100%;\n  min-width: 90px;\n}\n#MainThingForUsInSaunas .us-in-saunas_item_name {\n  font-weight: bold;\n  font-size: 140%;\n  margin-bottom: 6px;\n  margin-top: 6px;\n}\n@media (max-width: 600px) {\n  #MainThingForUsInSaunas .us-in-saunas_item {\n    width: 100%;\n  }\n}\n", ""]);
+
+	// exports
+
+
+/***/ }),
+/* 209 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(210);
+
+	var ScreenCalculator = (function (_React$Component) {
+	    _inherits(ScreenCalculator, _React$Component);
+
+	    function ScreenCalculator(props) {
+	        _classCallCheck(this, ScreenCalculator);
+
+	        _get(Object.getPrototypeOf(ScreenCalculator.prototype), 'constructor', this).call(this, props);
+
+	        this.state = this.initialState = {
+	            background: true
+	        };
+	    }
+
+	    _createClass(ScreenCalculator, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2['default'].createElement(
+	                'div',
+	                { className: 'screen', id: 'ScreenCalculator' },
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'info-block' },
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'float-right' },
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'box-inline' },
+	                            _react2['default'].createElement(
+	                                'h3',
+	                                null,
+	                                'Постройте свою сауну с',
+	                                _react2['default'].createElement('br', null),
+	                                'профессионалами!'
+	                            ),
+	                            _react2['default'].createElement(
+	                                'p',
+	                                null,
+	                                ' Звоните по телефону ',
+	                                _react2['default'].createElement(
+	                                    'nobr',
+	                                    null,
+	                                    '+7 (495) 215-05-46'
+	                                )
+	                            )
+	                        )
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'container' },
+	                    _react2['default'].createElement(
+	                        'h2',
+	                        { className: 'title-screen' },
+	                        'рассчитайте',
+	                        _react2['default'].createElement('br', null),
+	                        'стоимость',
+	                        _react2['default'].createElement('br', null),
+	                        'вашей сауны'
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'container center' },
+	                    _react2['default'].createElement(
+	                        'h3',
+	                        null,
+	                        'Укажите размер помещения:'
+	                    ),
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'controllers' },
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'controller' },
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'controller_name' },
+	                                'Длина, см'
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'controller_group' },
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'controller_btn left' },
+	                                    _react2['default'].createElement('i', { className: 'fa fa-minus' })
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'controller_input' },
+	                                    _react2['default'].createElement('input', null)
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'controller_btn right' },
+	                                    _react2['default'].createElement('i', { className: 'fa fa-plus' })
+	                                )
+	                            )
+	                        ),
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'controller' },
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'controller_name' },
+	                                'Ширина, см'
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'controller_group' },
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'controller_btn left' },
+	                                    _react2['default'].createElement('i', { className: 'fa fa-minus' })
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'controller_input' },
+	                                    _react2['default'].createElement('input', null)
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'controller_btn right' },
+	                                    _react2['default'].createElement('i', { className: 'fa fa-plus' })
+	                                )
+	                            )
+	                        ),
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'controller' },
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'controller_name' },
+	                                'Высота, см'
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'controller_group' },
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'controller_btn left' },
+	                                    _react2['default'].createElement('i', { className: 'fa fa-minus' })
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'controller_input' },
+	                                    _react2['default'].createElement('input', null)
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'controller_btn right' },
+	                                    _react2['default'].createElement('i', { className: 'fa fa-plus' })
+	                                )
+	                            )
+	                        )
+	                    )
+	                ),
+	                _react2['default'].createElement('div', { className: 'container separator' }),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'container center' },
+	                    _react2['default'].createElement(
+	                        'h3',
+	                        null,
+	                        'Материалы и оборудования:'
+	                    ),
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'controllers row' },
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'controller' },
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'controller_name' },
+	                                'Отделка стен и потолка'
+	                            ),
+	                            _react2['default'].createElement('div', { className: 'controller_pic', style: { backgroundImage: 'url(/assets/controllerPics/01.jpg)' } }),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'controller_group' },
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'controller_btn left' },
+	                                    _react2['default'].createElement('i', { className: 'fa fa-chevron-left' })
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'controller_input' },
+	                                    _react2['default'].createElement('input', { className: 'sm', defaultValue: 'Канадский кедр', readOnly: true })
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'controller_btn right' },
+	                                    _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
+	                                )
+	                            )
+	                        ),
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'controller' },
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'controller_name' },
+	                                'Расположение полок'
+	                            ),
+	                            _react2['default'].createElement('div', { className: 'controller_pic', style: { backgroundImage: 'url(/assets/controllerPics/01.jpg)' } }),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'controller_group' },
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'controller_btn left' },
+	                                    _react2['default'].createElement('i', { className: 'fa fa-chevron-left' })
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'controller_input' },
+	                                    _react2['default'].createElement('input', { className: 'sm', defaultValue: 'Прямые', readOnly: true })
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'controller_btn right' },
+	                                    _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
+	                                )
+	                            )
+	                        ),
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'controller' },
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'controller_name' },
+	                                'Печь'
+	                            ),
+	                            _react2['default'].createElement('div', { className: 'controller_pic', style: { backgroundImage: 'url(/assets/controllerPics/01.jpg)' } }),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'controller_group' },
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'controller_btn left' },
+	                                    _react2['default'].createElement('i', { className: 'fa fa-chevron-left' })
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'controller_input' },
+	                                    _react2['default'].createElement('input', { className: 'sm', defaultValue: 'Дровяная', readOnly: true })
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'controller_btn right' },
+	                                    _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
+	                                )
+	                            )
+	                        ),
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'controller' },
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'controller_name' },
+	                                'Камни'
+	                            ),
+	                            _react2['default'].createElement('div', { className: 'controller_pic', style: { backgroundImage: 'url(/assets/controllerPics/01.jpg)' } }),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'controller_group' },
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'controller_btn left' },
+	                                    _react2['default'].createElement('i', { className: 'fa fa-chevron-left' })
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'controller_input' },
+	                                    _react2['default'].createElement('input', { className: 'sm', defaultValue: 'Подарок', readOnly: true })
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'controller_btn right' },
+	                                    _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
+	                                )
+	                            )
+	                        ),
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'controller' },
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'controller_name' },
+	                                'Освещение'
+	                            ),
+	                            _react2['default'].createElement('div', { className: 'controller_pic', style: { backgroundImage: 'url(/assets/controllerPics/01.jpg)' } }),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'controller_group' },
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'controller_btn left' },
+	                                    _react2['default'].createElement('i', { className: 'fa fa-chevron-left' })
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'controller_input' },
+	                                    _react2['default'].createElement('input', { className: 'sm', defaultValue: 'Светильник', readOnly: true })
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'controller_btn right' },
+	                                    _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
+	                                )
+	                            )
+	                        ),
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'controller' },
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'controller_name' },
+	                                'Отделка за печью'
+	                            ),
+	                            _react2['default'].createElement('div', { className: 'controller_pic', style: { backgroundImage: 'url(/assets/controllerPics/01.jpg)' } }),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'controller_group' },
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'controller_btn left' },
+	                                    _react2['default'].createElement('i', { className: 'fa fa-chevron-left' })
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'controller_input' },
+	                                    _react2['default'].createElement('input', { className: 'sm', defaultValue: 'Талькомагнезит', readOnly: true })
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'controller_btn right' },
+	                                    _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
+	                                )
+	                            )
+	                        )
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'container center' },
+	                    _react2['default'].createElement(
+	                        'h3',
+	                        null,
+	                        'Итого: 237 000 руб.'
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return ScreenCalculator;
+	})(_react2['default'].Component);
+
+	exports['default'] = ScreenCalculator;
+	module.exports = exports['default'];
+
+/***/ }),
+/* 210 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(211);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(199)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/autoprefixer-loader/index.js!../../../node_modules/less-loader/index.js!./ScreenCalculator.less", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/autoprefixer-loader/index.js!../../../node_modules/less-loader/index.js!./ScreenCalculator.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ }),
+/* 211 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(198)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "#ScreenCalculator {\n  background-color: #fff;\n  color: #020100;\n  min-height: 50vh;\n}\n#ScreenCalculator .container {\n  max-width: 1200px;\n}\n#ScreenCalculator .float-right {\n  margin-left: 46%;\n  margin-bottom: -8vh;\n  text-align: left;\n}\n#ScreenCalculator .box-inline {\n  display: inline-block;\n  padding: 1vw 3vw;\n  box-shadow: 0 0 8px 6px rgba(252, 190, 2, 0.5), inset 0 0 8px 6px rgba(252, 190, 2, 0.5);\n}\n#ScreenCalculator .box-inline > * {\n  margin: 0;\n}\n#ScreenCalculator .box-inline h3 {\n  margin-bottom: 10px;\n}\n#ScreenCalculator .controllers {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: end;\n      -ms-flex-align: end;\n          align-items: flex-end;\n}\n#ScreenCalculator .controllers.row {\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n}\n#ScreenCalculator .controller {\n  margin: 0 0 40px;\n  padding: 0 20px;\n  width: 18rem;\n}\n#ScreenCalculator .controller_group {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n#ScreenCalculator .controller_name {\n  width: 90%;\n  margin: 0 auto;\n}\n#ScreenCalculator .controller_pic {\n  width: 7rem;\n  height: 7rem;\n  margin: 4px auto;\n  overflow: hidden;\n  background-position: center;\n  background-size: cover;\n  border-radius: 100%;\n}\n#ScreenCalculator .controller_input input {\n  border: none;\n  background-color: #efeeee;\n  text-align: inherit;\n  height: 2rem;\n  width: 6rem;\n}\n#ScreenCalculator .controller_input input.sm {\n  font-size: 76%;\n}\n#ScreenCalculator .controller_btn {\n  height: 2rem;\n  width: 2.2rem;\n  line-height: 2.2rem;\n  background-color: #fcbe02;\n  cursor: pointer;\n}\n#ScreenCalculator .controller_btn.left {\n  border-radius: 100% 0 0 100%;\n  padding-left: .2rem;\n}\n#ScreenCalculator .controller_btn.right {\n  border-radius: 0 100% 100% 0;\n  padding-right: .2rem;\n}\n#ScreenCalculator .separator {\n  max-width: 800px;\n  height: 2px;\n  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(2, 1, 0, 0.65) 50%, rgba(2, 1, 0, 0.64) 51%, rgba(0, 0, 0, 0) 100%);\n}\n@media (max-width: 600px) {\n  #ScreenCalculator .info-block {\n    display: none;\n  }\n  #ScreenCalculator .controllers {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n  }\n}\n", ""]);
 
 	// exports
 

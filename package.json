@@ -24,7 +24,6 @@
     "less": "^2.6.0",
     "moment": "^2.18.1",
     "moment-timezone": "^0.5.13",
-    "normalize.css": "^7.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-masonry-component": "^4.0.0",
