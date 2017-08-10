@@ -1,0 +1,109 @@
+#BeforeBuildSauna {
+	background-image: url('/assets/screen_backgrounds/BeforeBuildSauna.jpg');
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	min-height: 70vh;
+}
+
+#BeforeBuildSauna .container {
+	max-width: 1200px;
+}
+
+#BeforeBuildSauna .build-sauna {
+	display: flex;
+	align-items: flex-start;
+	margin-top: 7vh;
+}
+
+#BeforeBuildSauna .build-sauna_detail-view {
+	background-color: rgba(0, 0, 0, .36); 
+	padding: 5vh 5vw;
+}
+#BeforeBuildSauna .build-sauna_detail-view img {
+	max-width: 100%;
+}
+
+#BeforeBuildSauna .build-sauna_list {
+	padding-right: 20px;
+}
+#BeforeBuildSauna .build-sauna_item {
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: 20px;
+	-webkit-user-select: none;
+	cursor: pointer;
+}
+#BeforeBuildSauna .build-sauna_item.active {
+	background-color: rgba(0, 0, 0, .36); 
+}
+#BeforeBuildSauna .build-sauna_item_bulit {
+	flex-shrink: 0;
+    width: 4rem;
+    height: 4rem;
+    font-size: 3rem;
+    line-height: 2.8rem;
+    font-weight: 900;
+    text-align: center;
+    border: 10px solid #fcbe02;
+}
+#BeforeBuildSauna .build-sauna_item_bulit span {
+	display: block;
+}
+#BeforeBuildSauna .build-sauna_item.active .build-sauna_item_bulit {
+	transform: rotate(17deg);
+    border-color: #fff;
+}
+#BeforeBuildSauna .build-sauna_item.active .build-sauna_item_bulit span {
+	transform: rotate(-17deg);
+	color:  #fcbe02;
+}
+#BeforeBuildSauna .build-sauna_item_name {
+	padding-left: 10px
+}
+#BeforeBuildSauna .build-sauna_item_name h3 {
+	margin: 0;
+	font-size: 150%;
+}
+#BeforeBuildSauna .build-sauna_item.active .build-sauna_item_name h3 {
+	color:  #fcbe02;
+}
+#BeforeBuildSauna .build-sauna_item_name p {
+	margin: 0;
+	font-size: 76%;
+}
+
+@media (max-width: 1000px) {
+}
+
+@media (max-width: 600px) {
+	#BeforeBuildSauna .build-sauna {
+		flex-direction: column;
+	}
+	#BeforeBuildSauna .build-sauna_list {
+		padding-right: 0;
+	    display: flex;
+	    flex-direction: row;
+	    justify-content: space-between;
+	    width: 100%;
+	}
+	#BeforeBuildSauna .build-sauna_item_bulit {
+	    width: 3rem;
+	    height: 3rem;
+	    font-size: 2rem;
+	    line-height: 2rem;
+	    border-width: 8px;
+	}
+	#BeforeBuildSauna .build-sauna_item_name {
+		display: none;
+	}
+	#BeforeBuildSauna .build-sauna_detail-view img {
+		margin-right: 0 !important;
+		width: 100%;
+	}
+}

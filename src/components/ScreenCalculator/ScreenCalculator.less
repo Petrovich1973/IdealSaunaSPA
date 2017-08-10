@@ -1,7 +1,11 @@
 #ScreenCalculator {
-	background-color: #fff;
+	background-color: #f4f4f4;
 	color: #020100;
 	min-height: 50vh;
+	background-image: url(/assets/screen_backgrounds/ScreenCalculator.png);
+	background-repeat: no-repeat;
+	background-position: 10vw 10vh;
+	background-attachment: fixed;
 }
 
 #ScreenCalculator .container {
@@ -16,7 +20,7 @@
 
 #ScreenCalculator .box-inline {
 	display: inline-block;
-	padding: 1vw 3vw;
+	padding: 2vw 3vw;
 	box-shadow: 0 0 8px 6px rgba(252, 190, 2, .5), inset 0 0 8px 6px rgba(252, 190, 2, .5);
 }
 #ScreenCalculator .box-inline > * {
@@ -48,7 +52,7 @@
 }
 #ScreenCalculator .controller_name {
 	width: 90%;
-	margin: 0 auto;
+	margin: 0 auto 4px;
 }
 #ScreenCalculator .controller_pic {
 	width: 7rem;
@@ -61,7 +65,7 @@
 }
 #ScreenCalculator .controller_input input {
 	border: none;
-	background-color: #efeeee;
+	background-color: #fff;
 	text-align: inherit;
 	height: 2rem;
 	width: 6rem;
@@ -75,6 +79,9 @@
 	line-height: 2.2rem;
 	background-color: #fcbe02;
 	cursor: pointer;
+}
+#ScreenCalculator .controller_btn:active i {
+	transform: scale(1.3);
 }
 #ScreenCalculator .controller_btn.left {
 	border-radius: 100% 0 0 100%;

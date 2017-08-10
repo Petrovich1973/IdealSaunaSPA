@@ -35,7 +35,7 @@ class ScreenCalculator extends React.Component {
                             <div className="controller_name">Длина, см</div>
                             <div className="controller_group">
                                 <span className="controller_btn left"><i className="fa fa-minus" /></span>
-                                <span className="controller_input"><input /></span>
+                                <span className="controller_input"><input defaultValue="200" /></span>
                                 <span className="controller_btn right"><i className="fa fa-plus" /></span>
                             </div>
                         </div>
@@ -43,7 +43,7 @@ class ScreenCalculator extends React.Component {
                             <div className="controller_name">Ширина, см</div>
                             <div className="controller_group">
                                 <span className="controller_btn left"><i className="fa fa-minus" /></span>
-                                <span className="controller_input"><input /></span>
+                                <span className="controller_input"><input defaultValue="200" /></span>
                                 <span className="controller_btn right"><i className="fa fa-plus" /></span>
                             </div>
                         </div>
@@ -51,7 +51,7 @@ class ScreenCalculator extends React.Component {
                             <div className="controller_name">Высота, см</div>
                             <div className="controller_group">
                                 <span className="controller_btn left"><i className="fa fa-minus" /></span>
-                                <span className="controller_input"><input /></span>
+                                <span className="controller_input"><input defaultValue="200" /></span>
                                 <span className="controller_btn right"><i className="fa fa-plus" /></span>
                             </div>
                         </div>
@@ -74,7 +74,7 @@ class ScreenCalculator extends React.Component {
                         </div>
                         <div className="controller">
                             <div className="controller_name">Расположение полок</div>
-                            <div className="controller_pic" style={{backgroundImage: 'url(/assets/controllerPics/01.jpg)'}}></div>
+                            <div className="controller_pic" style={{backgroundImage: 'url(/assets/controllerPics/02.jpg)'}}></div>
                             <div className="controller_group">
                                 <span className="controller_btn left"><i className="fa fa-chevron-left" /></span>
                                 <span className="controller_input"><input className="sm" defaultValue="Прямые" readOnly /></span>
@@ -83,7 +83,7 @@ class ScreenCalculator extends React.Component {
                         </div>
                         <div className="controller">
                             <div className="controller_name">Печь</div>
-                            <div className="controller_pic" style={{backgroundImage: 'url(/assets/controllerPics/01.jpg)'}}></div>
+                            <div className="controller_pic" style={{backgroundImage: 'url(/assets/controllerPics/03.jpg)'}}></div>
                             <div className="controller_group">
                                 <span className="controller_btn left"><i className="fa fa-chevron-left" /></span>
                                 <span className="controller_input"><input className="sm" defaultValue="Дровяная" readOnly /></span>
@@ -92,7 +92,7 @@ class ScreenCalculator extends React.Component {
                         </div>
                         <div className="controller">
                             <div className="controller_name">Камни</div>
-                            <div className="controller_pic" style={{backgroundImage: 'url(/assets/controllerPics/01.jpg)'}}></div>
+                            <div className="controller_pic" style={{backgroundImage: 'url(/assets/controllerPics/04.jpg)'}}></div>
                             <div className="controller_group">
                                 <span className="controller_btn left"><i className="fa fa-chevron-left" /></span>
                                 <span className="controller_input"><input className="sm" defaultValue="Подарок" readOnly /></span>
@@ -101,7 +101,7 @@ class ScreenCalculator extends React.Component {
                         </div>
                         <div className="controller">
                             <div className="controller_name">Освещение</div>
-                            <div className="controller_pic" style={{backgroundImage: 'url(/assets/controllerPics/01.jpg)'}}></div>
+                            <div className="controller_pic" style={{backgroundImage: 'url(/assets/controllerPics/05.jpg)'}}></div>
                             <div className="controller_group">
                                 <span className="controller_btn left"><i className="fa fa-chevron-left" /></span>
                                 <span className="controller_input"><input className="sm" defaultValue="Светильник" readOnly /></span>
@@ -110,7 +110,7 @@ class ScreenCalculator extends React.Component {
                         </div>
                         <div className="controller">
                             <div className="controller_name">Отделка за печью</div>
-                            <div className="controller_pic" style={{backgroundImage: 'url(/assets/controllerPics/01.jpg)'}}></div>
+                            <div className="controller_pic" style={{backgroundImage: 'url(/assets/controllerPics/06.jpg)'}}></div>
                             <div className="controller_group">
                                 <span className="controller_btn left"><i className="fa fa-chevron-left" /></span>
                                 <span className="controller_input"><input className="sm" defaultValue="Талькомагнезит" readOnly /></span>

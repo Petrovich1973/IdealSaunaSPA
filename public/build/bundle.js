@@ -22800,6 +22800,10 @@
 
 	var _ScreenCalculator2 = _interopRequireDefault(_ScreenCalculator);
 
+	var _BeforeBuildSauna = __webpack_require__(212);
+
+	var _BeforeBuildSauna2 = _interopRequireDefault(_BeforeBuildSauna);
+
 	var App = (function (_React$Component) {
 	    _inherits(App, _React$Component);
 
@@ -22822,7 +22826,8 @@
 	                _react2['default'].createElement(_ScreenFirst2['default'], null),
 	                _react2['default'].createElement(_OurRealizedProjects2['default'], null),
 	                _react2['default'].createElement(_MainThingForUsInSaunas2['default'], null),
-	                _react2['default'].createElement(_ScreenCalculator2['default'], null)
+	                _react2['default'].createElement(_ScreenCalculator2['default'], null),
+	                _react2['default'].createElement(_BeforeBuildSauna2['default'], null)
 	            );
 	        }
 	    }]);
@@ -24084,7 +24089,7 @@
 	                                _react2['default'].createElement(
 	                                    'span',
 	                                    { className: 'controller_input' },
-	                                    _react2['default'].createElement('input', null)
+	                                    _react2['default'].createElement('input', { defaultValue: '200' })
 	                                ),
 	                                _react2['default'].createElement(
 	                                    'span',
@@ -24112,7 +24117,7 @@
 	                                _react2['default'].createElement(
 	                                    'span',
 	                                    { className: 'controller_input' },
-	                                    _react2['default'].createElement('input', null)
+	                                    _react2['default'].createElement('input', { defaultValue: '200' })
 	                                ),
 	                                _react2['default'].createElement(
 	                                    'span',
@@ -24140,7 +24145,7 @@
 	                                _react2['default'].createElement(
 	                                    'span',
 	                                    { className: 'controller_input' },
-	                                    _react2['default'].createElement('input', null)
+	                                    _react2['default'].createElement('input', { defaultValue: '200' })
 	                                ),
 	                                _react2['default'].createElement(
 	                                    'span',
@@ -24200,7 +24205,7 @@
 	                                { className: 'controller_name' },
 	                                'Расположение полок'
 	                            ),
-	                            _react2['default'].createElement('div', { className: 'controller_pic', style: { backgroundImage: 'url(/assets/controllerPics/01.jpg)' } }),
+	                            _react2['default'].createElement('div', { className: 'controller_pic', style: { backgroundImage: 'url(/assets/controllerPics/02.jpg)' } }),
 	                            _react2['default'].createElement(
 	                                'div',
 	                                { className: 'controller_group' },
@@ -24229,7 +24234,7 @@
 	                                { className: 'controller_name' },
 	                                'Печь'
 	                            ),
-	                            _react2['default'].createElement('div', { className: 'controller_pic', style: { backgroundImage: 'url(/assets/controllerPics/01.jpg)' } }),
+	                            _react2['default'].createElement('div', { className: 'controller_pic', style: { backgroundImage: 'url(/assets/controllerPics/03.jpg)' } }),
 	                            _react2['default'].createElement(
 	                                'div',
 	                                { className: 'controller_group' },
@@ -24258,7 +24263,7 @@
 	                                { className: 'controller_name' },
 	                                'Камни'
 	                            ),
-	                            _react2['default'].createElement('div', { className: 'controller_pic', style: { backgroundImage: 'url(/assets/controllerPics/01.jpg)' } }),
+	                            _react2['default'].createElement('div', { className: 'controller_pic', style: { backgroundImage: 'url(/assets/controllerPics/04.jpg)' } }),
 	                            _react2['default'].createElement(
 	                                'div',
 	                                { className: 'controller_group' },
@@ -24287,7 +24292,7 @@
 	                                { className: 'controller_name' },
 	                                'Освещение'
 	                            ),
-	                            _react2['default'].createElement('div', { className: 'controller_pic', style: { backgroundImage: 'url(/assets/controllerPics/01.jpg)' } }),
+	                            _react2['default'].createElement('div', { className: 'controller_pic', style: { backgroundImage: 'url(/assets/controllerPics/05.jpg)' } }),
 	                            _react2['default'].createElement(
 	                                'div',
 	                                { className: 'controller_group' },
@@ -24316,7 +24321,7 @@
 	                                { className: 'controller_name' },
 	                                'Отделка за печью'
 	                            ),
-	                            _react2['default'].createElement('div', { className: 'controller_pic', style: { backgroundImage: 'url(/assets/controllerPics/01.jpg)' } }),
+	                            _react2['default'].createElement('div', { className: 'controller_pic', style: { backgroundImage: 'url(/assets/controllerPics/06.jpg)' } }),
 	                            _react2['default'].createElement(
 	                                'div',
 	                                { className: 'controller_group' },
@@ -24393,7 +24398,191 @@
 
 
 	// module
-	exports.push([module.id, "#ScreenCalculator {\n  background-color: #fff;\n  color: #020100;\n  min-height: 50vh;\n}\n#ScreenCalculator .container {\n  max-width: 1200px;\n}\n#ScreenCalculator .float-right {\n  margin-left: 46%;\n  margin-bottom: -8vh;\n  text-align: left;\n}\n#ScreenCalculator .box-inline {\n  display: inline-block;\n  padding: 1vw 3vw;\n  box-shadow: 0 0 8px 6px rgba(252, 190, 2, 0.5), inset 0 0 8px 6px rgba(252, 190, 2, 0.5);\n}\n#ScreenCalculator .box-inline > * {\n  margin: 0;\n}\n#ScreenCalculator .box-inline h3 {\n  margin-bottom: 10px;\n}\n#ScreenCalculator .controllers {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: end;\n      -ms-flex-align: end;\n          align-items: flex-end;\n}\n#ScreenCalculator .controllers.row {\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n}\n#ScreenCalculator .controller {\n  margin: 0 0 40px;\n  padding: 0 20px;\n  width: 18rem;\n}\n#ScreenCalculator .controller_group {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n#ScreenCalculator .controller_name {\n  width: 90%;\n  margin: 0 auto;\n}\n#ScreenCalculator .controller_pic {\n  width: 7rem;\n  height: 7rem;\n  margin: 4px auto;\n  overflow: hidden;\n  background-position: center;\n  background-size: cover;\n  border-radius: 100%;\n}\n#ScreenCalculator .controller_input input {\n  border: none;\n  background-color: #efeeee;\n  text-align: inherit;\n  height: 2rem;\n  width: 6rem;\n}\n#ScreenCalculator .controller_input input.sm {\n  font-size: 76%;\n}\n#ScreenCalculator .controller_btn {\n  height: 2rem;\n  width: 2.2rem;\n  line-height: 2.2rem;\n  background-color: #fcbe02;\n  cursor: pointer;\n}\n#ScreenCalculator .controller_btn.left {\n  border-radius: 100% 0 0 100%;\n  padding-left: .2rem;\n}\n#ScreenCalculator .controller_btn.right {\n  border-radius: 0 100% 100% 0;\n  padding-right: .2rem;\n}\n#ScreenCalculator .separator {\n  max-width: 800px;\n  height: 2px;\n  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(2, 1, 0, 0.65) 50%, rgba(2, 1, 0, 0.64) 51%, rgba(0, 0, 0, 0) 100%);\n}\n@media (max-width: 600px) {\n  #ScreenCalculator .info-block {\n    display: none;\n  }\n  #ScreenCalculator .controllers {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n  }\n}\n", ""]);
+	exports.push([module.id, "#ScreenCalculator {\n  background-color: #f4f4f4;\n  color: #020100;\n  min-height: 50vh;\n  background-image: url(/assets/screen_backgrounds/ScreenCalculator.png);\n  background-repeat: no-repeat;\n  background-position: 10vw 10vh;\n  background-attachment: fixed;\n}\n#ScreenCalculator .container {\n  max-width: 1200px;\n}\n#ScreenCalculator .float-right {\n  margin-left: 46%;\n  margin-bottom: -8vh;\n  text-align: left;\n}\n#ScreenCalculator .box-inline {\n  display: inline-block;\n  padding: 2vw 3vw;\n  box-shadow: 0 0 8px 6px rgba(252, 190, 2, 0.5), inset 0 0 8px 6px rgba(252, 190, 2, 0.5);\n}\n#ScreenCalculator .box-inline > * {\n  margin: 0;\n}\n#ScreenCalculator .box-inline h3 {\n  margin-bottom: 10px;\n}\n#ScreenCalculator .controllers {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: end;\n      -ms-flex-align: end;\n          align-items: flex-end;\n}\n#ScreenCalculator .controllers.row {\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n}\n#ScreenCalculator .controller {\n  margin: 0 0 40px;\n  padding: 0 20px;\n  width: 18rem;\n}\n#ScreenCalculator .controller_group {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n#ScreenCalculator .controller_name {\n  width: 90%;\n  margin: 0 auto 4px;\n}\n#ScreenCalculator .controller_pic {\n  width: 7rem;\n  height: 7rem;\n  margin: 4px auto;\n  overflow: hidden;\n  background-position: center;\n  background-size: cover;\n  border-radius: 100%;\n}\n#ScreenCalculator .controller_input input {\n  border: none;\n  background-color: #fff;\n  text-align: inherit;\n  height: 2rem;\n  width: 6rem;\n}\n#ScreenCalculator .controller_input input.sm {\n  font-size: 76%;\n}\n#ScreenCalculator .controller_btn {\n  height: 2rem;\n  width: 2.2rem;\n  line-height: 2.2rem;\n  background-color: #fcbe02;\n  cursor: pointer;\n}\n#ScreenCalculator .controller_btn:active i {\n  -webkit-transform: scale(1.3);\n          transform: scale(1.3);\n}\n#ScreenCalculator .controller_btn.left {\n  border-radius: 100% 0 0 100%;\n  padding-left: .2rem;\n}\n#ScreenCalculator .controller_btn.right {\n  border-radius: 0 100% 100% 0;\n  padding-right: .2rem;\n}\n#ScreenCalculator .separator {\n  max-width: 800px;\n  height: 2px;\n  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(2, 1, 0, 0.65) 50%, rgba(2, 1, 0, 0.64) 51%, rgba(0, 0, 0, 0) 100%);\n}\n@media (max-width: 600px) {\n  #ScreenCalculator .info-block {\n    display: none;\n  }\n  #ScreenCalculator .controllers {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n  }\n}\n", ""]);
+
+	// exports
+
+
+/***/ }),
+/* 212 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(213);
+
+	var BeforeBuildSauna = (function (_React$Component) {
+	    _inherits(BeforeBuildSauna, _React$Component);
+
+	    function BeforeBuildSauna(props) {
+	        _classCallCheck(this, BeforeBuildSauna);
+
+	        _get(Object.getPrototypeOf(BeforeBuildSauna.prototype), 'constructor', this).call(this, props);
+
+	        this.state = this.initialState = {
+	            actionsList: [{ id: 1, isActive: true, name: 'Смета', intro: null, detail: '<h4>1 Руководитель компании IdealSauna Протасов Александр</h4><p>«Главный принцип работы нашей компании – построение доверительных отношений с клиентом.</p><p>Что мы для этого делаем? Конечно, даем гарантии.</p><p>Я лично предоставляю финансовое поручительство как физическое лицо. Такая ответственность владельца бизнеса гораздо серьезнее, чем формальная ответственность юридического лица. Кроме того, я лично контролирую все стадии каждого проекта.»</p>' }, { id: 2, isActive: false, name: 'Замер', intro: '(выезд специалиста на объект,для создания проекта и уточнения сметы)', detail: '<img src="/assets/BeforeBuildSauna/photo.jpg" style="float: left; margin: 0px 15px 15px 0px;" /> <h4>Руководитель компании IdealSauna Протасов Александр</h4><p>«Главный принцип работы нашей компании – построение доверительных отношений с клиентом.</p><p>Что мы для этого делаем? Конечно, даем гарантии.</p><p>Я лично предоставляю финансовое поручительство как физическое лицо. Такая ответственность владельца бизнеса гораздо серьезнее, чем формальная ответственность юридического лица. Кроме того, я лично контролирую все стадии каждого проекта.»</p>' }, { id: 3, isActive: false, name: 'Проект', intro: '(чертеж выполненный тушью)', detail: '<img src="/assets/BeforeBuildSauna/photo.jpg" style="float: left; margin: 0px 15px 15px 0px;" /> <h4>3 Руководитель компании IdealSauna Протасов Александр</h4><p>«Главный принцип работы нашей компании – построение доверительных отношений с клиентом.</p><p>Что мы для этого делаем? Конечно, даем гарантии.</p><p>Я лично предоставляю финансовое поручительство как физическое лицо. Такая ответственность владельца бизнеса гораздо серьезнее, чем формальная ответственность юридического лица. Кроме того, я лично контролирую все стадии каждого проекта.»</p>' }, { id: 4, isActive: false, name: 'Договор', intro: '(проверенный юристами и заверенный натариусом)', detail: '<h4>4 Руководитель компании IdealSauna Протасов Александр</h4><p>«Главный принцип работы нашей компании – построение доверительных отношений с клиентом.</p><p>Что мы для этого делаем? Конечно, даем гарантии.</p><p>Я лично предоставляю финансовое поручительство как физическое лицо. Такая ответственность владельца бизнеса гораздо серьезнее, чем формальная ответственность юридического лица. Кроме того, я лично контролирую все стадии каждого проекта.»</p>' }, { id: 5, isActive: false, name: 'Строительство', intro: '(вся спец техника и квалифицированные рабочие)', detail: '<img src="/assets/BeforeBuildSauna/photo.jpg" style="float: left; margin: 0px 15px 15px 0px;" /> <h4>5 Руководитель компании IdealSauna Протасов Александр</h4><p>«Главный принцип работы нашей компании – построение доверительных отношений с клиентом.</p><p>Что мы для этого делаем? Конечно, даем гарантии.</p><p>Я лично предоставляю финансовое поручительство как физическое лицо. Такая ответственность владельца бизнеса гораздо серьезнее, чем формальная ответственность юридического лица. Кроме того, я лично контролирую все стадии каждого проекта.»</p>' }]
+	        };
+	    }
+
+	    _createClass(BeforeBuildSauna, [{
+	        key: 'handleClickItem',
+	        value: function handleClickItem(item) {
+	            var list = this.state.actionsList.map(function (m) {
+	                if (m.id === item.id) {
+	                    return _extends({}, m, { isActive: true });
+	                } else {
+	                    return _extends({}, m, { isActive: false });
+	                }
+	            });
+	            this.setState({
+	                actionsList: list
+	            });
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            var _this = this;
+
+	            return _react2['default'].createElement(
+	                'div',
+	                { className: 'screen', id: 'BeforeBuildSauna' },
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'container' },
+	                    _react2['default'].createElement(
+	                        'h2',
+	                        { className: 'title-screen' },
+	                        '5 действий',
+	                        _react2['default'].createElement('br', null),
+	                        'до строительства',
+	                        _react2['default'].createElement('br', null),
+	                        'вашей сауны'
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'container' },
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'build-sauna' },
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'build-sauna_list' },
+	                            this.state.actionsList.map(function (m, i) {
+	                                return _react2['default'].createElement(
+	                                    'div',
+	                                    {
+	                                        key: i,
+	                                        className: m.isActive ? 'build-sauna_item active' : 'build-sauna_item',
+	                                        onClick: function () {
+	                                            return _this.handleClickItem(m);
+	                                        } },
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'build-sauna_item_bulit' },
+	                                        _react2['default'].createElement(
+	                                            'span',
+	                                            null,
+	                                            m.id
+	                                        )
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'div',
+	                                        { className: 'build-sauna_item_name' },
+	                                        _react2['default'].createElement(
+	                                            'h3',
+	                                            null,
+	                                            m.name
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            'p',
+	                                            null,
+	                                            m.intro || null
+	                                        )
+	                                    )
+	                                );
+	                            })
+	                        ),
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'build-sauna_detail-view' },
+	                            _react2['default'].createElement('div', { dangerouslySetInnerHTML: { __html: this.state.actionsList.filter(function (f) {
+	                                        return f.isActive;
+	                                    })[0].detail } })
+	                        )
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'container' },
+	                    _react2['default'].createElement('img', { src: '/libs/img/icon-mouse.png', className: 'mouse' })
+	                )
+	            );
+	        }
+	    }]);
+
+	    return BeforeBuildSauna;
+	})(_react2['default'].Component);
+
+	exports['default'] = BeforeBuildSauna;
+	module.exports = exports['default'];
+
+/***/ }),
+/* 213 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(214);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(199)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/autoprefixer-loader/index.js!../../../node_modules/less-loader/index.js!./BeforeBuildSauna.less", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/autoprefixer-loader/index.js!../../../node_modules/less-loader/index.js!./BeforeBuildSauna.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ }),
+/* 214 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(198)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "#BeforeBuildSauna {\n  background-image: url('/assets/screen_backgrounds/BeforeBuildSauna.jpg');\n  background-size: cover;\n  background-position: center;\n  color: #fff;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -ms-flex-line-pack: center;\n      align-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  min-height: 70vh;\n}\n#BeforeBuildSauna .container {\n  max-width: 1200px;\n}\n#BeforeBuildSauna .build-sauna {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n  margin-top: 7vh;\n}\n#BeforeBuildSauna .build-sauna_detail-view {\n  background-color: rgba(0, 0, 0, 0.36);\n  padding: 5vh 5vw;\n}\n#BeforeBuildSauna .build-sauna_detail-view img {\n  max-width: 100%;\n}\n#BeforeBuildSauna .build-sauna_list {\n  padding-right: 20px;\n}\n#BeforeBuildSauna .build-sauna_item {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n  margin-bottom: 20px;\n  -webkit-user-select: none;\n  cursor: pointer;\n}\n#BeforeBuildSauna .build-sauna_item.active {\n  background-color: rgba(0, 0, 0, 0.36);\n}\n#BeforeBuildSauna .build-sauna_item_bulit {\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  width: 4rem;\n  height: 4rem;\n  font-size: 3rem;\n  line-height: 2.8rem;\n  font-weight: 900;\n  text-align: center;\n  border: 10px solid #fcbe02;\n}\n#BeforeBuildSauna .build-sauna_item_bulit span {\n  display: block;\n}\n#BeforeBuildSauna .build-sauna_item.active .build-sauna_item_bulit {\n  -webkit-transform: rotate(17deg);\n          transform: rotate(17deg);\n  border-color: #fff;\n}\n#BeforeBuildSauna .build-sauna_item.active .build-sauna_item_bulit span {\n  -webkit-transform: rotate(-17deg);\n          transform: rotate(-17deg);\n  color: #fcbe02;\n}\n#BeforeBuildSauna .build-sauna_item_name {\n  padding-left: 10px;\n}\n#BeforeBuildSauna .build-sauna_item_name h3 {\n  margin: 0;\n  font-size: 150%;\n}\n#BeforeBuildSauna .build-sauna_item.active .build-sauna_item_name h3 {\n  color: #fcbe02;\n}\n#BeforeBuildSauna .build-sauna_item_name p {\n  margin: 0;\n  font-size: 76%;\n}\n@media (max-width: 600px) {\n  #BeforeBuildSauna .build-sauna {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n  }\n  #BeforeBuildSauna .build-sauna_list {\n    padding-right: 0;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    width: 100%;\n  }\n  #BeforeBuildSauna .build-sauna_item_bulit {\n    width: 3rem;\n    height: 3rem;\n    font-size: 2rem;\n    line-height: 2rem;\n    border-width: 8px;\n  }\n  #BeforeBuildSauna .build-sauna_item_name {\n    display: none;\n  }\n  #BeforeBuildSauna .build-sauna_detail-view img {\n    margin-right: 0 !important;\n    width: 100%;\n  }\n}\n", ""]);
 
 	// exports
 
