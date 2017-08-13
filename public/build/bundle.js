@@ -24107,7 +24107,7 @@
 	                        'span',
 	                        { className: 'controller_input' },
 	                        _react2['default'].createElement('input', {
-	                            name: 'long',
+	                            name: item,
 	                            maxLength: '4',
 	                            value: value,
 	                            onChange: this.handleChangeInput.bind(this) })
