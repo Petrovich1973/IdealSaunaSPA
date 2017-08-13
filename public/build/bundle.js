@@ -23997,11 +23997,15 @@
 	    value: true
 	});
 
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
 	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
@@ -24022,11 +24026,179 @@
 	        _get(Object.getPrototypeOf(ScreenCalculator.prototype), 'constructor', this).call(this, props);
 
 	        this.state = this.initialState = {
-	            background: true
+	            calculationConfig: 3000,
+	            calculationParameters: {
+	                long: 200,
+	                width: 200,
+	                height: 200
+	            },
+	            setMaterials: {
+	                walls: [{ id: 1, selected: true, name: 'Канадский кедр', image: '/assets/controllerPics/01.jpg', price: 2300 }, { id: 2, selected: false, name: 'Сибирский дуб', image: '/assets/controllerPics/02.jpg', price: 700 }, { id: 3, selected: false, name: 'Сосна', image: '/assets/controllerPics/03.jpg', price: 900 }],
+	                rack: [{ id: 1, selected: true, name: 'Прямые', image: '/assets/controllerPics/02.jpg', price: 300 }, { id: 2, selected: false, name: 'Каскадные', image: '/assets/controllerPics/03.jpg', price: 500 }, { id: 3, selected: false, name: 'Вертикальные', image: '/assets/controllerPics/04.jpg', price: 800 }],
+	                furnace: [{ id: 1, selected: true, name: 'Деревяные', image: '/assets/controllerPics/03.jpg', price: 30000 }, { id: 2, selected: false, name: 'Электрические', image: '/assets/controllerPics/04.jpg', price: 50000 }],
+	                stones: [{ id: 1, selected: true, name: 'Подарок', image: '/assets/controllerPics/04.jpg', price: 0 }, { id: 2, selected: false, name: 'Эльфийские', image: '/assets/controllerPics/05.jpg', price: 5000 }, { id: 3, selected: false, name: 'Астеройдные', image: '/assets/controllerPics/06.jpg', price: 10000 }],
+	                lighting: [{ id: 1, selected: true, name: 'Светильник', image: '/assets/controllerPics/05.jpg', price: 4000 }, { id: 2, selected: false, name: 'Бра', image: '/assets/controllerPics/03.jpg', price: 5000 }, { id: 3, selected: false, name: 'Торшер', image: '/assets/controllerPics/06.jpg', price: 6000 }],
+	                furnishBehind: [{ id: 1, selected: true, name: 'Талькомагнезит', image: '/assets/controllerPics/06.jpg', price: 4000 }, { id: 2, selected: false, name: 'Талькохлорит', image: '/assets/controllerPics/02.jpg', price: 5000 }]
+	            }
 	        };
 	    }
 
 	    _createClass(ScreenCalculator, [{
+	        key: 'calculationTotal',
+	        value: function calculationTotal() {
+	            var list = this.state.calculationParameters;
+	            var total = Object.keys(list).map(function (m) {
+	                return list[m];
+	            }).reduce(function (a, b) {
+	                return +a * +b;
+	            });
+	            return (total / 1000 / 1000 * this.state.calculationConfig).toFixed().replace(/(\d{1,3})(?=((\d{3})*([^\d]|$)))/g, " $1 ");
+	        }
+	    }, {
+	        key: 'handleChangeInput',
+	        value: function handleChangeInput(event) {
+	            var name = event.target.name,
+	                value = event.target.value;
+	            var reg = new RegExp('^[0-9]+$');
+	            if (reg.test(value)) {
+	                this.setState({
+	                    calculationParameters: _extends({}, this.state.calculationParameters, _defineProperty({}, name, value))
+	                });
+	            }
+	        }
+	    }, {
+	        key: 'handleChangeInputBtn',
+	        value: function handleChangeInputBtn(key, action) {
+	            var act = action === 'increment' ? 1 : -1,
+	                value = +this.state.calculationParameters[key] + act;
+	            if (value > 0 && value < 10000) {
+	                this.setState({
+	                    calculationParameters: _extends({}, this.state.calculationParameters, _defineProperty({}, key, value))
+	                });
+	            }
+	        }
+	    }, {
+	        key: 'sizingItem',
+	        value: function sizingItem(item, name) {
+	            var _this = this;
+
+	            var value = this.state.calculationParameters[item];
+	            return _react2['default'].createElement(
+	                'div',
+	                { className: 'controller' },
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'controller_name' },
+	                    name
+	                ),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'controller_group' },
+	                    _react2['default'].createElement(
+	                        'span',
+	                        {
+	                            className: 'controller_btn left',
+	                            onClick: function () {
+	                                return _this.handleChangeInputBtn(item, 'decrement');
+	                            } },
+	                        _react2['default'].createElement('i', { className: 'fa fa-minus' })
+	                    ),
+	                    _react2['default'].createElement(
+	                        'span',
+	                        { className: 'controller_input' },
+	                        _react2['default'].createElement('input', {
+	                            name: 'long',
+	                            maxLength: '4',
+	                            value: value,
+	                            onChange: this.handleChangeInput.bind(this) })
+	                    ),
+	                    _react2['default'].createElement(
+	                        'span',
+	                        {
+	                            className: 'controller_btn right',
+	                            onClick: function () {
+	                                return _this.handleChangeInputBtn(item, 'increment');
+	                            } },
+	                        _react2['default'].createElement('i', { className: 'fa fa-plus' })
+	                    )
+	                )
+	            );
+	        }
+	    }, {
+	        key: 'materialItem',
+	        value: function materialItem(item, name) {
+	            var _this2 = this;
+
+	            var list = this.state.setMaterials[item];
+	            var currentElement = list.filter(function (f) {
+	                return f.selected;
+	            })[0];
+	            return _react2['default'].createElement(
+	                'div',
+	                { className: 'controller' },
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'controller_name' },
+	                    name
+	                ),
+	                _react2['default'].createElement('div', { className: 'controller_pic', style: { backgroundImage: 'url(' + currentElement.image + ')' } }),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'controller_group' },
+	                    _react2['default'].createElement(
+	                        'span',
+	                        {
+	                            className: 'controller_btn left',
+	                            onClick: function () {
+	                                return _this2.handleChangeWalls(item, currentElement, 'decrement');
+	                            } },
+	                        _react2['default'].createElement('i', { className: 'fa fa-chevron-left' })
+	                    ),
+	                    _react2['default'].createElement(
+	                        'span',
+	                        { className: 'controller_input' },
+	                        _react2['default'].createElement('input', { className: 'sm', value: currentElement.name, readOnly: true })
+	                    ),
+	                    _react2['default'].createElement(
+	                        'span',
+	                        {
+	                            className: 'controller_btn right',
+	                            onClick: function () {
+	                                return _this2.handleChangeWalls(item, currentElement, 'increment');
+	                            } },
+	                        _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
+	                    )
+	                )
+	            );
+	        }
+	    }, {
+	        key: 'handleChangeWalls',
+	        value: function handleChangeWalls(parent, element, action) {
+	            var list = this.state.setMaterials[parent];
+	            var act = action === 'increment' ? 1 : -1,
+	                currentIndex = list.map(function (m) {
+	                return m.selected;
+	            }).indexOf(element.selected) + act,
+	                nextElementIndex = function nextElementIndex() {
+	                if (currentIndex > list.length - 1) {
+	                    return 0;
+	                } else if (currentIndex < 0) {
+	                    return list.length - 1;
+	                }
+	                return currentIndex;
+	            },
+	                setUpdate = list.map(function (m, i) {
+	                if (i === nextElementIndex()) {
+	                    return _extends({}, m, { selected: true });
+	                } else {
+	                    return _extends({}, m, { selected: false });
+	                }
+	            });
+	            this.setState({
+	                setMaterials: _extends({}, this.state.setMaterials, _defineProperty({}, parent, setUpdate))
+	            });
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            return _react2['default'].createElement(
@@ -24080,95 +24252,15 @@
 	                    _react2['default'].createElement(
 	                        'h3',
 	                        null,
-	                        'Укажите размер помещения:'
+	                        'Укажите размер помещения: ',
+	                        this.state.setMaterials.sss
 	                    ),
 	                    _react2['default'].createElement(
 	                        'div',
 	                        { className: 'controllers' },
-	                        _react2['default'].createElement(
-	                            'div',
-	                            { className: 'controller' },
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'controller_name' },
-	                                'Длина, см'
-	                            ),
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'controller_group' },
-	                                _react2['default'].createElement(
-	                                    'span',
-	                                    { className: 'controller_btn left' },
-	                                    _react2['default'].createElement('i', { className: 'fa fa-minus' })
-	                                ),
-	                                _react2['default'].createElement(
-	                                    'span',
-	                                    { className: 'controller_input' },
-	                                    _react2['default'].createElement('input', { defaultValue: '200' })
-	                                ),
-	                                _react2['default'].createElement(
-	                                    'span',
-	                                    { className: 'controller_btn right' },
-	                                    _react2['default'].createElement('i', { className: 'fa fa-plus' })
-	                                )
-	                            )
-	                        ),
-	                        _react2['default'].createElement(
-	                            'div',
-	                            { className: 'controller' },
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'controller_name' },
-	                                'Ширина, см'
-	                            ),
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'controller_group' },
-	                                _react2['default'].createElement(
-	                                    'span',
-	                                    { className: 'controller_btn left' },
-	                                    _react2['default'].createElement('i', { className: 'fa fa-minus' })
-	                                ),
-	                                _react2['default'].createElement(
-	                                    'span',
-	                                    { className: 'controller_input' },
-	                                    _react2['default'].createElement('input', { defaultValue: '200' })
-	                                ),
-	                                _react2['default'].createElement(
-	                                    'span',
-	                                    { className: 'controller_btn right' },
-	                                    _react2['default'].createElement('i', { className: 'fa fa-plus' })
-	                                )
-	                            )
-	                        ),
-	                        _react2['default'].createElement(
-	                            'div',
-	                            { className: 'controller' },
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'controller_name' },
-	                                'Высота, см'
-	                            ),
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'controller_group' },
-	                                _react2['default'].createElement(
-	                                    'span',
-	                                    { className: 'controller_btn left' },
-	                                    _react2['default'].createElement('i', { className: 'fa fa-minus' })
-	                                ),
-	                                _react2['default'].createElement(
-	                                    'span',
-	                                    { className: 'controller_input' },
-	                                    _react2['default'].createElement('input', { defaultValue: '200' })
-	                                ),
-	                                _react2['default'].createElement(
-	                                    'span',
-	                                    { className: 'controller_btn right' },
-	                                    _react2['default'].createElement('i', { className: 'fa fa-plus' })
-	                                )
-	                            )
-	                        )
+	                        this.sizingItem('long', 'Длина, см'),
+	                        this.sizingItem('width', 'Ширина, см'),
+	                        this.sizingItem('height', 'Высота, см')
 	                    )
 	                ),
 	                _react2['default'].createElement('div', { className: 'container separator' }),
@@ -24183,180 +24275,12 @@
 	                    _react2['default'].createElement(
 	                        'div',
 	                        { className: 'controllers row' },
-	                        _react2['default'].createElement(
-	                            'div',
-	                            { className: 'controller' },
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'controller_name' },
-	                                'Отделка стен и потолка'
-	                            ),
-	                            _react2['default'].createElement('div', { className: 'controller_pic', style: { backgroundImage: 'url(/assets/controllerPics/01.jpg)' } }),
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'controller_group' },
-	                                _react2['default'].createElement(
-	                                    'span',
-	                                    { className: 'controller_btn left' },
-	                                    _react2['default'].createElement('i', { className: 'fa fa-chevron-left' })
-	                                ),
-	                                _react2['default'].createElement(
-	                                    'span',
-	                                    { className: 'controller_input' },
-	                                    _react2['default'].createElement('input', { className: 'sm', defaultValue: 'Канадский кедр', readOnly: true })
-	                                ),
-	                                _react2['default'].createElement(
-	                                    'span',
-	                                    { className: 'controller_btn right' },
-	                                    _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
-	                                )
-	                            )
-	                        ),
-	                        _react2['default'].createElement(
-	                            'div',
-	                            { className: 'controller' },
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'controller_name' },
-	                                'Расположение полок'
-	                            ),
-	                            _react2['default'].createElement('div', { className: 'controller_pic', style: { backgroundImage: 'url(/assets/controllerPics/02.jpg)' } }),
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'controller_group' },
-	                                _react2['default'].createElement(
-	                                    'span',
-	                                    { className: 'controller_btn left' },
-	                                    _react2['default'].createElement('i', { className: 'fa fa-chevron-left' })
-	                                ),
-	                                _react2['default'].createElement(
-	                                    'span',
-	                                    { className: 'controller_input' },
-	                                    _react2['default'].createElement('input', { className: 'sm', defaultValue: 'Прямые', readOnly: true })
-	                                ),
-	                                _react2['default'].createElement(
-	                                    'span',
-	                                    { className: 'controller_btn right' },
-	                                    _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
-	                                )
-	                            )
-	                        ),
-	                        _react2['default'].createElement(
-	                            'div',
-	                            { className: 'controller' },
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'controller_name' },
-	                                'Печь'
-	                            ),
-	                            _react2['default'].createElement('div', { className: 'controller_pic', style: { backgroundImage: 'url(/assets/controllerPics/03.jpg)' } }),
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'controller_group' },
-	                                _react2['default'].createElement(
-	                                    'span',
-	                                    { className: 'controller_btn left' },
-	                                    _react2['default'].createElement('i', { className: 'fa fa-chevron-left' })
-	                                ),
-	                                _react2['default'].createElement(
-	                                    'span',
-	                                    { className: 'controller_input' },
-	                                    _react2['default'].createElement('input', { className: 'sm', defaultValue: 'Дровяная', readOnly: true })
-	                                ),
-	                                _react2['default'].createElement(
-	                                    'span',
-	                                    { className: 'controller_btn right' },
-	                                    _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
-	                                )
-	                            )
-	                        ),
-	                        _react2['default'].createElement(
-	                            'div',
-	                            { className: 'controller' },
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'controller_name' },
-	                                'Камни'
-	                            ),
-	                            _react2['default'].createElement('div', { className: 'controller_pic', style: { backgroundImage: 'url(/assets/controllerPics/04.jpg)' } }),
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'controller_group' },
-	                                _react2['default'].createElement(
-	                                    'span',
-	                                    { className: 'controller_btn left' },
-	                                    _react2['default'].createElement('i', { className: 'fa fa-chevron-left' })
-	                                ),
-	                                _react2['default'].createElement(
-	                                    'span',
-	                                    { className: 'controller_input' },
-	                                    _react2['default'].createElement('input', { className: 'sm', defaultValue: 'Подарок', readOnly: true })
-	                                ),
-	                                _react2['default'].createElement(
-	                                    'span',
-	                                    { className: 'controller_btn right' },
-	                                    _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
-	                                )
-	                            )
-	                        ),
-	                        _react2['default'].createElement(
-	                            'div',
-	                            { className: 'controller' },
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'controller_name' },
-	                                'Освещение'
-	                            ),
-	                            _react2['default'].createElement('div', { className: 'controller_pic', style: { backgroundImage: 'url(/assets/controllerPics/05.jpg)' } }),
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'controller_group' },
-	                                _react2['default'].createElement(
-	                                    'span',
-	                                    { className: 'controller_btn left' },
-	                                    _react2['default'].createElement('i', { className: 'fa fa-chevron-left' })
-	                                ),
-	                                _react2['default'].createElement(
-	                                    'span',
-	                                    { className: 'controller_input' },
-	                                    _react2['default'].createElement('input', { className: 'sm', defaultValue: 'Светильник', readOnly: true })
-	                                ),
-	                                _react2['default'].createElement(
-	                                    'span',
-	                                    { className: 'controller_btn right' },
-	                                    _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
-	                                )
-	                            )
-	                        ),
-	                        _react2['default'].createElement(
-	                            'div',
-	                            { className: 'controller' },
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'controller_name' },
-	                                'Отделка за печью'
-	                            ),
-	                            _react2['default'].createElement('div', { className: 'controller_pic', style: { backgroundImage: 'url(/assets/controllerPics/06.jpg)' } }),
-	                            _react2['default'].createElement(
-	                                'div',
-	                                { className: 'controller_group' },
-	                                _react2['default'].createElement(
-	                                    'span',
-	                                    { className: 'controller_btn left' },
-	                                    _react2['default'].createElement('i', { className: 'fa fa-chevron-left' })
-	                                ),
-	                                _react2['default'].createElement(
-	                                    'span',
-	                                    { className: 'controller_input' },
-	                                    _react2['default'].createElement('input', { className: 'sm', defaultValue: 'Талькомагнезит', readOnly: true })
-	                                ),
-	                                _react2['default'].createElement(
-	                                    'span',
-	                                    { className: 'controller_btn right' },
-	                                    _react2['default'].createElement('i', { className: 'fa fa-chevron-right' })
-	                                )
-	                            )
-	                        )
+	                        this.materialItem('walls', 'Отделка стен и потолка'),
+	                        this.materialItem('rack', 'Расположение полок'),
+	                        this.materialItem('furnace', 'Печь'),
+	                        this.materialItem('stones', 'Камни'),
+	                        this.materialItem('lighting', 'Освещение'),
+	                        this.materialItem('furnishBehind', 'Отделка за печью')
 	                    )
 	                ),
 	                _react2['default'].createElement(
@@ -24365,7 +24289,9 @@
 	                    _react2['default'].createElement(
 	                        'h3',
 	                        null,
-	                        'Итого: 237 000 руб.'
+	                        'Итого: ',
+	                        this.calculationTotal(),
+	                        ' руб.'
 	                    )
 	                )
 	            );
@@ -24657,6 +24583,13 @@
 	            this.setState({
 	                reviewsList: list
 	            });
+	            this.scrollStartScreen();
+	        }
+	    }, {
+	        key: 'scrollStartScreen',
+	        value: function scrollStartScreen() {
+	            var elmnt = document.getElementById("ScreenReviews");
+	            scrollTo(document.body, elmnt.offsetTop, 100);
 	        }
 	    }, {
 	        key: 'handleClickNavigationItem',
@@ -24671,6 +24604,7 @@
 	            this.setState({
 	                reviewsList: list
 	            });
+	            this.scrollStartScreen();
 	        }
 	    }, {
 	        key: 'reviewsNavigation',
@@ -24900,13 +24834,7 @@
 	                    balloonContentFooter: "Москва, Варшавское шоссе, д.152к1"
 	                });
 
-	                myMap.controls
-	                // Кнопка изменения масштаба.
-	                .add('zoomControl', { left: 5, top: 5 })
-	                // Список типов карты
-	                .add('typeSelector')
-	                // Стандартный набор кнопок
-	                .add('mapTools', { left: 35, top: 5 });
+	                myMap.controls.add('zoomControl', { left: 5, top: 5 }).add('typeSelector').add('mapTools', { left: 35, top: 5 });
 
 	                myMap.geoObjects.add(myPlacemark);
 	            }
@@ -25174,7 +25102,7 @@
 
 
 	// module
-	exports.push([module.id, "#ScreenMap {\n  min-height: 60vh;\n  position: relative;\n  display: block;\n}\n#ScreenMap .container {\n  max-width: 1200px;\n}\n#ScreenMap .contacts-box {\n  position: absolute;\n  top: 40px;\n  right: 0;\n  width: 340px;\n  max-width: 100%;\n  overflow-y: auto;\n  background-color: rgba(255, 255, 255, 0.8);\n  padding: 10px 20px 20px 40px;\n  z-index: 1;\n  -webkit-transform-origin: right;\n          transform-origin: right;\n  transition: all 400ms;\n}\n#ScreenMap .contacts-items {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n#ScreenMap .contacts-items li {\n  position: relative;\n  font-size: 76%;\n  margin-bottom: 20px;\n}\n#ScreenMap .contacts-items li p {\n  margin: 0 0 3px;\n}\n#ScreenMap .contacts-icon {\n  position: absolute;\n  right: 100%;\n  margin-right: 8px;\n}\n#ScreenMap .contacts-box_close {\n  position: absolute;\n  right: 10px;\n  top: 46px;\n  width: auto;\n  padding: 5px;\n  cursor: pointer;\n  z-index: 2;\n}\n#ScreenMap .hide {\n  -webkit-transform: scaleX(0);\n          transform: scaleX(0);\n}\n@media (max-width: 700px) {\n  #ScreenMap {\n    height: 100vh;\n  }\n  #ScreenMap .contacts-box {\n    max-height: 80%;\n  }\n}\n", ""]);
+	exports.push([module.id, "#ScreenMap {\n  min-height: 60vh;\n  position: relative;\n  display: block;\n}\n#ScreenMap .container {\n  max-width: 1200px;\n}\n#ScreenMap .contacts-box {\n  position: absolute;\n  top: 40px;\n  right: 0;\n  width: 340px;\n  max-width: 100%;\n  overflow-y: auto;\n  background-color: rgba(255, 255, 255, 0.8);\n  padding: 10px 20px 20px 40px;\n  z-index: 1;\n  -webkit-transform-origin: right;\n          transform-origin: right;\n  transition: all 400ms;\n}\n#ScreenMap .contacts-items {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n#ScreenMap .contacts-items li {\n  position: relative;\n  font-size: 76%;\n  margin-bottom: 20px;\n}\n#ScreenMap .contacts-items li p {\n  margin: 0 0 3px;\n}\n#ScreenMap .contacts-icon {\n  position: absolute;\n  right: 100%;\n  margin-right: 8px;\n}\n#ScreenMap .contacts-box_close {\n  position: absolute;\n  right: 10px;\n  top: 46px;\n  width: auto;\n  padding: 5px;\n  cursor: pointer;\n  z-index: 2;\n}\n#ScreenMap .hide {\n  -webkit-transform: scaleX(0);\n          transform: scaleX(0);\n}\n@media (max-width: 700px) {\n  #ScreenMap {\n    height: 100vh;\n  }\n  #ScreenMap .contacts-box {\n    max-height: 80%;\n  }\n}\n@media (orientation: landscape) and (max-width: 700px) {\n  #ScreenMap {\n    padding: 0 40px;\n  }\n}\n", ""]);
 
 	// exports
 

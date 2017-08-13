@@ -25,10 +25,16 @@ class ScreenReviews extends React.Component {
             } else {
                 return {...m, isActive: false}
             }
-        })        
+        }) ;       
         this.setState({
             reviewsList: list
-        })
+        });
+        this.scrollStartScreen();
+    }
+
+    scrollStartScreen() {
+        let elmnt = document.getElementById("ScreenReviews");
+        scrollTo(document.body, elmnt.offsetTop, 100);
     }
 
     handleClickNavigationItem(item) {
@@ -38,10 +44,11 @@ class ScreenReviews extends React.Component {
             } else {
                 return {...m, isActive: false}
             }
-        })        
+        })    ;    
         this.setState({
             reviewsList: list
-        })
+        });
+        this.scrollStartScreen();
     }
 
     reviewsNavigation() {

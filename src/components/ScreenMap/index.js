@@ -28,11 +28,8 @@ class ScreenMap extends React.Component {
             });
 
             myMap.controls
-                // Кнопка изменения масштаба.
                 .add('zoomControl', { left: 5, top: 5 })
-                // Список типов карты
                 .add('typeSelector')
-                // Стандартный набор кнопок
                 .add('mapTools', { left: 35, top: 5 });
 
             myMap.geoObjects.add(myPlacemark);
