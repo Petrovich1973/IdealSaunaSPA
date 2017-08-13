@@ -27,7 +27,8 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-masonry-component": "^4.0.0",
-    "react-moment": "^0.2.4"
+    "react-moment": "^0.2.4",
+    "react-touch-events": "^2.1.0"
   },
   "devDependencies": {
     "autoprefixer-loader": "^3.2.0",

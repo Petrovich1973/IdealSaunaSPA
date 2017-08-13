@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ReactTouchEvents from "react-touch-events";
+
 import './ScreenCalculator.less';
 
 class ScreenCalculator extends React.Component {
@@ -113,7 +115,12 @@ class ScreenCalculator extends React.Component {
         let currentElement = list.filter(f => f.selected)[0];
         return <div className="controller">
                     <div className="controller_name">{ name }</div>
-                    <div className="controller_pic" style={{backgroundImage: `url(${currentElement.image})`}}></div>
+                    <ReactTouchEvents
+                    onTap={ this.handleTap.bind(this) }
+                    onSwipe={ this.handleSwipe.bind(this, item, currentElement) }
+                    >
+                        <div className="controller_pic" style={{backgroundImage: `url(${currentElement.image})`}}></div>
+                    </ReactTouchEvents>
                     <div className="controller_group">
                         <span 
                         className="controller_btn left" 
@@ -157,6 +164,25 @@ class ScreenCalculator extends React.Component {
                 [parent]: setUpdate
             }
         })
+    }
+
+    handleTap() {    
+        console.log("you have taped me");    
+    }
+    
+    handleSwipe(item, currentElement, direction) {    
+        switch (direction) {
+            case "top":
+                break;
+            case "bottom":
+                break;
+            case "left":
+                this.handleChangeWalls(item, currentElement, 'decrement');
+                break;
+            case "right":
+                this.handleChangeWalls(item, currentElement, 'increment');
+                break;
+        }
     }
 
     render() {
