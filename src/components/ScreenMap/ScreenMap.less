@@ -1,0 +1,71 @@
+#ScreenMap {
+	min-height: 60vh;
+	position: relative;
+	display: block;
+}
+
+#ScreenMap .container {
+	max-width: 1200px;
+}
+
+#ScreenMap .contacts-box {
+	position: absolute;
+	top: 40px;
+	right: 0;
+	width: 340px;
+	max-width: 100%;
+	overflow-y: auto;
+	background-color: rgba(255, 255, 255, .8);
+	padding: 10px 20px 20px 40px;
+	z-index: 1;
+    transform-origin: right;
+    transition: all 400ms;
+}
+#ScreenMap .contacts-items {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#ScreenMap .contacts-items li {
+	position: relative;
+	font-size: 76%;
+	margin-bottom: 20px;
+}
+#ScreenMap .contacts-items li p {
+	margin: 0 0 3px;
+}
+#ScreenMap .contacts-icon {
+	position: absolute;
+	right: 100%;
+	margin-right: 8px;
+}
+
+#ScreenMap .contacts-box_close {
+	position: absolute;
+	right: 10px;
+	top: 46px;
+	width: auto;
+	padding: 5px;
+	cursor: pointer;
+	z-index: 2;
+}
+
+#ScreenMap .hide {
+    transform: scaleX(0);
+}
+
+@media (max-width: 700px) {
+	#ScreenMap {
+		height: 100vh;
+	}
+	#ScreenMap .contacts-box {
+		max-height: 80%;
+	}
+}
+
+@media (max-width: 600px) {
+}
+
+@media (orientation: landscape) and (max-width: 700px) {
+}

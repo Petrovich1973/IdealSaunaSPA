@@ -7,6 +7,9 @@ import OurRealizedProjects from './OurRealizedProjects';
 import MainThingForUsInSaunas from './MainThingForUsInSaunas';
 import ScreenCalculator from './ScreenCalculator';
 import BeforeBuildSauna from './BeforeBuildSauna';
+import ScreenReviews from './ScreenReviews';
+import ScreenMap from './ScreenMap';
+import Footer from './Footer';
 
 class App extends React.Component {
     constructor(props) {
@@ -25,6 +28,9 @@ class App extends React.Component {
                 <MainThingForUsInSaunas />
                 <ScreenCalculator />
                 <BeforeBuildSauna />
+                <ScreenReviews />
+                <ScreenMap />
+                <Footer />
             </div>          
         )
     }
