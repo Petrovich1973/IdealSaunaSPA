@@ -24,10 +24,15 @@ class BeforeBuildSauna extends React.Component {
             } else {
                 return {...m, isActive: false}
             }
-        })        
-        this.setState({
-            actionsList: list
         })
+        document.querySelector('.build-sauna_detail-view').classList.add('transition');
+        setTimeout( transition.bind(this), 300 )
+        function transition() {
+            this.setState({
+                actionsList: list
+            });
+            document.querySelector('.build-sauna_detail-view').classList.remove('transition');
+        }
     }
 
     render() {
