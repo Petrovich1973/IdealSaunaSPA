@@ -71,7 +71,8 @@
 	width: 6rem;
 }
 #ScreenCalculator .controller_input input.sm {
-	font-size: 76%;
+	font-size: 71%;
+	font-family: Arial;
 }
 #ScreenCalculator .controller_btn {
 	height: 2rem;
@@ -105,13 +106,15 @@
 	}
 }
 
-
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 	#ScreenCalculator .info-block {
 		display: none;
 	}
 	#ScreenCalculator .controllers {
 		flex-direction: column;
 		align-items: center;
+	}
+	#ScreenCalculator .controller_input input {
+		width: 7rem;
 	}
 }
