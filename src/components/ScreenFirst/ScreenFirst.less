@@ -27,7 +27,9 @@
 	margin-right: 0;
 }
 #ScreenFirst .screen__header_phone {
+	padding: 0 10px;
 	text-align: right;
+	white-space: nowrap;
 }
 #ScreenFirst .screen__header_phone a {
 	display: inline-block;
@@ -42,6 +44,13 @@
 	cursor: pointer;
 }
 
+#ScreenFirst .screen__header_catalog-link {
+	padding: 0 10px;
+}
+#ScreenFirst .screen__header_catalog-link a {
+	color: #fff;
+	text-decoration: none;
+}
 
 #ScreenFirst .float-right {
 	margin-left: 36%;
@@ -95,8 +104,6 @@
 }
 
 
-
-
 @media (max-width: 1000px) {
 	#ScreenFirst .title-page {
 		font-size: 210%;
@@ -119,7 +126,8 @@
 		justify-content: center;
 	}
 	#ScreenFirst .screen__header_social-link,
-	#ScreenFirst .screen__header_phone {
+	#ScreenFirst .screen__header_phone,
+	#ScreenFirst .screen__header_catalog-link {
 		display: none;
 	}
 	#ScreenFirst .screen__header_phone a {

@@ -67,7 +67,7 @@ class OurRealizedProjects extends React.Component {
                                 <div className="gallery_info_item_icon"><img src="/assets/gallery_info_item_icons/02.png" /></div>
                                 <div>
                                     <span className="gallery_info_item_name">Площадь</span>
-                                    <span className="gallery_info_item_value">от 2 м2 - 16 м2</span>
+                                    <span className="gallery_info_item_value">от 2 м<sup><small>2</small></sup> - 16 м<sup><small>2</small></sup></span>
                                 </div>
                             </div>
                             <div className="gallery_info_item">
@@ -81,7 +81,7 @@ class OurRealizedProjects extends React.Component {
                                 <div className="gallery_info_item_icon"><img src="/assets/gallery_info_item_icons/04.png" /></div>
                                 <div>
                                     <span className="gallery_info_item_name">Стоимость</span>
-                                    <span className="gallery_info_item_value">от 50 т.руб/м2</span>
+                                    <span className="gallery_info_item_value">от 50 т.руб/м<sup><small>2</small></sup></span>
                                 </div>
                             </div>
                             <div className="gallery_info_link">

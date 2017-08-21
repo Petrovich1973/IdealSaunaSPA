@@ -22792,27 +22792,31 @@
 
 	var _OurRealizedProjects2 = _interopRequireDefault(_OurRealizedProjects);
 
-	var _MainThingForUsInSaunas = __webpack_require__(206);
+	var _FinishedProjects = __webpack_require__(206);
+
+	var _FinishedProjects2 = _interopRequireDefault(_FinishedProjects);
+
+	var _MainThingForUsInSaunas = __webpack_require__(209);
 
 	var _MainThingForUsInSaunas2 = _interopRequireDefault(_MainThingForUsInSaunas);
 
-	var _ScreenCalculator = __webpack_require__(209);
+	var _ScreenCalculator = __webpack_require__(212);
 
 	var _ScreenCalculator2 = _interopRequireDefault(_ScreenCalculator);
 
-	var _BeforeBuildSauna = __webpack_require__(213);
+	var _BeforeBuildSauna = __webpack_require__(216);
 
 	var _BeforeBuildSauna2 = _interopRequireDefault(_BeforeBuildSauna);
 
-	var _ScreenReviews = __webpack_require__(216);
+	var _ScreenReviews = __webpack_require__(219);
 
 	var _ScreenReviews2 = _interopRequireDefault(_ScreenReviews);
 
-	var _ScreenMap = __webpack_require__(219);
+	var _ScreenMap = __webpack_require__(222);
 
 	var _ScreenMap2 = _interopRequireDefault(_ScreenMap);
 
-	var _Footer = __webpack_require__(223);
+	var _Footer = __webpack_require__(226);
 
 	var _Footer2 = _interopRequireDefault(_Footer);
 
@@ -22836,7 +22840,7 @@
 	                'div',
 	                { id: 'App' },
 	                _react2['default'].createElement(_ScreenFirst2['default'], null),
-	                _react2['default'].createElement(_OurRealizedProjects2['default'], null),
+	                _react2['default'].createElement(_FinishedProjects2['default'], null),
 	                _react2['default'].createElement(_MainThingForUsInSaunas2['default'], null),
 	                _react2['default'].createElement(_ScreenCalculator2['default'], null),
 	                _react2['default'].createElement(_BeforeBuildSauna2['default'], null),
@@ -23278,6 +23282,15 @@
 	                        ),
 	                        _react2['default'].createElement(
 	                            'div',
+	                            { className: 'screen__header_catalog-link' },
+	                            _react2['default'].createElement(
+	                                'a',
+	                                { href: 'https://idealsauna.ru/catalogue/pechi-dlya-bani-i-sauny' },
+	                                'Печи для бани и сауны'
+	                            )
+	                        ),
+	                        _react2['default'].createElement(
+	                            'div',
 	                            { className: 'screen__header_social-link' },
 	                            _react2['default'].createElement('a', { href: '#', className: 'fa fa-vk', title: 'vk' }),
 	                            _react2['default'].createElement('a', { href: '#', className: 'fa fa-facebook-square', title: 'facebook' }),
@@ -23444,7 +23457,7 @@
 
 
 	// module
-	exports.push([module.id, "#ScreenFirst {\n  background-image: url('/assets/screen_backgrounds/screen_first.jpg');\n  background-size: cover;\n  background-position: center;\n  background-attachment: fixed;\n  color: #fff;\n}\n#ScreenFirst .screen__header {\n  background-color: rgba(0, 0, 0, 0.5);\n  padding: 5px 0;\n}\n#ScreenFirst .screen__header .container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n#ScreenFirst .screen__header_social-link a {\n  display: inline-block;\n  font-size: 130%;\n  color: #fff;\n  text-decoration: none;\n  margin: 0 4px;\n}\n#ScreenFirst .screen__header_social-link a:last-child {\n  margin-right: 0;\n}\n#ScreenFirst .screen__header_phone {\n  text-align: right;\n}\n#ScreenFirst .screen__header_phone a {\n  display: inline-block;\n  color: #fff;\n  text-decoration: none;\n  margin-left: 4px;\n}\n#ScreenFirst .screen__header_phone_back-call {\n  font-weight: bold;\n  color: #fcbe02;\n  border-bottom: 2px dashed #fff;\n  cursor: pointer;\n}\n#ScreenFirst .float-right {\n  margin-left: 36%;\n  background-color: rgba(0, 0, 0, 0.36);\n  padding: 1vw 3vw;\n}\n#ScreenFirst .title-page {\n  font-size: 350%;\n  line-height: 1;\n  text-transform: uppercase;\n  margin: 0;\n}\n#ScreenFirst .title-page small {\n  color: #fcbe02;\n}\n#ScreenFirst .float-right .description {\n  font-size: 150%;\n  line-height: 1;\n  text-transform: uppercase;\n}\n#ScreenFirst .screen__footer .container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n}\n#ScreenFirst .feature {\n  width: 17vw;\n  text-align: center;\n  padding: 0 3vw;\n}\n#ScreenFirst .feature img {\n  max-width: 100%;\n}\n#ScreenFirst .what-price {\n  display: block;\n  background-color: transparent;\n  padding: 5px 18px;\n  margin: 7vh 0;\n  border: 2px solid #fcbe02;\n  border-radius: 20px;\n  font-size: 150%;\n  font-family: inherit;\n  color: #fff;\n  cursor: pointer;\n}\n@media (max-width: 1000px) {\n  #ScreenFirst .title-page {\n    font-size: 210%;\n  }\n  #ScreenFirst .float-right {\n    margin-left: 0;\n    text-align: center;\n  }\n  #ScreenFirst .float-right .description {\n    font-size: 140%;\n  }\n}\n@media (max-width: 600px) {\n  #ScreenFirst .feature {\n    width: 33%;\n  }\n  #ScreenFirst .screen__header .container {\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n  }\n  #ScreenFirst .screen__header_social-link,\n  #ScreenFirst .screen__header_phone {\n    display: none;\n  }\n  #ScreenFirst .screen__header_phone a {\n    font-size: 86%;\n  }\n}\n", ""]);
+	exports.push([module.id, "#ScreenFirst {\n  background-image: url('/assets/screen_backgrounds/screen_first.jpg');\n  background-size: cover;\n  background-position: center;\n  background-attachment: fixed;\n  color: #fff;\n}\n#ScreenFirst .screen__header {\n  background-color: rgba(0, 0, 0, 0.5);\n  padding: 5px 0;\n}\n#ScreenFirst .screen__header .container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n#ScreenFirst .screen__header_social-link a {\n  display: inline-block;\n  font-size: 130%;\n  color: #fff;\n  text-decoration: none;\n  margin: 0 4px;\n}\n#ScreenFirst .screen__header_social-link a:last-child {\n  margin-right: 0;\n}\n#ScreenFirst .screen__header_phone {\n  padding: 0 10px;\n  text-align: right;\n  white-space: nowrap;\n}\n#ScreenFirst .screen__header_phone a {\n  display: inline-block;\n  color: #fff;\n  text-decoration: none;\n  margin-left: 4px;\n}\n#ScreenFirst .screen__header_phone_back-call {\n  font-weight: bold;\n  color: #fcbe02;\n  border-bottom: 2px dashed #fff;\n  cursor: pointer;\n}\n#ScreenFirst .screen__header_catalog-link {\n  padding: 0 10px;\n}\n#ScreenFirst .screen__header_catalog-link a {\n  color: #fff;\n  text-decoration: none;\n}\n#ScreenFirst .float-right {\n  margin-left: 36%;\n  background-color: rgba(0, 0, 0, 0.36);\n  padding: 1vw 3vw;\n}\n#ScreenFirst .title-page {\n  font-size: 350%;\n  line-height: 1;\n  text-transform: uppercase;\n  margin: 0;\n}\n#ScreenFirst .title-page small {\n  color: #fcbe02;\n}\n#ScreenFirst .float-right .description {\n  font-size: 150%;\n  line-height: 1;\n  text-transform: uppercase;\n}\n#ScreenFirst .screen__footer .container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n}\n#ScreenFirst .feature {\n  width: 17vw;\n  text-align: center;\n  padding: 0 3vw;\n}\n#ScreenFirst .feature img {\n  max-width: 100%;\n}\n#ScreenFirst .what-price {\n  display: block;\n  background-color: transparent;\n  padding: 5px 18px;\n  margin: 7vh 0;\n  border: 2px solid #fcbe02;\n  border-radius: 20px;\n  font-size: 150%;\n  font-family: inherit;\n  color: #fff;\n  cursor: pointer;\n}\n@media (max-width: 1000px) {\n  #ScreenFirst .title-page {\n    font-size: 210%;\n  }\n  #ScreenFirst .float-right {\n    margin-left: 0;\n    text-align: center;\n  }\n  #ScreenFirst .float-right .description {\n    font-size: 140%;\n  }\n}\n@media (max-width: 600px) {\n  #ScreenFirst .feature {\n    width: 33%;\n  }\n  #ScreenFirst .screen__header .container {\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n  }\n  #ScreenFirst .screen__header_social-link,\n  #ScreenFirst .screen__header_phone,\n  #ScreenFirst .screen__header_catalog-link {\n    display: none;\n  }\n  #ScreenFirst .screen__header_phone a {\n    font-size: 86%;\n  }\n}\n", ""]);
 
 	// exports
 
@@ -23612,7 +23625,26 @@
 	                                    _react2['default'].createElement(
 	                                        'span',
 	                                        { className: 'gallery_info_item_value' },
-	                                        'от 2 м2 - 16 м2'
+	                                        'от 2 м',
+	                                        _react2['default'].createElement(
+	                                            'sup',
+	                                            null,
+	                                            _react2['default'].createElement(
+	                                                'small',
+	                                                null,
+	                                                '2'
+	                                            )
+	                                        ),
+	                                        ' - 16 м',
+	                                        _react2['default'].createElement(
+	                                            'sup',
+	                                            null,
+	                                            _react2['default'].createElement(
+	                                                'small',
+	                                                null,
+	                                                '2'
+	                                            )
+	                                        )
 	                                    )
 	                                )
 	                            ),
@@ -23658,7 +23690,16 @@
 	                                    _react2['default'].createElement(
 	                                        'span',
 	                                        { className: 'gallery_info_item_value' },
-	                                        'от 50 т.руб/м2'
+	                                        'от 50 т.руб/м',
+	                                        _react2['default'].createElement(
+	                                            'sup',
+	                                            null,
+	                                            _react2['default'].createElement(
+	                                                'small',
+	                                                null,
+	                                                '2'
+	                                            )
+	                                        )
 	                                    )
 	                                )
 	                            ),
@@ -23751,7 +23792,7 @@
 
 
 	// module
-	exports.push([module.id, "#OurRealizedProjects {\n  background-image: url('/assets/screen_backgrounds/OurRealizedProjects.jpg');\n  background-size: cover;\n  background-position: center;\n  color: #020100;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -ms-flex-line-pack: center;\n      align-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  min-height: 70vh;\n}\n#OurRealizedProjects .container {\n  max-width: 1200px;\n}\n#OurRealizedProjects .receive-an-estimate {\n  display: block;\n  background-color: transparent;\n  padding: 5px 18px;\n  margin: 4vh auto;\n  border: 2px solid #fcbe02;\n  border-radius: 20px;\n  font-size: 150%;\n  font-family: inherit;\n  color: inherit;\n  cursor: pointer;\n}\n#OurRealizedProjects .gallery {\n  /* display: flex; */\n}\n#OurRealizedProjects .gallery:after {\n  display: block;\n  content: \"\";\n  clear: both;\n}\n#OurRealizedProjects .gallery_info {\n  width: 25%;\n  float: left;\n  padding-right: 1%;\n}\n#OurRealizedProjects .gallery_info_title {\n  font-size: 200%;\n  font-weight: 900;\n  margin-top: 0;\n}\n#OurRealizedProjects .gallery_info_item {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  margin-bottom: 15px;\n}\n#OurRealizedProjects .gallery_info_item_icon {\n  /* width: 20%; */\n}\n#OurRealizedProjects .gallery_info_item_icon img {\n  width: 100%;\n}\n#OurRealizedProjects .gallery_info_item_name,\n#OurRealizedProjects .gallery_info_item_value {\n  display: block;\n  padding: 0 10px;\n  margin: 4px 0;\n}\n#OurRealizedProjects .gallery_info_item_value {\n  font-size: 120%;\n  margin-bottom: 0;\n}\n#OurRealizedProjects .gallery_info_link {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  padding: 2px 6px;\n  margin: 8px 0;\n  background-color: #fcbe02;\n  -webkit-user-select: none;\n  cursor: pointer;\n}\n#OurRealizedProjects .gallery_info_link span {\n  padding: 0 8px;\n}\n#OurRealizedProjects .gallery_view {\n  position: relative;\n  width: 75%;\n  float: left;\n  margin-bottom: 30px;\n}\n#OurRealizedProjects .gallery_view img {\n  display: block;\n  width: 100%;\n  max-height: 500px;\n}\n#OurRealizedProjects .gallery_navigation {\n  position: absolute;\n  top: 100%;\n  left: 0;\n  right: 0;\n  margin: 0;\n  padding: 0;\n  margin-top: 10px;\n  text-align: center;\n}\n#OurRealizedProjects .gallery_navigation li {\n  display: inline-block;\n  width: 12px;\n  height: 12px;\n  margin: 5px;\n  border: 2px solid #fcbe02;\n  border-radius: 100%;\n  cursor: pointer;\n}\n#OurRealizedProjects .gallery_navigation li.active {\n  background-color: #fcbe02;\n}\n#OurRealizedProjects .social-link {\n  text-align: right;\n  margin-bottom: 10px;\n}\n#OurRealizedProjects .social-link a {\n  display: inline-block;\n  font-size: 150%;\n  text-decoration: none;\n  margin: 4px;\n}\n#OurRealizedProjects .social-link a:last-child {\n  margin-right: 0;\n}\n#OurRealizedProjects .social-link a.fa-vk {\n  color: #507299;\n}\n#OurRealizedProjects .social-link a.fa-facebook-square {\n  color: #3b5998;\n}\n#OurRealizedProjects .social-link a.fa-instagram {\n  color: #8a3ab9;\n}\n#OurRealizedProjects .social-link a.fa-google-plus-square {\n  color: #d34836;\n}\n@media (max-width: 1000px) {\n  #OurRealizedProjects .gallery_info {\n    width: 100%;\n    float: none;\n    padding-right: 0;\n  }\n  #OurRealizedProjects .gallery_info_item {\n    display: none;\n  }\n  #OurRealizedProjects .gallery_view {\n    width: 100%;\n    float: none;\n  }\n}\n", ""]);
+	exports.push([module.id, "#OurRealizedProjects {\n  background-image: url('/assets/screen_backgrounds/OurRealizedProjects.jpg');\n  background-size: cover;\n  background-position: center;\n  color: #020100;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -ms-flex-line-pack: center;\n      align-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  min-height: 70vh;\n}\n#OurRealizedProjects .container {\n  max-width: 1200px;\n}\n#OurRealizedProjects .receive-an-estimate {\n  display: block;\n  background-color: transparent;\n  padding: 5px 18px;\n  margin: 4vh auto;\n  border: 2px solid #fcbe02;\n  border-radius: 20px;\n  font-size: 150%;\n  font-family: inherit;\n  color: inherit;\n  cursor: pointer;\n}\n#OurRealizedProjects .gallery {\n  /* display: flex; */\n}\n#OurRealizedProjects .gallery:after {\n  display: block;\n  content: \"\";\n  clear: both;\n}\n#OurRealizedProjects .gallery_info {\n  width: 25%;\n  float: left;\n  padding-right: 1%;\n}\n#OurRealizedProjects .gallery_info_title {\n  font-size: 200%;\n  font-weight: 900;\n  margin-top: 0;\n}\n#OurRealizedProjects .gallery_info_item {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  margin-bottom: 15px;\n}\n#OurRealizedProjects .gallery_info_item_icon {\n  /* width: 20%; */\n}\n#OurRealizedProjects .gallery_info_item_icon img {\n  width: 100%;\n}\n#OurRealizedProjects .gallery_info_item_name,\n#OurRealizedProjects .gallery_info_item_value {\n  display: block;\n  padding: 0 10px;\n  margin: 4px 0;\n}\n#OurRealizedProjects .gallery_info_item_value {\n  font-size: 120%;\n  margin-bottom: 0;\n}\n#OurRealizedProjects .gallery_info_link {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  padding: 2px 6px;\n  margin: 8px 0;\n  background-color: #fcbe02;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  cursor: pointer;\n  transition: all 200ms;\n}\n#OurRealizedProjects .gallery_info_link:hover {\n  -webkit-transform: scale(1.03);\n          transform: scale(1.03);\n}\n#OurRealizedProjects .gallery_info_link span {\n  padding: 0 8px;\n}\n#OurRealizedProjects .gallery_view {\n  position: relative;\n  width: 75%;\n  float: left;\n  margin-bottom: 30px;\n}\n#OurRealizedProjects .gallery_view img {\n  display: block;\n  width: 100%;\n  max-height: 500px;\n}\n#OurRealizedProjects .gallery_navigation {\n  position: absolute;\n  top: 100%;\n  left: 0;\n  right: 0;\n  margin: 0;\n  padding: 0;\n  margin-top: 10px;\n  text-align: center;\n}\n#OurRealizedProjects .gallery_navigation li {\n  display: inline-block;\n  width: 12px;\n  height: 12px;\n  margin: 5px;\n  border: 2px solid #fcbe02;\n  border-radius: 100%;\n  cursor: pointer;\n}\n#OurRealizedProjects .gallery_navigation li.active {\n  background-color: #fcbe02;\n}\n#OurRealizedProjects .social-link {\n  text-align: right;\n  margin-bottom: 10px;\n}\n#OurRealizedProjects .social-link a {\n  display: inline-block;\n  font-size: 150%;\n  text-decoration: none;\n  margin: 4px;\n}\n#OurRealizedProjects .social-link a:last-child {\n  margin-right: 0;\n}\n#OurRealizedProjects .social-link a.fa-vk {\n  color: #507299;\n}\n#OurRealizedProjects .social-link a.fa-facebook-square {\n  color: #3b5998;\n}\n#OurRealizedProjects .social-link a.fa-instagram {\n  color: #8a3ab9;\n}\n#OurRealizedProjects .social-link a.fa-google-plus-square {\n  color: #d34836;\n}\n@media (max-width: 1000px) {\n  #OurRealizedProjects .gallery_info {\n    width: 100%;\n    float: none;\n    padding-right: 0;\n  }\n  #OurRealizedProjects .gallery_info_item {\n    display: none;\n  }\n  #OurRealizedProjects .gallery_view {\n    width: 100%;\n    float: none;\n  }\n}\n", ""]);
 
 	// exports
 
@@ -23781,6 +23822,335 @@
 	var _react2 = _interopRequireDefault(_react);
 
 	__webpack_require__(207);
+
+	var FinishedProjects = (function (_React$Component) {
+	    _inherits(FinishedProjects, _React$Component);
+
+	    function FinishedProjects(props) {
+	        _classCallCheck(this, FinishedProjects);
+
+	        _get(Object.getPrototypeOf(FinishedProjects.prototype), 'constructor', this).call(this, props);
+
+	        this.state = this.initialState = {
+	            gallery: [1, 2, 3, 4, 5],
+	            galleryView: 1
+	        };
+	    }
+
+	    _createClass(FinishedProjects, [{
+	        key: 'handleClickGalleryView',
+	        value: function handleClickGalleryView() {
+	            var current = this.state.galleryView + 1;
+	            if (this.state.galleryView + 1 > 5) {
+	                current = 1;
+	            }
+	            this.setState({
+	                galleryView: current
+	            });
+	        }
+	    }, {
+	        key: 'handleClickNavigationItem',
+	        value: function handleClickNavigationItem(item) {
+	            this.setState({
+	                galleryView: item
+	            });
+	        }
+	    }, {
+	        key: 'galleryNavigation',
+	        value: function galleryNavigation() {
+	            var _this = this;
+
+	            return this.state.gallery.map(function (m) {
+	                return _react2['default'].createElement('li', {
+	                    key: m,
+	                    className: _this.state.galleryView === m ? 'active' : null,
+	                    onClick: function () {
+	                        return _this.handleClickNavigationItem(m);
+	                    } });
+	            });
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            var galleryView = this.state.galleryView;
+
+	            return _react2['default'].createElement(
+	                'div',
+	                { className: 'screen', id: 'FinishedProjects' },
+	                _react2['default'].createElement('div', {
+	                    className: 'gallery_view',
+	                    style: { backgroundImage: 'url(/assets/OurRealizedProjects/0' + galleryView + '.jpg)' } }),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'container' },
+	                    _react2['default'].createElement(
+	                        'h2',
+	                        { className: 'title-screen' },
+	                        'наши',
+	                        _react2['default'].createElement('br', null),
+	                        'реализованные',
+	                        _react2['default'].createElement('br', null),
+	                        'проекты'
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'container', style: { display: 'none' } },
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'social-link' },
+	                        _react2['default'].createElement('a', { href: '#', className: 'fa fa-vk', title: 'vk' }),
+	                        _react2['default'].createElement('a', { href: '#', className: 'fa fa-facebook-square', title: 'facebook' }),
+	                        _react2['default'].createElement('a', { href: '#', className: 'fa fa-instagram', title: 'instagram' }),
+	                        _react2['default'].createElement('a', { href: '#', className: 'fa fa-google-plus-square', title: 'google plus' })
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'container' },
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: 'gallery_info' },
+	                        _react2['default'].createElement(
+	                            'h3',
+	                            { className: 'gallery_info_title' },
+	                            'Сауна «Престиж»'
+	                        ),
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'gallery_info_item' },
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'gallery_info_item_icon' },
+	                                _react2['default'].createElement('img', { src: '/assets/gallery_info_item_icons/01.png' })
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                null,
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'gallery_info_item_name' },
+	                                    'Высота'
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'gallery_info_item_value' },
+	                                    'от 1,9 м - 2,5 м'
+	                                )
+	                            )
+	                        ),
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'gallery_info_item' },
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'gallery_info_item_icon' },
+	                                _react2['default'].createElement('img', { src: '/assets/gallery_info_item_icons/02.png' })
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                null,
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'gallery_info_item_name' },
+	                                    'Площадь'
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'gallery_info_item_value' },
+	                                    'от 2 м',
+	                                    _react2['default'].createElement(
+	                                        'sup',
+	                                        null,
+	                                        _react2['default'].createElement(
+	                                            'small',
+	                                            null,
+	                                            '2'
+	                                        )
+	                                    ),
+	                                    ' - 16 м',
+	                                    _react2['default'].createElement(
+	                                        'sup',
+	                                        null,
+	                                        _react2['default'].createElement(
+	                                            'small',
+	                                            null,
+	                                            '2'
+	                                        )
+	                                    )
+	                                )
+	                            )
+	                        ),
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'gallery_info_item' },
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'gallery_info_item_icon' },
+	                                _react2['default'].createElement('img', { src: '/assets/gallery_info_item_icons/03.png' })
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                null,
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'gallery_info_item_name' },
+	                                    'Срок'
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'gallery_info_item_value' },
+	                                    'от 7 до 20 дней'
+	                                )
+	                            )
+	                        ),
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'gallery_info_item' },
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'gallery_info_item_icon' },
+	                                _react2['default'].createElement('img', { src: '/assets/gallery_info_item_icons/04.png' })
+	                            ),
+	                            _react2['default'].createElement(
+	                                'div',
+	                                null,
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'gallery_info_item_name' },
+	                                    'Стоимость'
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'span',
+	                                    { className: 'gallery_info_item_value' },
+	                                    'от 50 т.руб/м',
+	                                    _react2['default'].createElement(
+	                                        'sup',
+	                                        null,
+	                                        _react2['default'].createElement(
+	                                            'small',
+	                                            null,
+	                                            '2'
+	                                        )
+	                                    )
+	                                )
+	                            )
+	                        ),
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'gallery_info_link' },
+	                            _react2['default'].createElement('img', { src: '/assets/icons/icon_gallery.png' }),
+	                            _react2['default'].createElement(
+	                                'span',
+	                                null,
+	                                'фотогалерея проектов'
+	                            )
+	                        ),
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { className: 'gallery_info_link' },
+	                            _react2['default'].createElement('img', { src: '/assets/icons/icon_3d.png' }),
+	                            _react2['default'].createElement(
+	                                'span',
+	                                null,
+	                                'панорамы проектов'
+	                            )
+	                        )
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'container' },
+	                    _react2['default'].createElement(
+	                        'ul',
+	                        { className: 'gallery_navigation' },
+	                        this.galleryNavigation()
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: 'container' },
+	                    _react2['default'].createElement(
+	                        'button',
+	                        { className: 'receive-an-estimate' },
+	                        'Получить смету'
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return FinishedProjects;
+	})(_react2['default'].Component);
+
+	exports['default'] = FinishedProjects;
+	module.exports = exports['default'];
+
+/***/ }),
+/* 207 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(208);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(199)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/autoprefixer-loader/index.js!../../../node_modules/less-loader/index.js!./FinishedProjects.less", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/autoprefixer-loader/index.js!../../../node_modules/less-loader/index.js!./FinishedProjects.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ }),
+/* 208 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(198)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "#FinishedProjects {\n  background-color: #4a4a4a;\n  color: #fff;\n  position: relative;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -ms-flex-line-pack: center;\n      align-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  min-height: 100vh;\n}\n#FinishedProjects .container {\n  max-width: 1200px;\n}\n#FinishedProjects .receive-an-estimate {\n  display: block;\n  background-color: transparent;\n  padding: 5px 18px;\n  margin: 4vh auto;\n  border: 2px solid #fcbe02;\n  border-radius: 20px;\n  font-size: 150%;\n  font-family: inherit;\n  color: inherit;\n  cursor: pointer;\n}\n#FinishedProjects .gallery {\n  /* display: flex; */\n}\n#FinishedProjects .gallery:after {\n  display: block;\n  content: \"\";\n  clear: both;\n}\n#FinishedProjects .gallery_info {\n  width: 27%;\n}\n#FinishedProjects .gallery_info_title {\n  font-size: 200%;\n  font-weight: 900;\n  margin-top: 0;\n}\n#FinishedProjects .gallery_info_item {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  margin-bottom: 15px;\n}\n#FinishedProjects .gallery_info_item_icon {\n  /* width: 20%; */\n}\n#FinishedProjects .gallery_info_item_icon img {\n  width: 100%;\n}\n#FinishedProjects .gallery_info_item_name,\n#FinishedProjects .gallery_info_item_value {\n  display: block;\n  padding: 0 10px;\n  margin: 4px 0;\n}\n#FinishedProjects .gallery_info_item_value {\n  font-size: 120%;\n  margin-bottom: 0;\n}\n#FinishedProjects .gallery_info_link {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  padding: 2px 6px;\n  margin: 8px 0;\n  background-color: #fcbe02;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  cursor: pointer;\n  transition: all 200ms;\n}\n#FinishedProjects .gallery_info_link:hover {\n  -webkit-transform: scale(1.03);\n          transform: scale(1.03);\n}\n#FinishedProjects .gallery_info_link span {\n  padding: 0 8px;\n}\n#FinishedProjects .gallery_view {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center;\n}\n#FinishedProjects .gallery_view img {\n  display: block;\n  width: 100%;\n  max-height: 500px;\n}\n#FinishedProjects .gallery_navigation {\n  margin: 0;\n  padding: 0;\n  margin-top: 10px;\n  text-align: center;\n}\n#FinishedProjects .gallery_navigation li {\n  display: inline-block;\n  width: 12px;\n  height: 12px;\n  margin: 5px;\n  border: 2px solid #fff;\n  border-radius: 100%;\n  cursor: pointer;\n}\n#FinishedProjects .gallery_navigation li.active {\n  background-color: #fff;\n}\n#FinishedProjects .social-link {\n  text-align: right;\n  margin-bottom: 10px;\n}\n#FinishedProjects .social-link a {\n  display: inline-block;\n  font-size: 150%;\n  text-decoration: none;\n  margin: 4px;\n}\n#FinishedProjects .social-link a:last-child {\n  margin-right: 0;\n}\n#FinishedProjects .social-link a.fa-vk {\n  color: #507299;\n}\n#FinishedProjects .social-link a.fa-facebook-square {\n  color: #3b5998;\n}\n#FinishedProjects .social-link a.fa-instagram {\n  color: #8a3ab9;\n}\n#FinishedProjects .social-link a.fa-google-plus-square {\n  color: #d34836;\n}\n@media (max-width: 1000px) {\n  #FinishedProjects .gallery_info {\n    width: 100%;\n    float: none;\n    padding-right: 0;\n  }\n  #FinishedProjects .gallery_info_item {\n    display: none;\n  }\n  #FinishedProjects .gallery_view {\n    width: 100%;\n    float: none;\n  }\n}\n", ""]);
+
+	// exports
+
+
+/***/ }),
+/* 209 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(210);
 
 	var MainThingForUsInSaunas = (function (_React$Component) {
 	    _inherits(MainThingForUsInSaunas, _React$Component);
@@ -23948,13 +24318,13 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 207 */
+/* 210 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(208);
+	var content = __webpack_require__(211);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(199)(content, {});
@@ -23974,7 +24344,7 @@
 	}
 
 /***/ }),
-/* 208 */
+/* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(198)();
@@ -23982,13 +24352,13 @@
 
 
 	// module
-	exports.push([module.id, "#MainThingForUsInSaunas {\n  background-image: url('/assets/screen_backgrounds/MainThingForUsInSaunas.jpg');\n  background-size: cover;\n  background-position: center;\n  background-attachment: fixed;\n  color: #fff;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -ms-flex-line-pack: center;\n      align-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  min-height: 50vh;\n}\n#MainThingForUsInSaunas .container {\n  max-width: 1200px;\n}\n#MainThingForUsInSaunas .us-in-saunas {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: distribute;\n      justify-content: space-around;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n}\n#MainThingForUsInSaunas .us-in-saunas_item {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: nowrap;\n      flex-wrap: nowrap;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n  width: 50%;\n  padding: 60px 10%;\n  position: relative;\n}\n#MainThingForUsInSaunas .us-in-saunas_item_decor {\n  position: absolute;\n  top: 10%;\n  right: 70%;\n  font-size: 1300%;\n  font-weight: 900;\n  opacity: .2;\n}\n#MainThingForUsInSaunas .us-in-saunas_item_icon {\n  width: 50%;\n  padding-right: 10px;\n}\n#MainThingForUsInSaunas .us-in-saunas_item_icon img {\n  width: 100%;\n  min-width: 90px;\n}\n#MainThingForUsInSaunas .us-in-saunas_item_name {\n  font-weight: bold;\n  font-size: 140%;\n  margin-bottom: 6px;\n  margin-top: 6px;\n}\n@media (max-width: 600px) {\n  #MainThingForUsInSaunas .us-in-saunas_item {\n    width: 100%;\n  }\n}\n", ""]);
+	exports.push([module.id, "#MainThingForUsInSaunas {\n  background-image: url('/assets/screen_backgrounds/MainThingForUsInSaunas.jpg');\n  background-size: cover;\n  background-position: center;\n  background-attachment: fixed;\n  color: #fff;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -ms-flex-line-pack: center;\n      align-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  min-height: 50vh;\n}\n#MainThingForUsInSaunas .container {\n  max-width: 1200px;\n}\n#MainThingForUsInSaunas .us-in-saunas {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-pack: distribute;\n      justify-content: space-around;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n}\n#MainThingForUsInSaunas .us-in-saunas_item {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: nowrap;\n      flex-wrap: nowrap;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n  width: 50%;\n  padding: 60px 10%;\n  position: relative;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n#MainThingForUsInSaunas .us-in-saunas_item_decor {\n  position: absolute;\n  top: 10%;\n  right: 70%;\n  font-size: 1300%;\n  font-weight: 900;\n  opacity: .2;\n}\n#MainThingForUsInSaunas .us-in-saunas_item_icon {\n  width: 50%;\n  padding-right: 10px;\n}\n#MainThingForUsInSaunas .us-in-saunas_item_icon img {\n  width: 100%;\n  min-width: 90px;\n}\n#MainThingForUsInSaunas .us-in-saunas_item_name {\n  font-weight: bold;\n  font-size: 140%;\n  margin-bottom: 6px;\n  margin-top: 6px;\n}\n@media (max-width: 600px) {\n  #MainThingForUsInSaunas .us-in-saunas_item {\n    width: 100%;\n  }\n}\n", ""]);
 
 	// exports
 
 
 /***/ }),
-/* 209 */
+/* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24015,11 +24385,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactTouchEvents = __webpack_require__(210);
+	var _reactTouchEvents = __webpack_require__(213);
 
 	var _reactTouchEvents2 = _interopRequireDefault(_reactTouchEvents);
 
-	__webpack_require__(211);
+	__webpack_require__(214);
 
 	var ScreenCalculator = (function (_React$Component) {
 	    _inherits(ScreenCalculator, _React$Component);
@@ -24337,7 +24707,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 210 */
+/* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	(function webpackUniversalModuleDefinition(root, factory) {
@@ -25349,13 +25719,13 @@
 	});
 
 /***/ }),
-/* 211 */
+/* 214 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(212);
+	var content = __webpack_require__(215);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(199)(content, {});
@@ -25375,7 +25745,7 @@
 	}
 
 /***/ }),
-/* 212 */
+/* 215 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(198)();
@@ -25389,7 +25759,7 @@
 
 
 /***/ }),
-/* 213 */
+/* 216 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25414,7 +25784,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(214);
+	__webpack_require__(217);
 
 	var BeforeBuildSauna = (function (_React$Component) {
 	    _inherits(BeforeBuildSauna, _React$Component);
@@ -25538,13 +25908,13 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 214 */
+/* 217 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(215);
+	var content = __webpack_require__(218);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(199)(content, {});
@@ -25564,7 +25934,7 @@
 	}
 
 /***/ }),
-/* 215 */
+/* 218 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(198)();
@@ -25572,13 +25942,13 @@
 
 
 	// module
-	exports.push([module.id, "#BeforeBuildSauna {\n  background-image: url('/assets/screen_backgrounds/BeforeBuildSauna.jpg');\n  background-size: cover;\n  background-position: center;\n  background-attachment: fixed;\n  color: #fff;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -ms-flex-line-pack: center;\n      align-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  min-height: 100vh;\n}\n#BeforeBuildSauna .container {\n  max-width: 1200px;\n}\n#BeforeBuildSauna .build-sauna {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n  margin-top: 7vh;\n}\n#BeforeBuildSauna .build-sauna_detail-view {\n  background-color: rgba(0, 0, 0, 0.36);\n  padding: 5vh 5vw;\n  line-height: 1.5;\n  transition: all 300ms;\n}\n#BeforeBuildSauna .build-sauna_detail-view.transition {\n  -webkit-transform: scaleX(0);\n          transform: scaleX(0);\n}\n#BeforeBuildSauna .build-sauna_detail-view img {\n  max-width: 100%;\n}\n#BeforeBuildSauna .build-sauna_list {\n  padding-right: 20px;\n}\n#BeforeBuildSauna .build-sauna_item {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n  margin-bottom: 20px;\n  -webkit-user-select: none;\n  cursor: pointer;\n}\n#BeforeBuildSauna .build-sauna_item.active {\n  background-color: rgba(0, 0, 0, 0.36);\n}\n#BeforeBuildSauna .build-sauna_item_bulit {\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  width: 4rem;\n  height: 4rem;\n  font-size: 3rem;\n  line-height: 2.8rem;\n  font-weight: 900;\n  text-align: center;\n  border: 10px solid #fcbe02;\n}\n#BeforeBuildSauna .build-sauna_item_bulit span {\n  display: block;\n}\n#BeforeBuildSauna .build-sauna_item.active .build-sauna_item_bulit {\n  -webkit-transform: rotate(17deg);\n          transform: rotate(17deg);\n  border-color: #fff;\n}\n#BeforeBuildSauna .build-sauna_item.active .build-sauna_item_bulit span {\n  -webkit-transform: rotate(-17deg);\n          transform: rotate(-17deg);\n  color: #fcbe02;\n}\n#BeforeBuildSauna .build-sauna_item_name {\n  padding-left: 10px;\n}\n#BeforeBuildSauna .build-sauna_item_name h3 {\n  margin: 0;\n  font-size: 150%;\n}\n#BeforeBuildSauna .build-sauna_item.active .build-sauna_item_name h3 {\n  color: #fcbe02;\n}\n#BeforeBuildSauna .build-sauna_item_name p {\n  margin: 0;\n  font-size: 76%;\n}\n#BeforeBuildSauna .mouse {\n  margin-top: 3vh;\n}\n@media (max-width: 700px) {\n  #BeforeBuildSauna .build-sauna_detail-view img {\n    margin-right: 0 !important;\n    width: 100%;\n  }\n}\n@media (max-width: 600px) {\n  #BeforeBuildSauna .build-sauna {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n  }\n  #BeforeBuildSauna .build-sauna_list {\n    padding-right: 0;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -ms-flex-pack: distribute;\n        justify-content: space-around;\n    width: 100%;\n  }\n  #BeforeBuildSauna .build-sauna_item_bulit {\n    width: 3rem;\n    height: 3rem;\n    font-size: 2rem;\n    line-height: 2rem;\n    border-width: 8px;\n  }\n  #BeforeBuildSauna .build-sauna_item_name {\n    display: none;\n  }\n}\n", ""]);
+	exports.push([module.id, "#BeforeBuildSauna {\n  background-image: url('/assets/screen_backgrounds/BeforeBuildSauna.jpg');\n  background-size: cover;\n  background-position: center;\n  background-attachment: fixed;\n  color: #fff;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -ms-flex-line-pack: center;\n      align-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  min-height: 100vh;\n}\n#BeforeBuildSauna .container {\n  max-width: 1200px;\n}\n#BeforeBuildSauna .build-sauna {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n  margin-top: 7vh;\n}\n#BeforeBuildSauna .build-sauna_detail-view {\n  background-color: rgba(0, 0, 0, 0.36);\n  padding: 5vh 5vw;\n  line-height: 1.5;\n  transition: all 300ms;\n}\n#BeforeBuildSauna .build-sauna_detail-view.transition {\n  -webkit-transform: scaleX(0);\n          transform: scaleX(0);\n}\n#BeforeBuildSauna .build-sauna_detail-view img {\n  max-width: 100%;\n}\n#BeforeBuildSauna .build-sauna_list {\n  padding-right: 20px;\n}\n#BeforeBuildSauna .build-sauna_item {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n  margin-bottom: 20px;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  cursor: pointer;\n}\n#BeforeBuildSauna .build-sauna_item.active {\n  background-color: rgba(0, 0, 0, 0.36);\n}\n#BeforeBuildSauna .build-sauna_item_bulit {\n  -ms-flex-negative: 0;\n      flex-shrink: 0;\n  width: 4rem;\n  height: 4rem;\n  font-size: 3rem;\n  line-height: 2.8rem;\n  font-weight: 900;\n  text-align: center;\n  border: 10px solid #fcbe02;\n  transition: all 400ms;\n}\n#BeforeBuildSauna .build-sauna_item_bulit span {\n  display: block;\n}\n#BeforeBuildSauna .build-sauna_item.active .build-sauna_item_bulit {\n  -webkit-transform: rotate(17deg);\n          transform: rotate(17deg);\n  border-color: #fff;\n}\n#BeforeBuildSauna .build-sauna_item.active .build-sauna_item_bulit span {\n  -webkit-transform: rotate(-17deg);\n          transform: rotate(-17deg);\n  color: #fcbe02;\n}\n#BeforeBuildSauna .build-sauna_item_name {\n  padding-left: 10px;\n}\n#BeforeBuildSauna .build-sauna_item_name h3 {\n  margin: 0;\n  font-size: 150%;\n}\n#BeforeBuildSauna .build-sauna_item.active .build-sauna_item_name h3 {\n  color: #fcbe02;\n}\n#BeforeBuildSauna .build-sauna_item_name p {\n  margin: 0;\n  font-size: 76%;\n}\n#BeforeBuildSauna .mouse {\n  margin-top: 3vh;\n}\n@media (max-width: 700px) {\n  #BeforeBuildSauna .build-sauna_detail-view img {\n    margin-right: 0 !important;\n    width: 100%;\n  }\n}\n@media (max-width: 600px) {\n  #BeforeBuildSauna .build-sauna {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n  }\n  #BeforeBuildSauna .build-sauna_list {\n    padding-right: 0;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -ms-flex-pack: distribute;\n        justify-content: space-around;\n    width: 100%;\n  }\n  #BeforeBuildSauna .build-sauna_item_bulit {\n    width: 3rem;\n    height: 3rem;\n    font-size: 2rem;\n    line-height: 2rem;\n    border-width: 8px;\n  }\n  #BeforeBuildSauna .build-sauna_item_name {\n    display: none;\n  }\n}\n", ""]);
 
 	// exports
 
 
 /***/ }),
-/* 216 */
+/* 219 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25603,7 +25973,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(217);
+	var _reactTouchEvents = __webpack_require__(213);
+
+	var _reactTouchEvents2 = _interopRequireDefault(_reactTouchEvents);
+
+	__webpack_require__(220);
 
 	var ScreenReviews = (function (_React$Component) {
 	    _inherits(ScreenReviews, _React$Component);
@@ -25614,14 +25988,20 @@
 	        _get(Object.getPrototypeOf(ScreenReviews.prototype), 'constructor', this).call(this, props);
 
 	        this.state = this.initialState = {
-	            reviewsList: [{ id: 1, isActive: true, image: null, name: 'Иван Иванович', message: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.' }, { id: 2, isActive: false, image: '/assets/ScreenReviews/02.jpg', name: 'Аленушка', message: 'Жили-были старик да старуха, у них была дочка Алёнушка да сынок Иванушка. Старик со старухой умерли. Остались Аленушка да Иванушка одни-одинешеньки. Пошла Аленушка на работу и братца с собой взяла. Идут они по дальнему пути, по широкому полю, и захотелось Иванушке пить.' }, { id: 3, isActive: false, image: '/assets/ScreenReviews/01.jpg', name: null, message: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.' }, { id: 4, isActive: false, image: '/assets/ScreenReviews/04.jpg', name: 'Елена Дмитриевна', message: null }, { id: 5, isActive: false, image: '/assets/ScreenReviews/01.jpg', name: 'Константин Константинович', message: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.' }]
+	            reviewsList: [{ id: 1, isActive: true, image: null, name: 'Иван Иванович', message: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.' }, { id: 2, isActive: false, image: null, name: 'Аленушка', message: 'Жили-были старик да старуха, у них была дочка Алёнушка да сынок Иванушка. Старик со старухой умерли. Остались Аленушка да Иванушка одни-одинешеньки. Пошла Аленушка на работу и братца с собой взяла. Идут они по дальнему пути, по широкому полю, и захотелось Иванушке пить.' }, { id: 3, isActive: false, image: '/assets/ScreenReviews/01.jpg', name: null, message: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.' }, { id: 4, isActive: false, image: '/assets/ScreenReviews/04.jpg', name: 'Елена Дмитриевна', message: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor." }, { id: 5, isActive: false, image: '/assets/ScreenReviews/01.jpg', name: 'Константин Константинович', message: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.' }]
 	        };
 	    }
 
 	    _createClass(ScreenReviews, [{
 	        key: 'handleClickReviewsItem',
-	        value: function handleClickReviewsItem(item) {
-	            var s = item.id === this.state.reviewsList.slice(-1)[0].id ? 1 : item.id + 1;
+	        value: function handleClickReviewsItem(item, direction) {
+	            var s = undefined,
+	                _direction = direction || 'left';
+	            if (_direction === 'right') {
+	                s = item.id === this.state.reviewsList.slice(0)[0].id ? this.state.reviewsList.slice(-1)[0].id : item.id - 1;
+	            } else if (_direction === 'left') {
+	                s = item.id === this.state.reviewsList.slice(-1)[0].id ? 1 : item.id + 1;
+	            }
 	            var list = this.state.reviewsList.map(function (m) {
 	                if (m.id === s) {
 	                    return _extends({}, m, { isActive: true });
@@ -25670,6 +26050,22 @@
 	            });
 	        }
 	    }, {
+	        key: 'handleSwipe',
+	        value: function handleSwipe(item, direction) {
+	            switch (direction) {
+	                case "top":
+	                    break;
+	                case "bottom":
+	                    break;
+	                case "left":
+	                    this.handleClickReviewsItem(item, 'left');
+	                    break;
+	                case "right":
+	                    this.handleClickReviewsItem(item, 'right');
+	                    break;
+	            }
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            var _this2 = this;
@@ -25691,31 +26087,40 @@
 	                this.state.reviewsList.filter(function (f) {
 	                    return f.isActive;
 	                }).map(function (m, i) {
+
 	                    return _react2['default'].createElement(
-	                        'div',
+	                        _reactTouchEvents2['default'],
 	                        {
 	                            key: i,
-	                            className: 'reviews-item',
-	                            onClick: function () {
+	                            onTap: function () {
 	                                return _this2.handleClickReviewsItem(m);
-	                            } },
+	                            },
+	                            onSwipe: _this2.handleSwipe.bind(_this2, m) },
 	                        _react2['default'].createElement(
 	                            'div',
-	                            { className: 'reviews-item_image' },
-	                            _react2['default'].createElement('img', { src: m.image || '/assets/ScreenReviews/defaultImage.jpg' })
-	                        ),
-	                        _react2['default'].createElement(
-	                            'div',
-	                            { className: 'reviews-item_message' },
+	                            {
+	                                onClick: function () {
+	                                    return _this2.handleClickReviewsItem(m);
+	                                },
+	                                className: 'reviews-item' },
 	                            _react2['default'].createElement(
-	                                'h3',
-	                                null,
-	                                m.name || 'Неизвестный пользователь'
+	                                'div',
+	                                { className: 'reviews-item_image' },
+	                                _react2['default'].createElement('img', { src: m.image || '/assets/ScreenReviews/defaultImage.jpg' })
 	                            ),
 	                            _react2['default'].createElement(
-	                                'p',
-	                                null,
-	                                m.message || 'Спасибо за то, что вы есть'
+	                                'div',
+	                                { className: 'reviews-item_message' },
+	                                _react2['default'].createElement(
+	                                    'h3',
+	                                    null,
+	                                    m.name || 'Неизвестный пользователь'
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'p',
+	                                    null,
+	                                    m.message || 'Спасибо за то, что вы есть'
+	                                )
 	                            )
 	                        )
 	                    );
@@ -25784,13 +26189,13 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 217 */
+/* 220 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(218);
+	var content = __webpack_require__(221);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(199)(content, {});
@@ -25810,7 +26215,7 @@
 	}
 
 /***/ }),
-/* 218 */
+/* 221 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(198)();
@@ -25824,7 +26229,7 @@
 
 
 /***/ }),
-/* 219 */
+/* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25847,11 +26252,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(220);
+	var _classnames = __webpack_require__(223);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	__webpack_require__(221);
+	__webpack_require__(224);
 
 	var ScreenMap = (function (_React$Component) {
 	    _inherits(ScreenMap, _React$Component);
@@ -26063,7 +26468,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 220 */
+/* 223 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -26117,13 +26522,13 @@
 
 
 /***/ }),
-/* 221 */
+/* 224 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(222);
+	var content = __webpack_require__(225);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(199)(content, {});
@@ -26143,7 +26548,7 @@
 	}
 
 /***/ }),
-/* 222 */
+/* 225 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(198)();
@@ -26157,7 +26562,7 @@
 
 
 /***/ }),
-/* 223 */
+/* 226 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26180,7 +26585,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(224);
+	__webpack_require__(227);
 
 	var Footer = (function (_React$Component) {
 	    _inherits(Footer, _React$Component);
@@ -26252,13 +26657,13 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 224 */
+/* 227 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(225);
+	var content = __webpack_require__(228);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(199)(content, {});
@@ -26278,7 +26683,7 @@
 	}
 
 /***/ }),
-/* 225 */
+/* 228 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(198)();

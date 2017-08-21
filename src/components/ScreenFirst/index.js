@@ -27,6 +27,9 @@ class ScreenFirst extends React.Component {
                             </div>
                             <span className="screen__header_phone_back-call">Заказать звонок</span>
                         </div>
+                        <div className="screen__header_catalog-link">
+                            <a href="https://idealsauna.ru/catalogue/pechi-dlya-bani-i-sauny">Печи для бани и сауны</a>
+                        </div>
                         <div className="screen__header_social-link">
                             <a href="#" className="fa fa-vk" title="vk"></a>
                             <a href="#" className="fa fa-facebook-square" title="facebook"></a>
