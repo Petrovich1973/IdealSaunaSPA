@@ -37,7 +37,14 @@
 	clear: both;
 }
 #FinishedProjects .gallery_info {
-	width: 27%;
+    display: inline-block;
+    padding: 1vh 1vw;
+    background-color: rgba(255, 255, 255, .4);
+    color: #020100;
+    transition: all 400ms;
+}
+#FinishedProjects .gallery_info:hover {
+    background-color: rgba(255, 255, 255, .8);
 }
 #FinishedProjects .gallery_info_title {
 	font-size: 200%;
@@ -144,9 +151,7 @@
 
 @media (max-width: 1000px) {
 	#FinishedProjects .gallery_info {
-		width: 100%;
-		float: none;
-		padding-right: 0;
+		display: block;
 	}
 	#FinishedProjects .gallery_info_item {
 		display: none; 

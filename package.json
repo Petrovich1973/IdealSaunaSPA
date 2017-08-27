@@ -12,22 +12,11 @@
     "url": "https://github.com/Petrovich1973"
   },
   "dependencies": {
-    "axios": "^0.9.1",
-    "body-parser": "^1.12.3",
     "classnames": "^2.2.3",
-    "cors": "*",
-    "events": "^1.1.0",
-    "express": "*",
-    "flux": "^2.1.1",
-    "jquery": "*",
-    "keymirror": "^0.1.1",
     "less": "^2.6.0",
-    "moment": "^2.18.1",
-    "moment-timezone": "^0.5.13",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-masonry-component": "^4.0.0",
-    "react-moment": "^0.2.4",
+    "react-scrollable-anchor": "^0.5.0",
     "react-touch-events": "^2.1.0"
   },
   "devDependencies": {

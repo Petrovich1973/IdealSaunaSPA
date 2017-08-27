@@ -1,6 +1,7 @@
 import React from 'react';
 
 import ReactTouchEvents from "react-touch-events";
+import ScrollableAnchor, { goToTop, goToAnchor, removeHash } from 'react-scrollable-anchor';
 
 import './ScreenReviews.less';
 
@@ -40,8 +41,9 @@ class ScreenReviews extends React.Component {
     }
 
     scrollStartScreen() {
-        let elmnt = document.getElementById("ScreenReviews");
-        scrollTo(document.body, elmnt.offsetTop, 100);
+        // let elmnt = document.getElementById("ScreenReviews");
+        // scrollTo(document.body, elmnt.offsetTop, 100);
+        goToAnchor('ScreenReviewsScrollToStartScreen');
     }
 
     handleClickNavigationItem(item) {
@@ -83,12 +85,13 @@ class ScreenReviews extends React.Component {
     }
 
     render() {
-        return (
+        return (            
             <div className="screen" id="ScreenReviews">
-
-                <div className="container">
-                    <h2 className="title-screen">отзывы<br/>наших клиентов</h2>
-                </div>
+                <ScrollableAnchor id={'ScreenReviewsScrollToStartScreen'}>
+                    <div className="container">
+                        <h2 className="title-screen">отзывы<br/>наших клиентов</h2>
+                    </div>
+                </ScrollableAnchor>
 
                 { this.state.reviewsList.filter(f => f.isActive).map((m, i) => {
 
@@ -128,7 +131,7 @@ class ScreenReviews extends React.Component {
                         </div>
                     </div>
                 </div>
-            </div>          
+            </div>        
         )
     }
 }
