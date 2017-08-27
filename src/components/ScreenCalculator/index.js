@@ -2,6 +2,8 @@ import React from 'react';
 
 import ReactTouchEvents from "react-touch-events";
 
+import ScrollableAnchor, { goToTop, goToAnchor, removeHash } from 'react-scrollable-anchor';
+
 import './ScreenCalculator.less';
 
 class ScreenCalculator extends React.Component {
@@ -188,6 +190,10 @@ class ScreenCalculator extends React.Component {
     render() {
         return (
             <div className="screen" id="ScreenCalculator">
+
+                <ScrollableAnchor id={'ScreenCalculatorScrollToStartScreen'}>
+                    <div></div>
+                </ScrollableAnchor>
 
                 <div className="info-block">
                     <div className="float-right">

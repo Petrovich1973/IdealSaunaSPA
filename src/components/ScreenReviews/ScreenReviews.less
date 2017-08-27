@@ -121,6 +121,7 @@
 
 #ScreenReviews .order-out {
     display: block;
+    overflow: hidden;
     background-color: transparent;
     padding: 5px 18px;
     margin: 2vh auto 0;
@@ -130,8 +131,45 @@
     font-family: inherit;
     color: inherit;
     cursor: pointer;
+	transition: all 300ms;
+}
+#ScreenReviews .order-out.hide {
+    padding: 0 18px;
+    height: 0;
 }
 
+#ScreenReviews .formOrderDeparture {
+	padding: 0 10px;
+	margin: 0 -4vw;
+	transition: all 300ms;
+	height: 0;
+	overflow: hidden;
+}
+#ScreenReviews .formOrderDeparture.open {
+	padding: 10px;
+	height: auto;
+}
+#ScreenReviews .formOrderDeparture .row {
+	padding: 5px 0;
+	display: flex;
+}
+#ScreenReviews .formOrderDeparture .row span {
+	padding: 1vh 0;
+	padding-right: 10px;
+	width: 100px;
+	text-align: right;
+	border-top: 1px solid transparent;
+	border-bottom: 1px solid transparent;
+}
+#ScreenReviews .formOrderDeparture .row input,
+#ScreenReviews .formOrderDeparture .row textarea {
+	width: 100%;
+	padding: 1vh 1vw;
+	border-color: transparent;
+}
+#ScreenReviews .formOrderDeparture .row textarea {
+	height: 100px;
+}
 
 @media (max-width: 700px) {
 	#ScreenReviews .direct:after {
@@ -140,10 +178,16 @@
 	#ScreenReviews .direct_wrap {
 		padding: 4vw 10vw;
 	}
+	#ScreenReviews .formOrderDeparture {
+		margin: 0 -10vw;
+	}
 	#ScreenReviews .reviews-item_image {
 	    display: none;
 	}
 }
 
 @media (max-width: 600px) {
+	#ScreenReviews .direct h3 span {
+		font-size: 81%;
+	}
 }

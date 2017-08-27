@@ -13,14 +13,6 @@ import ScreenMap from './ScreenMap';
 import Footer from './Footer';
 
 class App extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = this.initialState = {
-            scrollTop: 0
-        };
-    }
-
     render() {
         return (
             <div id="App">

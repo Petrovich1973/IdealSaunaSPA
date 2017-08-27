@@ -10,11 +10,6 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.js$/,
-                loader: "babel",
-                exclude: [/node_modules/, /public/]
-            },
-            {
                 test: /\.css$/,
                 loader: "style-loader!css-loader!autoprefixer-loader",
                 exclude: [/node_modules/, /public/]
@@ -41,9 +36,13 @@ module.exports = {
                 loader: "url-loader?limit=26000&mimetype=image/svg+xml"
             },
             {
-                test: /\.jsx$/,
-                loader: "react-hot!babel",
-                exclude: [/node_modules/, /public/]
+                test: /\.jsx?$/,
+                exclude: /(node_modules|bower_components)/,
+                loader: 'babel-loader',
+                query: {
+                    presets: ['react', 'es2015', 'stage-0'],
+                    plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy'],
+                }
             },
             {
                 test: /\.json$/,
@@ -52,15 +51,15 @@ module.exports = {
         ]
     },
     plugins:[
-    new webpack.DefinePlugin({
-        'process.env':{
-            'NODE_ENV': JSON.stringify('production')
-        }
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-        compress:{
-            warnings: true
-        }
-    })
+        new webpack.DefinePlugin({
+            'process.env':{
+                'NODE_ENV': JSON.stringify('production')
+            }
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            compress:{
+                warnings: true
+            }
+        })
     ]
 }

@@ -1,15 +1,14 @@
 import React from 'react';
 
+import ScrollableAnchor, { goToTop, goToAnchor, removeHash } from 'react-scrollable-anchor';
+
 import './MainThingForUsInSaunas.less';
 
 class MainThingForUsInSaunas extends React.Component {
-    constructor(props) {
-        super(props);
 
-        this.state = this.initialState = {
-            galleryView: 1
-        };
-    }
+    scrollToScreenCalculator() {
+        goToAnchor('ScreenCalculatorScrollToStartScreen');
+    } 
 
     render() {
         return (
@@ -61,7 +60,12 @@ class MainThingForUsInSaunas extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="container"><img src="/libs/img/icon-mouse.png" className="mouse" /></div>
+                <div className="container">
+                    <img 
+                    src="/libs/img/icon-mouse.png" 
+                    className="mouse"
+                    onClick={this.scrollToScreenCalculator} />
+                </div>
             </div>          
         )
     }

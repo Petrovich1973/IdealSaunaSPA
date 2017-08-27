@@ -10,6 +10,12 @@ class ScreenReviews extends React.Component {
         super(props);
 
         this.state = this.initialState = {
+            orderDeparture: {
+                name: '',
+                phone: '',
+                address: ''
+            },
+            isVisibleOrderDeparture: false,
             reviewsList: [
                 {id: 1, isActive: true, image: null, name: 'Иван Иванович', message: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.'},
                 {id: 2, isActive: false, image: null, name: 'Аленушка', message: 'Жили-были старик да старуха, у них была дочка Алёнушка да сынок Иванушка. Старик со старухой умерли. Остались Аленушка да Иванушка одни-одинешеньки. Пошла Аленушка на работу и братца с собой взяла. Идут они по дальнему пути, по широкому полю, и захотелось Иванушке пить.'},
@@ -41,9 +47,11 @@ class ScreenReviews extends React.Component {
     }
 
     scrollStartScreen() {
-        // let elmnt = document.getElementById("ScreenReviews");
-        // scrollTo(document.body, elmnt.offsetTop, 100);
         goToAnchor('ScreenReviewsScrollToStartScreen');
+    }
+
+    scrollDirect() {
+        goToAnchor('DirectScroll');
     }
 
     handleClickNavigationItem(item) {
@@ -84,14 +92,42 @@ class ScreenReviews extends React.Component {
         }
     }
 
+    handleSubmit(e) {
+        e.preventDefault();
+        console.log(this.state.orderDeparture)
+        this.setState({
+            isVisibleOrderDeparture: !this.state.isVisibleOrderDeparture,
+            orderDeparture: this.initialState.orderDeparture
+        });
+    }
+
+    handleChangeField(e) {
+        this.setState({
+            orderDeparture: {
+                ...this.state.orderDeparture,
+                [e.target.name]: e.target.value
+            }
+        });
+    }
+
+    isVisibleOrderDeparture() {
+        this.setState({
+            isVisibleOrderDeparture: !this.state.isVisibleOrderDeparture
+        });
+        this.scrollDirect();
+    }
+
     render() {
         return (            
             <div className="screen" id="ScreenReviews">
+            
                 <ScrollableAnchor id={'ScreenReviewsScrollToStartScreen'}>
-                    <div className="container">
-                        <h2 className="title-screen">отзывы<br/>наших клиентов</h2>
-                    </div>
+                    <div></div>
                 </ScrollableAnchor>
+            
+                <div className="container">
+                    <h2 className="title-screen">отзывы<br/>наших клиентов</h2>
+                </div>
 
                 { this.state.reviewsList.filter(f => f.isActive).map((m, i) => {
 
@@ -118,19 +154,56 @@ class ScreenReviews extends React.Component {
                     { this.reviewsNavigation() }
                 </div>
 
-                <div className="container center">
-                    <div className="direct">
-                        <div className="direct_wrap">
-                            <h3>Выезд специалиста<br />на объект <span>БЕСПЛАТНО!!!</span></h3>
-                            <ul className="direct_list">
-                                <li>Произведем все необходимые замеры</li>
-                                <li>Проконсультируем по подготовке помещения</li>
-                                <li>Поможем в выборе оборудования и материалов</li>
-                            </ul>
-                            <button className="order-out">Заказать выезд</button>
+                <ScrollableAnchor id={'DirectScroll'}>
+                    <div className="container center">
+                        <div className="direct">
+                            <div className="direct_wrap">
+                                <h3>Выезд специалиста<br />на объект <span>БЕСПЛАТНО!!!</span></h3>
+                                <ul className="direct_list">
+                                    <li>Произведем все необходимые замеры</li>
+                                    <li>Проконсультируем по подготовке помещения</li>
+                                    <li>Поможем в выборе оборудования и материалов</li>
+                                </ul>
+                                <button 
+                                className={ this.state.isVisibleOrderDeparture ? 'order-out hide' : 'order-out' }
+                                onClick={this.isVisibleOrderDeparture.bind(this)}>
+                                    Заказать выезд
+                                </button>
+
+                                <form 
+                                className={ this.state.isVisibleOrderDeparture ? 'formOrderDeparture open' : 'formOrderDeparture' } 
+                                id="orderDeparture"
+                                onSubmit={this.handleSubmit.bind(this)}>
+                                    <div className="row group">
+                                        <span>Имя</span>
+                                        <input 
+                                        name="name" 
+                                        value={this.state.orderDeparture.name}
+                                        onChange={this.handleChangeField.bind(this)} />
+                                    </div>
+                                    <div className="row group">
+                                        <span>Телефон</span>
+                                        <input 
+                                        name="phone" 
+                                        value={this.state.orderDeparture.phone}
+                                        onChange={this.handleChangeField.bind(this)} />
+                                    </div>
+                                    <div className="row group">
+                                        <span>Адрес</span>
+                                        <textarea 
+                                        name="address" 
+                                        value={this.state.orderDeparture.address}
+                                        onChange={this.handleChangeField.bind(this)} />
+                                    </div>
+                                    <div>
+                                        <button id="sendFormOrderDeparture" className="order-out">Отправить</button>
+                                    </div>
+                                </form>
+
+                            </div>
                         </div>
                     </div>
-                </div>
+                </ScrollableAnchor>
             </div>        
         )
     }

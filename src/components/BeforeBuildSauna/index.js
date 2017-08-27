@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ScrollableAnchor, { goToTop, goToAnchor, removeHash } from 'react-scrollable-anchor';
+
 import './BeforeBuildSauna.less';
 
 class BeforeBuildSauna extends React.Component {
@@ -35,6 +37,10 @@ class BeforeBuildSauna extends React.Component {
         }
     }
 
+    scrollToScreenReviews() {
+        goToAnchor('ScreenReviewsScrollToStartScreen');
+    }  
+
     render() {
         return (
             <div className="screen" id="BeforeBuildSauna">
@@ -62,7 +68,12 @@ class BeforeBuildSauna extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="container"><img src="/libs/img/icon-mouse.png" className="mouse" /></div>
+                <div className="container">
+                <img 
+                src="/libs/img/icon-mouse.png" 
+                className="mouse"
+                onClick={this.scrollToScreenReviews} />
+                </div>
             </div>          
         )
     }

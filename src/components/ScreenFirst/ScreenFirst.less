@@ -73,6 +73,14 @@
 	text-transform: uppercase;
 }
 
+#ScreenFirst .screen__center_phone {
+	margin-bottom: 3vh;
+	display: none;
+}
+#ScreenFirst .screen__center_phone a {
+	color: #fff;
+	text-decoration: none;
+}
 
 #ScreenFirst .screen__footer .container {
 	display: flex;
@@ -84,6 +92,10 @@
 	width: 17vw;
 	text-align: center;
 	padding: 0 3vw;
+	transition: all 300ms;
+}
+#ScreenFirst .feature:hover {
+	transform: scale(1.08);
 }
 #ScreenFirst .feature img {
 	max-width: 100%;
@@ -112,6 +124,9 @@
 		margin-left: 0;
 		text-align: center;
 	}	
+	#ScreenFirst .screen__center_phone {
+		display: block;
+	}
 	#ScreenFirst .float-right .description {
 		font-size: 140%;
 	}

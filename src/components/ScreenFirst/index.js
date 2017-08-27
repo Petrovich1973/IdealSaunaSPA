@@ -1,15 +1,14 @@
 import React from 'react';
 
+import ScrollableAnchor, { goToTop, goToAnchor, removeHash } from 'react-scrollable-anchor';
+
 import './ScreenFirst.less';
 
 class ScreenFirst extends React.Component {
-    constructor(props) {
-        super(props);
 
-        this.state = this.initialState = {
-            background: true
-        };
-    }
+    scrollToFinishedProjects() {
+        goToAnchor('FinishedProjectsScrollToStartScreen');
+    } 
 
     render() {
         return (
@@ -55,13 +54,21 @@ class ScreenFirst extends React.Component {
                     <div className="float-right">
                         <h1 className="title-page">Строительство<br/>и отделка<br/>саун <small>«под ключ»</small></h1>
                         <p className="description">в москве и <nobr>московской области</nobr></p>
+                        <div className="screen__center_phone">
+                            <i className="fa fa-phone" />
+                            <a href="tel:74952150546">+7(495) 215-05-46</a>
+                        </div>
                     </div>
                 </div>
 
                 <div className="screen__footer">
 
                     <div className="container">
-                        <button className="what-price">Узнать стоимость</button>
+                        <button 
+                        className="what-price"
+                        onClick={this.scrollToFinishedProjects}>
+                            Узнать стоимость
+                        </button>
                     </div>
 
                     <div className="container">
@@ -79,7 +86,12 @@ class ScreenFirst extends React.Component {
                         </div>
                     </div>
 
-                    <div className="container"><img src="/libs/img/icon-mouse.png" className="mouse" /></div>
+                    <div className="container">
+                        <img 
+                        src="/libs/img/icon-mouse.png" 
+                        className="mouse"
+                        onClick={this.scrollToFinishedProjects} />
+                    </div>
 
                 </div>
 
