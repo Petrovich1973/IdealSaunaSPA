@@ -131,23 +131,26 @@
     font-family: inherit;
     color: inherit;
     cursor: pointer;
-	transition: all 300ms;
+    max-height: 40px;
+	transition: all 500ms;
 }
 #ScreenReviews .order-out.hide {
     padding: 0 18px;
-    height: 0;
+    max-height: 0;
 }
 
 #ScreenReviews .formOrderDeparture {
 	padding: 0 10px;
 	margin: 0 -4vw;
-	transition: all 300ms;
-	height: 0;
+	transition: all 500ms;
+    max-height: 0;
 	overflow: hidden;
+	opacity: 0;
 }
 #ScreenReviews .formOrderDeparture.open {
 	padding: 10px;
-	height: auto;
+	max-height: 330px;
+	opacity: 1;
 }
 #ScreenReviews .formOrderDeparture .row {
 	padding: 5px 0;
@@ -179,7 +182,10 @@
 		padding: 4vw 10vw;
 	}
 	#ScreenReviews .formOrderDeparture {
-		margin: 0 -10vw;
+		margin: 0 -10vw;		
+	}
+	#ScreenReviews .formOrderDeparture .row {
+		display: block;
 	}
 	#ScreenReviews .reviews-item_image {
 	    display: none;

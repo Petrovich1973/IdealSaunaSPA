@@ -1,9 +1,18 @@
 import React from 'react';
+import { connect } from "react-redux";
+
+import { setCurrentReview } from "../../actions/reviewsActions";
 
 import ReactTouchEvents from "react-touch-events";
 import ScrollableAnchor, { goToTop, goToAnchor, removeHash } from 'react-scrollable-anchor';
 
 import './ScreenReviews.less';
+
+@connect((store) => {
+    return {
+        reviews: store.reviews.reviews,
+    };
+})
 
 class ScreenReviews extends React.Component {
     constructor(props) {
@@ -16,33 +25,31 @@ class ScreenReviews extends React.Component {
                 address: ''
             },
             isVisibleOrderDeparture: false,
-            reviewsList: [
-                {id: 1, isActive: true, image: null, name: 'Иван Иванович', message: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.'},
-                {id: 2, isActive: false, image: null, name: 'Аленушка', message: 'Жили-были старик да старуха, у них была дочка Алёнушка да сынок Иванушка. Старик со старухой умерли. Остались Аленушка да Иванушка одни-одинешеньки. Пошла Аленушка на работу и братца с собой взяла. Идут они по дальнему пути, по широкому полю, и захотелось Иванушке пить.'},
-                {id: 3, isActive: false, image: '/assets/ScreenReviews/01.jpg', name: null, message: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'},
-                {id: 4, isActive: false, image: '/assets/ScreenReviews/04.jpg', name: 'Елена Дмитриевна', message: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."},
-                {id: 5, isActive: false, image: '/assets/ScreenReviews/01.jpg', name: 'Константин Константинович', message: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.'}
-            ]
+            textButton: ['Заказать выезд', 'Отправка...', 'Отправлено!'],
         };
+    }
+
+    componentWillMount() {
+        this.setState({
+            textButton: this.initialState.textButton[0]
+        });
     }
 
     handleClickReviewsItem(item, direction) {
         let s, _direction = direction || 'left';
         if(_direction === 'right') {
-            s = (item.id === this.state.reviewsList.slice(0)[0].id) ? this.state.reviewsList.slice(-1)[0].id : item.id - 1;
+            s = (item.id === this.props.reviews.slice(0)[0].id) ? this.props.reviews.slice(-1)[0].id : item.id - 1;
         } else if(_direction === 'left') {
-            s = (item.id === this.state.reviewsList.slice(-1)[0].id) ? 1 : item.id + 1;
+            s = (item.id === this.props.reviews.slice(-1)[0].id) ? 1 : item.id + 1;
         }        
-        let list = this.state.reviewsList.map(m => {
+        let list = this.props.reviews.map(m => {
             if(m.id === s) {
                 return {...m, isActive: true}
             } else {
                 return {...m, isActive: false}
             }
         }) ;       
-        this.setState({
-            reviewsList: list
-        });
+        this.props.dispatch(setCurrentReview(list));
         this.scrollStartScreen();
     }
 
@@ -55,21 +62,19 @@ class ScreenReviews extends React.Component {
     }
 
     handleClickNavigationItem(item) {
-        let list = this.state.reviewsList.map(m => {
+        let list = this.props.reviews.map(m => {
             if(m.id === item.id) {
                 return {...m, isActive: true}
             } else {
                 return {...m, isActive: false}
             }
         })    ;    
-        this.setState({
-            reviewsList: list
-        });
+        this.props.dispatch(setCurrentReview(list));
         this.scrollStartScreen();
     }
 
     reviewsNavigation() {
-        return this.state.reviewsList.map((m, i) => {
+        return this.props.reviews.map((m, i) => {
             return <span 
                     key={i} 
                     className={ m.isActive ? 'active' : '' }
@@ -97,7 +102,22 @@ class ScreenReviews extends React.Component {
         console.log(this.state.orderDeparture)
         this.setState({
             isVisibleOrderDeparture: !this.state.isVisibleOrderDeparture,
-            orderDeparture: this.initialState.orderDeparture
+            orderDeparture: this.initialState.orderDeparture,
+            textButton: this.initialState.textButton[1]
+        });
+        setTimeout( () => this.sendSuccess(), 2000 )
+    }
+
+    sendSuccess() {
+        this.setState({
+            textButton: this.initialState.textButton[2]
+        });
+        setTimeout( () => this.sendInitial(), 2000 )
+    }
+
+    sendInitial() {
+        this.setState({
+            textButton: this.initialState.textButton[0]
         });
     }
 
@@ -129,7 +149,7 @@ class ScreenReviews extends React.Component {
                     <h2 className="title-screen">отзывы<br/>наших клиентов</h2>
                 </div>
 
-                { this.state.reviewsList.filter(f => f.isActive).map((m, i) => {
+                { this.props.reviews.filter(f => f.isActive).map((m, i) => {
 
                     return <ReactTouchEvents
                             key={i} 
@@ -166,8 +186,8 @@ class ScreenReviews extends React.Component {
                                 </ul>
                                 <button 
                                 className={ this.state.isVisibleOrderDeparture ? 'order-out hide' : 'order-out' }
-                                onClick={this.isVisibleOrderDeparture.bind(this)}>
-                                    Заказать выезд
+                                onClick={this.state.textButton === this.initialState.textButton[0] ? this.isVisibleOrderDeparture.bind(this) : null}>
+                                    { this.state.textButton }
                                 </button>
 
                                 <form 
