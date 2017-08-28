@@ -5,6 +5,7 @@ import user from "./userReducer"
 import gallery from "./galleryReducer"
 import reviews from "./reviewsReducer"
 import calculation from "./calculationReducer"
+import articles from "./articlesReducer"
 
 export default combineReducers({
   tweets,
@@ -12,4 +13,5 @@ export default combineReducers({
   gallery,
   reviews,
   calculation,
+  articles,
 })
