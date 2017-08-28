@@ -5,10 +5,45 @@ import ScrollableAnchor, { goToTop, goToAnchor, removeHash } from 'react-scrolla
 import './ScreenFirst.less';
 
 class ScreenFirst extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = this.initialState = {
+            orderPhoneCall: {
+                name: '',
+                phone: ''
+            },
+            isVisibleOrderPhoneCall: false,
+        };
+    }
 
     scrollToFinishedProjects() {
         goToAnchor('FinishedProjectsScrollToStartScreen');
     } 
+
+    handleSubmit(e) {
+        e.preventDefault();
+        console.log(this.state.orderPhoneCall)
+        this.setState({
+            isVisibleOrderPhoneCall: !this.state.isVisibleOrderPhoneCall,
+            orderPhoneCall: this.initialState.orderPhoneCall
+        });
+    }
+
+    handleChangeField(e) {
+        this.setState({
+            orderPhoneCall: {
+                ...this.state.orderPhoneCall,
+                [e.target.name]: e.target.value
+            }
+        });
+    }
+
+    isVisibleOrderPhoneCall() {
+        this.setState({
+            isVisibleOrderPhoneCall: !this.state.isVisibleOrderPhoneCall
+        });
+    }
 
     render() {
         return (
@@ -24,7 +59,9 @@ class ScreenFirst extends React.Component {
                                 <i className="fa fa-phone" />
                                 <a href="tel:74952150546">+7(495) 215-05-46</a>
                             </div>
-                            <span className="screen__header_phone_back-call">Заказать звонок</span>
+                            <span 
+                            className="screen__header_phone_back-call"
+                            onClick={ this.isVisibleOrderPhoneCall.bind(this) }>Заказать звонок</span>
                         </div>
                         <div className="screen__header_catalog-link">
                             <a href="https://idealsauna.ru/catalogue/pechi-dlya-bani-i-sauny">Печи для бани и сауны</a>
@@ -52,11 +89,37 @@ class ScreenFirst extends React.Component {
 
                 <div className="screen__center">
                     <div className="float-right">
-                        <h1 className="title-page">Строительство<br/>и отделка<br/>саун <small>«под ключ»</small></h1>
-                        <p className="description">в москве и <nobr>московской области</nobr></p>
-                        <div className="screen__center_phone">
-                            <i className="fa fa-phone" />
-                            <a href="tel:74952150546">+7(495) 215-05-46</a>
+                        <div className={ this.state.isVisibleOrderPhoneCall ? 'formOrderPhoneCall open' : 'formOrderPhoneCall' }>
+                            <form                             
+                            id="orderPhoneCall"
+                            onSubmit={this.handleSubmit.bind(this)}>
+                                <h4>Заказать звонок</h4>
+                                <div className="row group">
+                                    <span>Имя</span>
+                                    <input 
+                                    name="name" 
+                                    value={this.state.orderPhoneCall.name}
+                                    onChange={this.handleChangeField.bind(this)} />
+                                </div>
+                                <div className="row group">
+                                    <span>Телефон</span>
+                                    <input 
+                                    name="phone" 
+                                    value={this.state.orderPhoneCall.phone}
+                                    onChange={this.handleChangeField.bind(this)} />
+                                </div>
+                                <div>
+                                    <button id="sendFormOrderPhoneCall" className="order-out">Отправить</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div className={ !this.state.isVisibleOrderPhoneCall ? 'titleBlock open' : 'titleBlock' }>
+                            <h1 className="title-page">Строительство<br/>и отделка<br/>саун <small>«под ключ»</small></h1>
+                            <p className="description">в москве и <nobr>московской области</nobr></p>
+                            <div className="screen__center_phone">
+                                <i className="fa fa-phone" />
+                                <a href="tel:74952150546">+7(495) 215-05-46</a>
+                            </div>
                         </div>
                     </div>
                 </div>

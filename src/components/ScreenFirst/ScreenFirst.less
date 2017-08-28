@@ -56,6 +56,7 @@
 	margin-left: 36%;
 	background-color: rgba(0, 0, 0, .36);
 	padding: 1vw 3vw;
+	white-space: nowrap;
 }
 
 #ScreenFirst .title-page {
@@ -115,6 +116,38 @@
 	cursor: pointer;
 }
 
+#ScreenFirst .formOrderPhoneCall,
+#ScreenFirst .titleBlock {
+	display: inline-block;
+	vertical-align: top;
+	overflow: hidden;
+	max-width: 0;
+	transition: all 500ms;
+}
+#ScreenFirst .formOrderPhoneCall.open,
+#ScreenFirst .titleBlock.open {
+	max-width: 500px;
+}
+
+#ScreenFirst .formOrderPhoneCall form {
+	padding-right: 4vw;
+}
+#ScreenFirst .formOrderPhoneCall .row {
+	margin: 1.3vw 0;
+}
+#ScreenFirst .formOrderPhoneCall .row > span {
+	display: block;
+	font-size: 83%;
+}
+#ScreenFirst .formOrderPhoneCall .row input,
+#ScreenFirst .formOrderPhoneCall button {
+    width: 100%;
+    padding: .6vh .6vw;
+    border-color: transparent;
+}
+#ScreenFirst .formOrderPhoneCall button {
+	cursor: pointer;
+}
 
 @media (max-width: 1000px) {
 	#ScreenFirst .title-page {
