@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 
-import { setCurrentView } from "../../actions/galleryActions";
+import { fetchGallery, setCurrentView } from "../../actions/galleryActions";
 
 import ScrollableAnchor, { goToTop, goToAnchor, removeHash } from 'react-scrollable-anchor';
 
@@ -15,6 +15,10 @@ import './FinishedProjects.less';
 })
 
 class FinishedProjects extends React.Component {
+
+    componentDidMount() {
+        this.props.dispatch(fetchGallery());
+    }
 
     handleClickGalleryView(e) {
         if(e.target.id !== 'galleryNext') {

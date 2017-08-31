@@ -3,7 +3,6 @@ import React from 'react';
 import './App.less';
 
 import ScreenFirst from './ScreenFirst';
-import OurRealizedProjects from './OurRealizedProjects';
 import FinishedProjects from './FinishedProjects';
 import MainThingForUsInSaunas from './MainThingForUsInSaunas';
 import ScreenCalculator from './ScreenCalculator';

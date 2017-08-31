@@ -12,6 +12,7 @@ class ScreenMap extends React.Component {
             isBoxVisible: true
         };
     }
+    
     componentDidMount() {
         ymaps.ready(init);
 
