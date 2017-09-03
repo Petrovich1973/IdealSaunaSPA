@@ -10,7 +10,7 @@ export function setCurrentArticle(newlist) {
 export function fetchArticles() {
   return function(dispatch) {
     dispatch({type: "FETCH_ARTICLES"});
-    axios.get("http://sava.tanko.ru/articles")
+    axios.get("/articles")
       .then((response) => {
         dispatch({type: "FETCH_ARTICLES_FULFILLED", payload: response.data})
       })

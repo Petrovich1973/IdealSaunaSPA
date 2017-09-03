@@ -17,7 +17,7 @@ export function setChangeMaterial(newlist) {
 export function fetchCalculation() {
   return function(dispatch) {
     dispatch({type: "FETCH_CALCULATION"});
-    axios.get("http://sava.tanko.ru/calculation")
+    axios.get("/calculation")
       .then((response) => {
         dispatch({type: "FETCH_CALCULATION_FULFILLED", payload: response.data})
       })

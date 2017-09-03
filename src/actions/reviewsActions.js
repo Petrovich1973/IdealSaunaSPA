@@ -10,7 +10,7 @@ export function setCurrentReview(newlist) {
 export function fetchReviews() {
   return function(dispatch) {
     dispatch({type: "FETCH_REVIEWS"});
-    axios.get("http://sava.tanko.ru/reviews")
+    axios.get("/reviews")
       .then((response) => {
         dispatch({type: "FETCH_REVIEWS_FULFILLED", payload: response.data})
       })

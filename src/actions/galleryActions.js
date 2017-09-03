@@ -1,5 +1,4 @@
 import axios from "axios";
-import https from 'https';
 
 export function setCurrentView(current) {
   return {
@@ -11,7 +10,7 @@ export function setCurrentView(current) {
 export function fetchGallery() {
   return function(dispatch) {
     dispatch({type: "FETCH_GALLERY"});
-    axios.get("http://sava.tanko.ru/gallery") //https://idealsauna.ru/build/sauny/galereya/ http://echo.jsontest.com/key/value/one/two
+    axios.get("/gallery") //https://idealsauna.ru/build/sauny/galereya/ http://echo.jsontest.com/key/value/one/two
       .then((response) => {
         dispatch({type: "FETCH_GALLERY_FULFILLED", payload: response.data})
       })
