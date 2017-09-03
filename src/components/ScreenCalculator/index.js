@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 
-import { setChangeParameter, setChangeMaterial } from "../../actions/calculationActions";
+import { fetchCalculation, setChangeParameter, setChangeMaterial } from "../../actions/calculationActions";
 
 import ReactTouchEvents from "react-touch-events";
 
@@ -19,7 +19,12 @@ import './ScreenCalculator.less';
 
 class ScreenCalculator extends React.Component {
 
+    componentDidMount() {
+        this.props.dispatch(fetchCalculation());
+    }
+
     calculationTotal() {
+        if(!this.props.parameters) return 0
         let list = this.props.parameters;
         let total = Object.keys(list).map(m => list[m]).reduce(function(a, b) {
           return (+a) * (+b);
@@ -68,6 +73,7 @@ class ScreenCalculator extends React.Component {
     }
 
     sizingItem(item, name) {
+        if(!this.props.parameters) return null
         let value = this.props.parameters[item];
         return <div className="controller">
             <div className="controller_name">{ name }</div>
@@ -94,6 +100,7 @@ class ScreenCalculator extends React.Component {
     }
 
     materialItem(item, name) {
+        if(!this.props.materials) return null
         let list = this.props.materials[item];
         let currentElement = list.filter(f => f.selected)[0];
         return <div className="controller">
@@ -163,7 +170,7 @@ class ScreenCalculator extends React.Component {
                 </div>
 
                 <div className="container center">
-                    <h3>Укажите размер помещения:</h3>
+                    <h3>Размер помещения:</h3>
                     <div className="controllers">
 
                         { this.sizingItem('long', 'Длина, см') }

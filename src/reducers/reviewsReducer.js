@@ -1,5 +1,5 @@
 export default function reducer(state={
-    reviews: [{
+    reviews: [/*{
     	id: 1, 
     	isActive: true, 
     	image: null, 
@@ -14,22 +14,22 @@ export default function reducer(state={
     },{
     	id: 3, 
     	isActive: false, 
-    	image: '/assets/ScreenReviews/01.jpg', 
+    	image: '/assets/images/ScreenReviews/01.jpg', 
     	name: null, 
     	message: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'
     },{
     	id: 4, 
     	isActive: false, 
-    	image: '/assets/ScreenReviews/04.jpg', 
+    	image: '/assets/images/ScreenReviews/04.jpg', 
     	name: 'Елена Дмитриевна', 
     	message: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."
     },{
     	id: 5, 
     	isActive: false, 
-    	image: '/assets/ScreenReviews/01.jpg', 
+    	image: '/assets/images/ScreenReviews/01.jpg', 
     	name: 'Константин Константинович', 
     	message: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.'
-    }],
+    }*/],
     fetching: false,
     fetched: false,
     error: null,

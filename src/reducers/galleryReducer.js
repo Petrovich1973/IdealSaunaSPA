@@ -1,9 +1,9 @@
 export default function reducer(state={
-    gallery: [{
+    gallery: [/*{
         id: 1,
         type: 'Сауна',
         name: 'Престиж',
-        photo: '/assets/OurRealizedProjects/01.jpg',
+        photo: '/assets/images/OurRealizedProjects/01.jpg',
         params: {
             height: [1.9, 2.5],
             area: [2, 16],
@@ -14,7 +14,7 @@ export default function reducer(state={
         id: 2,
         type: 'Сауна',
         name: 'Пират',
-        photo: '/assets/OurRealizedProjects/02.jpg',
+        photo: '/assets/images/OurRealizedProjects/02.jpg',
         params: {
             height: [1.7, 2.8],
             area: [5, 10],
@@ -25,7 +25,7 @@ export default function reducer(state={
         id: 3,
         type: 'Сауна',
         name: 'Гурия',
-        photo: '/assets/OurRealizedProjects/03.jpg',
+        photo: '/assets/images/OurRealizedProjects/03.jpg',
         params: {
             height: [2.4, 3],
             area: [8, 16],
@@ -36,7 +36,7 @@ export default function reducer(state={
         id: 4,
         type: 'Сауна',
         name: 'Комфорт',
-        photo: '/assets/OurRealizedProjects/04.jpg',
+        photo: '/assets/images/OurRealizedProjects/04.jpg',
         params: {
             height: [1.5, 3.5],
             area: [20, 26],
@@ -47,14 +47,14 @@ export default function reducer(state={
         id: 5,
         type: 'Баня',
         name: 'Бревно',
-        photo: '/assets/OurRealizedProjects/05.jpg',
+        photo: '/assets/images/OurRealizedProjects/05.jpg',
         params: {
             height: [1.2, 2.7],
             area: [2, 10],
             period: [8, 14],
             price: [80]
         }
-    }],
+    }*/],
     galleryView: 0,
     fetching: false,
     fetched: false,
@@ -66,6 +66,7 @@ export default function reducer(state={
             return {...state, fetching: true}
         }
         case "FETCH_GALLERY_REJECTED": {
+            console.error( "FETCH_GALLERY_REJECTED", action.payload )
             return {...state, fetching: false, error: action.payload}
         }
         case "FETCH_GALLERY_FULFILLED": {

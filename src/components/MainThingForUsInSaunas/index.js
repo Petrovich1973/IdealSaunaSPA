@@ -21,7 +21,7 @@ class MainThingForUsInSaunas extends React.Component {
                         <div className="us-in-saunas_item">
                             <div className="us-in-saunas_item_decor">1</div>
                             <div className="us-in-saunas_item_icon">
-                                <img src="/assets/us-in-saunas_item_icons/01.png" />
+                                <img src="/assets/images/us-in-saunas_item_icons/01.png" />
                             </div>
                             <div>
                                 <div className="us-in-saunas_item_name">Безопасность</div>
@@ -31,7 +31,7 @@ class MainThingForUsInSaunas extends React.Component {
                         <div className="us-in-saunas_item">
                             <div className="us-in-saunas_item_decor">2</div>
                             <div className="us-in-saunas_item_icon">
-                                <img src="/assets/us-in-saunas_item_icons/02.png" />
+                                <img src="/assets/images/us-in-saunas_item_icons/02.png" />
                             </div>
                             <div>
                                 <div className="us-in-saunas_item_name">Надежность</div>
@@ -41,7 +41,7 @@ class MainThingForUsInSaunas extends React.Component {
                         <div className="us-in-saunas_item">
                             <div className="us-in-saunas_item_decor">3</div>
                             <div className="us-in-saunas_item_icon">
-                                <img src="/assets/us-in-saunas_item_icons/03.png" />
+                                <img src="/assets/images/us-in-saunas_item_icons/03.png" />
                             </div>
                             <div>
                                 <div className="us-in-saunas_item_name">Качество</div>
@@ -51,7 +51,7 @@ class MainThingForUsInSaunas extends React.Component {
                         <div className="us-in-saunas_item">
                             <div className="us-in-saunas_item_decor">4</div>
                             <div className="us-in-saunas_item_icon">
-                                <img src="/assets/us-in-saunas_item_icons/04.png" />
+                                <img src="/assets/images/us-in-saunas_item_icons/04.png" />
                             </div>
                             <div>
                                 <div className="us-in-saunas_item_name">Комфорт</div>

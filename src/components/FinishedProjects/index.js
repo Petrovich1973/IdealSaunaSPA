@@ -56,19 +56,26 @@ class FinishedProjects extends React.Component {
 
     scrollToScreenCalculator() {
         goToAnchor('ScreenCalculatorScrollToStartScreen');
-    }    
+    }
 
     render() {
+
         const { gallery, galleryView } = this.props;
+
+        if(!gallery.length) return <div 
+            className="screen" 
+            id="FinishedProjects"
+            style={{textAlign: 'center', minHeight: '4vh'}}>
+                <h3>Данные загружаются...</h3>
+            </div>
+
         return <div className="screen" id="FinishedProjects">
 
             <ScrollableAnchor id={'FinishedProjectsScrollToStartScreen'}>
                 <div style={{position: 'absolute', top: 0}}></div>
             </ScrollableAnchor>
 
-            <div 
-            className="gallery_view"                 
-            style={{backgroundImage: `url(${gallery[galleryView].photo})`}}></div>
+            <div className="gallery_view" style={ {backgroundImage: `url(${gallery[galleryView].photo})`} }></div>
             
 
             <div className="container">
@@ -84,7 +91,7 @@ class FinishedProjects extends React.Component {
 
                     <div className="gallery_info_item">
                         <div className="gallery_info_item_icon">
-                            <img src="/assets/gallery_info_item_icons/01.png" />
+                            <img src="/assets/images/gallery_info_item_icons/01.png" />
                         </div>
                         <div>
                             <span className="gallery_info_item_name">Высота</span>
@@ -96,7 +103,7 @@ class FinishedProjects extends React.Component {
 
                     <div className="gallery_info_item">
                         <div className="gallery_info_item_icon">
-                            <img src="/assets/gallery_info_item_icons/02.png" />
+                            <img src="/assets/images/gallery_info_item_icons/02.png" />
                         </div>
                         <div>
                             <span className="gallery_info_item_name">Площадь</span>
@@ -108,7 +115,7 @@ class FinishedProjects extends React.Component {
 
                     <div className="gallery_info_item">
                         <div className="gallery_info_item_icon">
-                            <img src="/assets/gallery_info_item_icons/03.png" />
+                            <img src="/assets/images/gallery_info_item_icons/03.png" />
                         </div>
                         <div>
                             <span className="gallery_info_item_name">Срок</span>
@@ -120,7 +127,7 @@ class FinishedProjects extends React.Component {
 
                     <div className="gallery_info_item">
                         <div className="gallery_info_item_icon">
-                            <img src="/assets/gallery_info_item_icons/04.png" />
+                            <img src="/assets/images/gallery_info_item_icons/04.png" />
                         </div>
                         <div>
                             <span className="gallery_info_item_name">Стоимость</span>
@@ -131,12 +138,12 @@ class FinishedProjects extends React.Component {
                     </div>
 
                     <div className="gallery_info_link">
-                        <img src="/assets/icons/icon_gallery.png" />
+                        <img src="/assets/images/icons/icon_gallery.png" />
                         <span>фотогалерея проектов</span>
                     </div>
 
                     <div className="gallery_info_link">
-                        <img src="/assets/icons/icon_3d.png" />
+                        <img src="/assets/images/icons/icon_3d.png" />
                         <span>панорамы проектов</span>
                     </div>
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 
-import { setCurrentArticle } from "../../actions/articlesActions";
+import { fetchArticles, setCurrentArticle } from "../../actions/articlesActions";
 
 import ScrollableAnchor, { goToTop, goToAnchor, removeHash } from 'react-scrollable-anchor';
 
@@ -14,6 +14,10 @@ import './BeforeBuildSauna.less';
 })
 
 class BeforeBuildSauna extends React.Component {
+
+    componentDidMount() {
+        this.props.dispatch(fetchArticles());
+    }
 
     handleClickItem(item) {
         let list = this.props.articles.map(m => {
@@ -36,6 +40,16 @@ class BeforeBuildSauna extends React.Component {
     }  
 
     render() {
+
+        const { articles } = this.props;
+
+        if(!articles.length) return <div 
+            className="screen" 
+            id="BeforeBuildSauna"
+            style={{textAlign: 'center', minHeight: '4vh'}}>
+                <h3>Данные загружаются...</h3>
+            </div>
+
         return (
             <div className="screen" id="BeforeBuildSauna">
                 <div className="container">
@@ -44,7 +58,7 @@ class BeforeBuildSauna extends React.Component {
                 <div className="container">
                     <div className="build-sauna">
                         <div className="build-sauna_list">
-                            { this.props.articles.map((m, i) => {
+                            { articles.map((m, i) => {
                                 return <div 
                                     key={i} 
                                     className={ m.isActive ? 'build-sauna_item active' : 'build-sauna_item' }
@@ -58,7 +72,7 @@ class BeforeBuildSauna extends React.Component {
                             }) }
                         </div>
                         <div className="build-sauna_detail-view">
-                            <div dangerouslySetInnerHTML={ {__html: this.props.articles.filter(f => f.isActive)[0].detail} } />
+                            <div dangerouslySetInnerHTML={ {__html: articles.filter(f => f.isActive)[0].detail} } />
                         </div>
                     </div>
                 </div>

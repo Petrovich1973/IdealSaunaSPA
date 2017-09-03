@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 
-import { setCurrentReview } from "../../actions/reviewsActions";
+import { fetchReviews, setCurrentReview } from "../../actions/reviewsActions";
 
 import ReactTouchEvents from "react-touch-events";
 import ScrollableAnchor, { goToTop, goToAnchor, removeHash } from 'react-scrollable-anchor';
@@ -29,6 +29,10 @@ class ScreenReviews extends React.Component {
         };
     }
 
+    componentDidMount() {
+        this.props.dispatch(fetchReviews());
+    }
+
     componentWillMount() {
         this.setState({
             textButton: this.initialState.textButton[0]
@@ -36,19 +40,23 @@ class ScreenReviews extends React.Component {
     }
 
     handleClickReviewsItem(item, direction) {
+
         let s, _direction = direction || 'left';
+
         if(_direction === 'right') {
             s = (item.id === this.props.reviews.slice(0)[0].id) ? this.props.reviews.slice(-1)[0].id : item.id - 1;
         } else if(_direction === 'left') {
             s = (item.id === this.props.reviews.slice(-1)[0].id) ? 1 : item.id + 1;
-        }        
+        }    
+
         let list = this.props.reviews.map(m => {
             if(m.id === s) {
                 return {...m, isActive: true}
             } else {
                 return {...m, isActive: false}
             }
-        }) ;       
+        }) ;  
+
         this.props.dispatch(setCurrentReview(list));
         this.scrollStartScreen();
     }
@@ -138,6 +146,16 @@ class ScreenReviews extends React.Component {
     }
 
     render() {
+
+        const { reviews } = this.props;
+
+        if(!reviews.length) return <div 
+            className="screen" 
+            id="ScreenReviews"
+            style={{textAlign: 'center', minHeight: '4vh'}}>
+                <h3>Данные загружаются...</h3>
+            </div>
+
         return (            
             <div className="screen" id="ScreenReviews">
             
@@ -149,17 +167,16 @@ class ScreenReviews extends React.Component {
                     <h2 className="title-screen">отзывы<br/>наших клиентов</h2>
                 </div>
 
-                { this.props.reviews.filter(f => f.isActive).map((m, i) => {
+                { reviews.filter(f => f.isActive).map((m, i) => {
 
                     return <ReactTouchEvents
                             key={i} 
-                            onTap={ () => this.handleClickReviewsItem(m) }
                             onSwipe={ this.handleSwipe.bind(this, m) }>
                                 <div  
                                 onClick={ () => this.handleClickReviewsItem(m) }                               
                                 className="reviews-item">
                                     <div className="reviews-item_image">
-                                       <img src={m.image || '/assets/ScreenReviews/defaultImage.jpg'} />
+                                       <img src={m.image || '/assets/images/ScreenReviews/defaultImage.jpg'} />
                                     </div>
                                     <div className="reviews-item_message">
                                         <h3>{ m.name || 'Неизвестный пользователь' }</h3>

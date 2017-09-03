@@ -13,11 +13,9 @@ export function fetchGallery() {
     dispatch({type: "FETCH_GALLERY"});
     axios.get("http://sava.tanko.ru/gallery") //https://idealsauna.ru/build/sauny/galereya/ http://echo.jsontest.com/key/value/one/two
       .then((response) => {
-      	console.log(response.data);
         dispatch({type: "FETCH_GALLERY_FULFILLED", payload: response.data})
       })
       .catch((err) => {
-      	console.log(err);
         dispatch({type: "FETCH_GALLERY_REJECTED", payload: err})
       })
   }

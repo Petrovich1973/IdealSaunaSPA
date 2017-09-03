@@ -136,15 +136,15 @@ class ScreenFirst extends React.Component {
 
                     <div className="container">
                         <div className="feature">
-                            <img src="/assets/features/feature_01.png" />
+                            <img src="/assets/images/features/feature_01.png" />
                             <p className="name">14 лет<br/>успешной<br/>работы</p>
                         </div>
                         <div className="feature">
-                            <img src="/assets/features/feature_02.png" />
+                            <img src="/assets/images/features/feature_02.png" />
                             <p className="name">Точный<br/>расчет<br/>стоимости</p>
                         </div>
                         <div className="feature">
-                            <img src="/assets/features/feature_03.png" />
+                            <img src="/assets/images/features/feature_03.png" />
                             <p className="name">Гарантия на<br/>работы и<br/>оборудование<br/>от 2-х лет</p>
                         </div>
                     </div>
