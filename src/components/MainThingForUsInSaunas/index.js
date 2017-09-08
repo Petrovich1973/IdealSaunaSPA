@@ -14,7 +14,7 @@ class MainThingForUsInSaunas extends React.Component {
         return (
             <div className="screen" id="MainThingForUsInSaunas">
                 <div className="container">
-                    <h2 className="title-screen">главное<br/>для нас в саунах</h2>
+                    <h2 className="title-screen">главное<br />для нас в саунах</h2>
                 </div>
                 <div className="container">
                     <div className="us-in-saunas">
@@ -61,14 +61,17 @@ class MainThingForUsInSaunas extends React.Component {
                     </div>
                 </div>
                 <div className="container">
-                    <img 
-                    src="/libs/img/icon-mouse.png" 
-                    className="mouse"
-                    onClick={this.scrollToScreenCalculator} />
+                    <img
+                        src="/libs/img/icon-mouse.png"
+                        className="mouse"
+                        onClick={this.scrollToScreenCalculator}
+                    />
                 </div>
-            </div>          
-        )
+            </div>
+        );
     }
 }
+
+MainThingForUsInSaunas.displayName = 'MainThingForUsInSaunas';
 
 export default MainThingForUsInSaunas;

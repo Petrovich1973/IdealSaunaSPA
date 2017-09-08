@@ -1,4 +1,4 @@
-export default function reducer(state={
+export default function reducer(state = {
     reviews: [/*{
     	id: 1, 
     	isActive: true, 
@@ -32,31 +32,31 @@ export default function reducer(state={
     }*/],
     fetching: false,
     fetched: false,
-    error: null,
+    error: null
 }, action) {
 
     switch (action.type) {
         case "FETCH_REVIEWS": {
-            return {...state, fetching: true}
+            return { ...state, fetching: true };
         }
         case "FETCH_REVIEWS_REJECTED": {
-            return {...state, fetching: false, error: action.payload}
+            return { ...state, fetching: false, error: action.payload };
         }
         case "FETCH_REVIEWS_FULFILLED": {
             return {
                 ...state,
                 fetching: false,
                 fetched: true,
-                reviews: action.payload,
-            }
+                reviews: action.payload
+            };
         }
         case "SET_CURRENT_REVIEW": {
             return {
                 ...state,
-                reviews: action.payload,
-            }
+                reviews: action.payload
+            };
         }
     }
 
-    return state
+    return state;
 }

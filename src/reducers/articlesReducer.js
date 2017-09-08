@@ -1,4 +1,4 @@
-export default function reducer(state={
+export default function reducer(state = {
     articles: [/*{
         id: 1, 
         isActive: true, 
@@ -32,31 +32,31 @@ export default function reducer(state={
     }*/],
     fetching: false,
     fetched: false,
-    error: null,
+    error: null
 }, action) {
 
     switch (action.type) {
         case "FETCH_ARTICLES": {
-            return {...state, fetching: true}
+            return { ...state, fetching: true };
         }
         case "FETCH_ARTICLES_REJECTED": {
-            return {...state, fetching: false, error: action.payload}
+            return { ...state, fetching: false, error: action.payload };
         }
         case "FETCH_ARTICLES_FULFILLED": {
             return {
                 ...state,
                 fetching: false,
                 fetched: true,
-                articles: action.payload,
-            }
+                articles: action.payload
+            };
         }
         case "SET_CURRENT_ARTICLES": {
             return {
                 ...state,
-                articles: action.payload,
-            }
+                articles: action.payload
+            };
         }
     }
 
-    return state
+    return state;
 }

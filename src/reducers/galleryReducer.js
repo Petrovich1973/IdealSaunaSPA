@@ -1,4 +1,4 @@
-export default function reducer(state={
+export default function reducer(state = {
     gallery: [/*{
         id: 1,
         type: 'Сауна',
@@ -58,32 +58,32 @@ export default function reducer(state={
     galleryView: 0,
     fetching: false,
     fetched: false,
-    error: null,
+    error: null
 }, action) {
 
     switch (action.type) {
         case "FETCH_GALLERY": {
-            return {...state, fetching: true}
+            return { ...state, fetching: true };
         }
         case "FETCH_GALLERY_REJECTED": {
-            console.log( "FETCH_GALLERY_REJECTED " + action.payload.statusText, action.payload )
-            return {...state, fetching: false, error: action.payload}
+            console.log("FETCH_GALLERY_REJECTED " + action.payload.statusText, action.payload);
+            return { ...state, fetching: false, error: action.payload };
         }
         case "FETCH_GALLERY_FULFILLED": {
             return {
                 ...state,
                 fetching: false,
                 fetched: true,
-                gallery: action.payload,
-            }
+                gallery: action.payload
+            };
         }
         case "SET_CURRENT_VIEW": {
             return {
                 ...state,
-                galleryView: action.payload,
-            }
+                galleryView: action.payload
+            };
         }
     }
 
-    return state
+    return state;
 }

@@ -32,9 +32,11 @@ class Footer extends React.Component {
                     </div>
                 </div>
 
-            </div>          
-        )
+            </div>
+        );
     }
 }
+
+Footer.displayName = 'Footer';
 
 export default Footer;

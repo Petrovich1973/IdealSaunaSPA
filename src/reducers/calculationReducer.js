@@ -1,4 +1,4 @@
-export default function reducer(state={
+export default function reducer(state = {
 /*    parameters: {
         long: 200,
         width: 200,
@@ -37,15 +37,15 @@ export default function reducer(state={
     config: 3000,*/
     fetching: false,
     fetched: false,
-    error: null,
+    error: null
 }, action) {
 
     switch (action.type) {
         case "FETCH_CALCULATION": {
-            return {...state, fetching: true}
+            return { ...state, fetching: true };
         }
         case "FETCH_CALCULATION_REJECTED": {
-            return {...state, fetching: false, error: action.payload}
+            return { ...state, fetching: false, error: action.payload };
         }
         case "FETCH_CALCULATION_FULFILLED": {
             return {
@@ -54,22 +54,22 @@ export default function reducer(state={
                 fetched: true,
                 parameters: action.payload.parameters,
                 materials: action.payload.materials,
-                config: action.payload.config,
-            }
+                config: action.payload.config
+            };
         }
         case "SET_CHANGE_PARAMETER": {
             return {
                 ...state,
-                parameters: action.payload,
-            }
+                parameters: action.payload
+            };
         }
         case "SET_CHANGE_MATERIAL": {
             return {
                 ...state,
-                materials: action.payload,
-            }
+                materials: action.payload
+            };
         }
     }
 
-    return state
+    return state;
 }
