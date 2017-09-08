@@ -23,9 +23,11 @@ class App extends React.Component {
                 <ScreenReviews />
                 <ScreenMap />
                 <Footer />
-            </div>          
-        )
+            </div>
+        );
     }
 }
+
+App.displayName = 'App';
 
 export default App;

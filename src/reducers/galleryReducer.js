@@ -66,7 +66,7 @@ export default function reducer(state={
             return {...state, fetching: true}
         }
         case "FETCH_GALLERY_REJECTED": {
-            console.error( "FETCH_GALLERY_REJECTED", action.payload )
+            console.log( "FETCH_GALLERY_REJECTED " + action.payload.statusText, action.payload )
             return {...state, fetching: false, error: action.payload}
         }
         case "FETCH_GALLERY_FULFILLED": {

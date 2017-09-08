@@ -41,7 +41,7 @@ class ScreenMap extends React.Component {
     handleClickClose() {
         this.setState({
             isBoxVisible: !this.state.isBoxVisible
-        })
+        });
     }
 
     render() {
@@ -59,7 +59,7 @@ class ScreenMap extends React.Component {
                 });
         return (
             <div className="screen" id="ScreenMap">
-                <div className={ isBoxVisible }>
+                <div className={isBoxVisible}>
                     <h2 className="title-screen">Контакты</h2>
                     <ul className="contacts-items">
                         <li>
@@ -93,12 +93,17 @@ class ScreenMap extends React.Component {
                         </li>
                     </ul>
                 </div>
-                <span 
-                className="contacts-box_close" 
-                onClick={ () => this.handleClickClose() }><i className={ isBtn } /></span>
-            </div>          
-        )
+                <span
+                    className="contacts-box_close"
+                    onClick={() => this.handleClickClose()}
+                >
+                    <i className={isBtn} />
+                </span>
+            </div>
+        );
     }
 }
+
+ScreenMap.displayName = 'ScreenMap';
 
 export default ScreenMap;
