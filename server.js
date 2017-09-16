@@ -38,43 +38,63 @@ var articles = [{
     }];
 
 var calculation = {
-		parameters: {
-	        long: 200,
-	        width: 200,
-	        height: 200,
-	    },
-	    materials: {
-	        walls: [
-	            {id: 1, selected: true, name: 'Канадский кедр', image: '/assets/images/controllerPics/01.jpg', price: 2300},
-	            {id: 2, selected: false, name: 'Сибирский дуб', image: '/assets/images/controllerPics/02.jpg', price: 700},
-	            {id: 3, selected: false, name: 'Сосна', image: '/assets/images/controllerPics/03.jpg', price: 900}
-	        ],
-	        rack: [
-	            {id: 1, selected: true, name: 'Прямые', image: '/assets/images/controllerPics/02.jpg', price: 300},
-	            {id: 2, selected: false, name: 'Каскадные', image: '/assets/images/controllerPics/03.jpg', price: 500},
-	            {id: 3, selected: false, name: 'Вертикальные', image: '/assets/images/controllerPics/04.jpg', price: 800}
-	        ],
-	        furnace: [
-	            {id: 1, selected: true, name: 'Деревяные', image: '/assets/images/controllerPics/03.jpg', price: 30000},
-	            {id: 2, selected: false, name: 'Электрические', image: '/assets/images/controllerPics/04.jpg', price: 50000}
-	        ],
-	        stones: [
-	            {id: 1, selected: true, name: 'Подарок', image: '/assets/images/controllerPics/04.jpg', price: 0},
-	            {id: 2, selected: false, name: 'Эльфийские', image: '/assets/images/controllerPics/05.jpg', price: 5000},
-	            {id: 3, selected: false, name: 'Астеройдные', image: '/assets/images/controllerPics/06.jpg', price: 10000}
-	        ],
-	        lighting: [
-	            {id: 1, selected: true, name: 'Светильник', image: '/assets/images/controllerPics/05.jpg', price: 4000},
-	            {id: 2, selected: false, name: 'Бра', image: '/assets/images/controllerPics/03.jpg', price: 5000},
-	            {id: 3, selected: false, name: 'Торшер', image: '/assets/images/controllerPics/06.jpg', price: 6000}
-	        ],
-	        furnishBehind: [
-	            {id: 1, selected: true, name: 'Талькомагнезит', image: '/assets/images/controllerPics/06.jpg', price: 4000},
-	            {id: 2, selected: false, name: 'Талькохлорит', image: '/assets/images/controllerPics/02.jpg', price: 5000}
-	        ],
-	    },
-	    config: 3000
-    };
+parameters: {
+	long: 200,
+	width: 200,
+	height: 200
+},
+materials: {
+    walls: [{
+        id: 1, selected: true, name: 'Канадский кедр', image: '/assets/images/controllerPics/01.jpg', price: 2300
+    },
+    {
+        id: 2, selected: false, name: 'Сибирский дуб', image: '/assets/images/controllerPics/02.jpg', price: 700
+    },
+    {
+        id: 3, selected: false, name: 'Сосна', image: '/assets/images/controllerPics/03.jpg', price: 900
+    }],
+	rack: [{
+        id: 1, selected: true, name: 'Прямые', image: '/assets/images/controllerPics/02.jpg', price: 300
+    },
+    {
+        id: 2, selected: false, name: 'Каскадные', image: '/assets/images/controllerPics/03.jpg', price: 500
+    },
+    {
+        id: 3, selected: false, name: 'Вертикальные', image: '/assets/images/controllerPics/04.jpg', price: 800
+    }],
+	furnace: [{
+        id: 1, selected: true, name: 'Деревяные', image: '/assets/images/controllerPics/03.jpg', price: 30000
+    },
+    {
+        id: 2, selected: false, name: 'Электрические', image: '/assets/images/controllerPics/04.jpg', price: 50000
+    }],
+	stones: [{
+        id: 1, selected: true, name: 'Подарок', image: '/assets/images/controllerPics/04.jpg', price: 0
+    },
+    {
+        id: 2, selected: false, name: 'Эльфийские', image: '/assets/images/controllerPics/05.jpg', price: 5000
+    },
+    {
+        id: 3, selected: false, name: 'Астеройдные', image: '/assets/images/controllerPics/06.jpg', price: 10000
+    }],
+	lighting: [{
+        id: 1, selected: true, name: 'Светильник', image: '/assets/images/controllerPics/05.jpg', price: 4000
+    },
+    {
+        id: 2, selected: false, name: 'Бра', image: '/assets/images/controllerPics/03.jpg', price: 5000
+    },
+    {
+        id: 3, selected: false, name: 'Торшер', image: '/assets/images/controllerPics/06.jpg', price: 6000
+    }],
+	furnishBehind: [{
+        id: 1, selected: true, name: 'Талькомагнезит', image: '/assets/images/controllerPics/06.jpg', price: 4000
+    },
+    {
+        id: 2, selected: false, name: 'Талькохлорит', image: '/assets/images/controllerPics/02.jpg', price: 5000
+    }]
+},
+config: 3000
+};
 
 var gallery = [{
         id: 1,
@@ -134,36 +154,36 @@ var gallery = [{
     }];
 
 var reviews = [{
-    	id: 1, 
-    	isActive: true, 
-    	image: null, 
-    	name: 'Иван Иванович', 
-    	message: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.'
-    },{
-    	id: 2, 
-    	isActive: false, 
-    	image: null, 
-    	name: 'Аленушка', 
-    	message: 'Жили-были старик да старуха, у них была дочка Алёнушка да сынок Иванушка. Старик со старухой умерли. Остались Аленушка да Иванушка одни-одинешеньки. Пошла Аленушка на работу и братца с собой взяла. Идут они по дальнему пути, по широкому полю, и захотелось Иванушке пить.'
-    },{
-    	id: 3, 
-    	isActive: false, 
-    	image: '/assets/images/ScreenReviews/01.jpg', 
-    	name: null, 
-    	message: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'
-    },{
-    	id: 4, 
-    	isActive: false, 
-    	image: '/assets/images/ScreenReviews/04.jpg', 
-    	name: 'Елена Дмитриевна', 
-    	message: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."
-    },{
-    	id: 5, 
-    	isActive: false, 
-    	image: '/assets/images/ScreenReviews/01.jpg', 
-    	name: 'Константин Константинович', 
-    	message: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.'
-    }];
+    id: 1, 
+    isActive: true, 
+    image: null, 
+    name: 'Иван Иванович', 
+    message: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.'
+},{
+    id: 2, 
+    isActive: false, 
+    image: null, 
+    name: 'Аленушка', 
+    message: 'Жили-были старик да старуха, у них была дочка Алёнушка да сынок Иванушка. Старик со старухой умерли. Остались Аленушка да Иванушка одни-одинешеньки. Пошла Аленушка на работу и братца с собой взяла. Идут они по дальнему пути, по широкому полю, и захотелось Иванушке пить.'
+},{
+    id: 3, 
+    isActive: false, 
+    image: '/assets/images/ScreenReviews/01.jpg', 
+    name: null, 
+    message: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'
+},{
+    id: 4, 
+    isActive: false, 
+    image: '/assets/images/ScreenReviews/04.jpg', 
+    name: 'Елена Дмитриевна', 
+    message: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."
+},{
+    id: 5, 
+    isActive: false, 
+    image: '/assets/images/ScreenReviews/01.jpg', 
+    name: 'Константин Константинович', 
+    message: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.'
+}];
 
 app.use( bodyParser.json() );
 
@@ -171,7 +191,7 @@ app.use( methodOverride() );
 
 app.use( cors({ origin: '*' }) );
 
-app.use( express.static(__dirname + '/public') )
+app.use(express.static(__dirname + '/public'));
 
 app.get('/articles', function (req, res) {
 	res.send( JSON.stringify(articles) );
