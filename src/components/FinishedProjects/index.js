@@ -16,7 +16,7 @@ import './FinishedProjects.less';
 
 class FinishedProjects extends React.Component {
 
-    componentDidMount() {
+    componentWillMount() {
         this.props.dispatch(fetchGallery());
     }
 

@@ -15,7 +15,7 @@ import './BeforeBuildSauna.less';
 
 class BeforeBuildSauna extends React.Component {
 
-    componentDidMount() {
+    componentWillMount() {
         this.props.dispatch(fetchArticles());
     }
 

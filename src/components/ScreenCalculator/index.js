@@ -19,7 +19,7 @@ import './ScreenCalculator.less';
 
 class ScreenCalculator extends React.Component {
 
-    componentDidMount() {
+    componentWillMount() {
         this.props.dispatch(fetchCalculation());
     }
 

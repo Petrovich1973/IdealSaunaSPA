@@ -31,9 +31,10 @@ class ScreenReviews extends React.Component {
 
     componentWillMount() {
         this.props.dispatch(fetchReviews());
+        this.initialStateTextButton();
     }
 
-    componentWillMount() {
+    initialStateTextButton() {
         this.setState({
             textButton: this.initialState.textButton[0]
         });
@@ -110,7 +111,6 @@ class ScreenReviews extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        console.log(this.state.orderDeparture);
         this.setState({
             isVisibleOrderDeparture: !this.state.isVisibleOrderDeparture,
             orderDeparture: this.initialState.orderDeparture,

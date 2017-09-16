@@ -13,7 +13,7 @@ class ScreenMap extends React.Component {
         };
     }
     
-    componentDidMount() {
+    componentWillMount() {
         ymaps.ready(init);
 
         function init () {

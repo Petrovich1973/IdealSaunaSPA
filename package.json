@@ -4,7 +4,9 @@
   "description": "IdealSauna landing page application",
   "license": "ISC",
   "scripts": {
-    "start": "webpack-dev-server --debug --hot --devtool eval-source-map --output-pathinfo --watch --colors --inline --content-base public --port 4040 --host 0.0.0.0"
+    "build": "webpack -p",
+    "server": "webpack --watch --colors --inline | nodemon server.js",
+    "dev": "webpack-dev-server --debug --hot --devtool eval-source-map --output-pathinfo --watch --colors --inline --content-base public --port 4040 --host 0.0.0.0"
   },
   "author": {
     "name": "Igor Tanko",
@@ -44,5 +46,10 @@
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "body-parser": "^1.18.1",
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "method-override": "^2.3.9"
+  }
 }
