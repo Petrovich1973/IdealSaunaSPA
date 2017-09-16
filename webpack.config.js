@@ -1,4 +1,6 @@
 var webpack = require('webpack');
+const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+// const CleanCSSPlugin = require("less-plugin-clean-css");
 
 module.exports = {
     entry: "./src/main.js",
@@ -10,30 +12,23 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.css$/,
-                loader: "style-loader!css-loader!autoprefixer-loader",
-                exclude: [/node_modules/, /public/]
-            },
-            {
                 test: /\.less$/,
-                loader: "style-loader!css-loader!autoprefixer-loader!less",
-                exclude: [/node_modules/, /public/]
-            },
-            {
-                test: /\.gif$/,
-                loader: "url-loader?limit=10000&mimetype=image/gif"
-            },
-            {
-                test: /\.jpg$/,
-                loader: "url-loader?limit=10000&mimetype=image/jpg"
-            },
-            {
-                test: /\.png$/,
-                loader: "url-loader?limit=10000&mimetype=image/png"
-            },
-            {
-                test: /\.svg/,
-                loader: "url-loader?limit=26000&mimetype=image/svg+xml"
+                exclude: /^node_modules$/,
+                loader: ExtractTextWebpackPlugin.extract({
+                    fallback: "style-loader",
+                    use: [{
+                        loader: "css-loader"
+                    }, {
+                        loader: "autoprefixer-loader"
+                    }, {
+                        loader: "less-loader"/*,
+                        options: {
+                            plugins: [
+                                new CleanCSSPlugin({ advanced: true })
+                            ]
+                        }*/
+                    }]
+                })
             },
             {
                 test: /\.jsx?$/,
@@ -60,6 +55,7 @@ module.exports = {
             compress: {
                 warnings: true
             }
-        })
+        }),
+        new ExtractTextWebpackPlugin( "bundle.css" )
     ]
 };
