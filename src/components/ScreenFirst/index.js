@@ -1,6 +1,7 @@
 import React from 'react';
 
 import ScrollableAnchor, { goToTop, goToAnchor, removeHash } from 'react-scrollable-anchor';
+import InputMask from 'react-input-mask';
 
 import './ScreenFirst.less';
 
@@ -11,7 +12,8 @@ class ScreenFirst extends React.Component {
         this.state = this.initialState = {
             orderPhoneCall: {
                 name: '',
-                phone: ''
+                phone: '',
+                agreement: false
             },
             isVisibleOrderPhoneCall: false
         };
@@ -23,18 +25,30 @@ class ScreenFirst extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        console.log(this.state.orderPhoneCall);
-        this.setState({
-            isVisibleOrderPhoneCall: !this.state.isVisibleOrderPhoneCall,
-            orderPhoneCall: this.initialState.orderPhoneCall
-        });
+        const { orderPhoneCall } = this.state;
+        if(orderPhoneCall.agreement && orderPhoneCall.name.length && orderPhoneCall.phone.replace(/[^\d]/ig, '').length === 11) {
+            console.log(orderPhoneCall);
+            this.setState({
+                isVisibleOrderPhoneCall: !this.state.isVisibleOrderPhoneCall,
+                orderPhoneCall: this.initialState.orderPhoneCall
+            });
+        }
     }
 
-    handleChangeField(e) {
+    handleChangeField(e) {        
         this.setState({
             orderPhoneCall: {
                 ...this.state.orderPhoneCall,
-                [e.target.name]: e.target.value
+                [e.target.name]: e.target.value.trim()
+            }
+        });
+    }
+
+    handleChangeChecked(e) {
+        this.setState({
+            orderPhoneCall: {
+                ...this.state.orderPhoneCall,
+                [e.target.name]: e.target.checked
             }
         });
     }
@@ -46,6 +60,7 @@ class ScreenFirst extends React.Component {
     }
 
     render() {
+        const { orderPhoneCall } = this.state;
         return (
             <div className="screen" id="ScreenFirst">
 
@@ -55,18 +70,18 @@ class ScreenFirst extends React.Component {
                             <img src="/libs/img/logo.png" width="153" />
                         </div>
                         <div className="screen__header_phone">
-                            <div className="row">
+                            <div className="row effect">
                                 <i className="fa fa-phone" />
                                 <a href="tel:74952150546">+7(495) 215-05-46</a>
                             </div>
                             <span
-                                className="screen__header_phone_back-call"
+                                className="screen__header_phone_back-call effect"
                                 onClick={this.isVisibleOrderPhoneCall.bind(this)}
                             >
                                 Заказать звонок
                             </span>
                         </div>
-                        <div className="screen__header_catalog-link">
+                        <div className="screen__header_catalog-link effect">
                             <a href="https://idealsauna.ru/catalogue/pechi-dlya-bani-i-sauny">Печи для бани и сауны</a>
                         </div>
                         <div className="screen__header_social-link">
@@ -101,21 +116,37 @@ class ScreenFirst extends React.Component {
                                 <div className="row group">
                                     <span>Имя</span>
                                     <input
-                                        name="name"
-                                        value={this.state.orderPhoneCall.name}
-                                        onChange={this.handleChangeField.bind(this)}
-                                    />
+                                    name="name" 
+                                    value={orderPhoneCall.name} 
+                                    onChange={this.handleChangeField.bind(this)}
+                                    autoComplete="off" />
                                 </div>
                                 <div className="row group">
                                     <span>Телефон</span>
-                                    <input
-                                        name="phone"
-                                        value={this.state.orderPhoneCall.phone}
-                                        onChange={this.handleChangeField.bind(this)}
-                                    />
+                                    <InputMask 
+                                    {...this.props} 
+                                    name="phone"
+                                    value={orderPhoneCall.phone}
+                                    onChange={this.handleChangeField.bind(this)}
+                                    mask="+7(999) 999 99 99" 
+                                    maskChar=" "
+                                    autoComplete="off" />
+                                </div>
+                                <div className="row group check">
+                                    <label>
+                                        <input 
+                                        type="checkbox" 
+                                        name="agreement"
+                                        checked={ orderPhoneCall.agreement }
+                                        onClick={this.handleChangeChecked.bind(this)} />
+                                        <span>Я соглашаюсь на обработку персональных данных</span>
+                                    </label>
                                 </div>
                                 <div>
-                                    <button id="sendFormOrderPhoneCall" className="order-out">Отправить</button>
+                                    <button 
+                                    id="sendFormOrderPhoneCall" 
+                                    disabled={ orderPhoneCall.agreement && orderPhoneCall.name.length && orderPhoneCall.phone.replace(/[^\d]/ig, '').length === 11 ? false : true }
+                                    className="order-out">Отправить</button>
                                 </div>
                             </form>
                         </div>
