@@ -169,7 +169,7 @@ class ScreenCalculator extends React.Component {
                     <div className="float-right">
                         <div className="box-inline">
                             <h3>Постройте свою сауну с<br />профессионалами!</h3>
-                            <p> Звоните по телефону <nobr>+7 (495) 215-05-46</nobr></p>
+                            <p> Звоните по телефону <a href="tel:74952150546"><nobr>+7(495) 215-05-46</nobr></a></p>
                         </div>
                     </div>
                 </div>

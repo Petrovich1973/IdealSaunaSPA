@@ -10,7 +10,7 @@ export function setCurrentView(current) {
 export function fetchGallery() {
     return function (dispatch) {
         dispatch({ type: "FETCH_GALLERY" });
-        axios.get("/gallery") //https://idealsauna.ru/build/sauny/galereya/ http://echo.jsontest.com/key/value/one/two
+        axios.get("/gallery")
             .then((response) => {
                 dispatch({ type: "FETCH_GALLERY_FULFILLED", payload: response.data });
             })

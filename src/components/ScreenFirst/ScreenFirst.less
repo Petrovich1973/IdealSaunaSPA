@@ -22,6 +22,9 @@
 	color: #fff;
 	text-decoration: none;
 	margin: 0 4px;
+	&:hover {
+		transform: scale(1.1);
+	}
 }
 #ScreenFirst .screen__header_social-link a:last-child {
 	margin-right: 0;
@@ -45,13 +48,6 @@
 	cursor: pointer;
 	&:hover {
 		border-color: #fcbe02;
-	}
-}
-
-#ScreenFirst .effect {
-	transition: all 300ms;
-	&:hover {
-		transform: scale(1.08);
 	}
 }
 
@@ -128,6 +124,9 @@
 	font-family: inherit;
 	color: #fff;
 	cursor: pointer;
+	&:hover {
+	background-color: #fcbe02;
+	}
 }
 
 #ScreenFirst .formOrderPhoneCall,
@@ -160,6 +159,9 @@
     padding: .6vh .6vw;
     border-color: transparent;
 }
+#ScreenFirst .formOrderPhoneCall button:not([disabled]) {
+	background-color: #fcbe02;
+}
 #ScreenFirst .formOrderPhoneCall .row.check label {
 	display: block;
 }
@@ -171,6 +173,14 @@
 	display: inline-block;
 	vertical-align: middle;
 	font-size: 83%;
+}
+#ScreenFirst .formOrderPhoneCall .row.check .link {
+	display: inline-block;
+	font-size: 83%;
+	color: #fff;
+	&:hover {
+		text-decoration: none;
+	}
 }
 
 @media (max-width: 1000px) {

@@ -13,7 +13,7 @@ class ScreenFirst extends React.Component {
             orderPhoneCall: {
                 name: '',
                 phone: '',
-                agreement: false
+                agreement: true
             },
             isVisibleOrderPhoneCall: false
         };
@@ -70,18 +70,18 @@ class ScreenFirst extends React.Component {
                             <img src="/libs/img/logo.png" width="153" />
                         </div>
                         <div className="screen__header_phone">
-                            <div className="row effect">
+                            <div className="row">
                                 <i className="fa fa-phone" />
                                 <a href="tel:74952150546">+7(495) 215-05-46</a>
                             </div>
                             <span
-                                className="screen__header_phone_back-call effect"
+                                className="screen__header_phone_back-call"
                                 onClick={this.isVisibleOrderPhoneCall.bind(this)}
                             >
                                 Заказать звонок
                             </span>
                         </div>
-                        <div className="screen__header_catalog-link effect">
+                        <div className="screen__header_catalog-link">
                             <a href="https://idealsauna.ru/catalogue/pechi-dlya-bani-i-sauny">Печи для бани и сауны</a>
                         </div>
                         <div className="screen__header_social-link">
@@ -139,8 +139,10 @@ class ScreenFirst extends React.Component {
                                         name="agreement"
                                         checked={ orderPhoneCall.agreement }
                                         onClick={this.handleChangeChecked.bind(this)} />
-                                        <span>Я соглашаюсь на обработку персональных данных</span>
+                                        &nbsp;
+                                        <span>Согласен на обработку персональных данных</span>
                                     </label>
+                                    <a className="link" href="https://idealsauna.ru/private-politika/" target="_blank">Соглашение на обработку персональных данных</a>
                                 </div>
                                 <div>
                                     <button 

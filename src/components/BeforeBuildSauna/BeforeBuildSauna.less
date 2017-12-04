@@ -27,6 +27,9 @@
 	padding: 5vh 5vw;
 	line-height: 1.5;
 	transition: all 300ms;
+	a {
+		color: #fff;
+	}
 }
 #BeforeBuildSauna .build-sauna_detail-view.transition {
 	transform: scaleX(0);
@@ -40,7 +43,7 @@
 }
 #BeforeBuildSauna .build-sauna_item {
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
 	margin-bottom: 20px;
 	user-select: none;
 	cursor: pointer;
@@ -90,6 +93,10 @@
 }
 
 @media (max-width: 700px) {
+	#BeforeBuildSauna {
+		background-image: none;
+		background-color: #5f5344;
+	}
 	#BeforeBuildSauna .build-sauna_detail-view img {
 		margin-right: 0 !important;
 		width: 100%;

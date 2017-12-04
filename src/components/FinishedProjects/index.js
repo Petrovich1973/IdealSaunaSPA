@@ -170,7 +170,7 @@ class FinishedProjects extends React.Component {
                         className="receive-an-estimate"
                         onClick={this.scrollToScreenCalculator}
                     >
-                        Получить смету
+                        Рассчет стоимости
                 </button>
                 </div>
 

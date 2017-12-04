@@ -1,17 +1,18 @@
 {
-  "name": "IdealSaunaSPA",
-  "version": "1.0.0",
+  "name"       : "IdealSaunaSPA",
+  "version"    : "1.0.0",
   "description": "IdealSauna landing page application",
-  "license": "ISC",
-  "scripts": {
-    "build": "webpack -p",
-    "server": "webpack --watch --colors | nodemon server.js",
-    "dev": "webpack-dev-server --debug --hot --devtool eval-source-map --output-pathinfo --watch --colors --inline --content-base public --port 4040 --host 0.0.0.0"
+  "license"    : "ISC",
+  "scripts"    : {
+    "build" : "webpack -p",
+    "server": "nodemon server.js",
+    "src"   : "webpack --watch --colors",
+    "dev"   : "webpack-dev-server --debug --hot --devtool eval-source-map --output-pathinfo --watch --colors --inline --content-base public --port 4040 --host 0.0.0.0"
   },
   "author": {
-    "name": "Igor Tanko",
+    "name" : "Igor Tanko",
     "email": "y.tanko@gmail.com",
-    "url": "https://github.com/Petrovich1973"
+    "url"  : "https://github.com/Petrovich1973"
   },
   "dependencies": {
     "autoprefixer-loader": "^3.2.0",
