@@ -35,6 +35,91 @@ export default function reducer(state = {
         ],
     },
     config: 3000,*/
+    calculation: {
+        "sizing": {
+            "long": 200,
+            "width": 200,
+            "height": 200
+        },
+        "decoration": [{
+            "id": 0,
+            "selected": true,
+            "name": "Канадский кедр",
+            "image": "/assets/images/controllerPics/01.jpg",
+            "price": 6300
+        },{
+            "id": 1,
+            "selected": false,
+            "name": "Сибирский кедр",
+            "image": "/assets/images/controllerPics/02.jpg",
+            "price": 3900
+        },{
+            "id": 2,
+            "selected": false,
+            "name": "Ольха",
+            "image": "/assets/images/controllerPics/03.jpg",
+            "price": 3750
+        }],
+        "rack": [{
+            "id": 0,
+            "selected": true,
+            "name": "Прямые",
+            "image": "/assets/images/controllerPics/01.jpg",
+            "price": 39000
+        },{
+            "id": 1,
+            "selected": false,
+            "name": "Г-образные",
+            "image": "/assets/images/controllerPics/02.jpg",
+            "price": 53000
+        }],
+        "oven": [{
+            "id": 0,
+            "selected": true,
+            "name": "Электрическая",
+            "image": "/assets/images/controllerPics/01.jpg",
+            "price": 40500
+        },{
+            "id": 1,
+            "selected": false,
+            "name": "Дровяная",
+            "image": "/assets/images/controllerPics/02.jpg",
+            "price": 98000
+        }],
+        "stones": [{
+            "id": 0,
+            "selected": true,
+            "name": "Подарок",
+            "image": "/assets/images/controllerPics/01.jpg",
+            "price": 0
+        }],
+        "lighting": [{
+            "id": 0,
+            "selected": true,
+            "name": "2 Светильника",
+            "image": "/assets/images/controllerPics/01.jpg",
+            "price": 5100
+        }],
+        "refractory": [{
+            "id": 0,
+            "selected": true,
+            "name": "Талькохлорит",
+            "image": "/assets/images/controllerPics/01.jpg",
+            "price": 30220
+        },{
+            "id": 1,
+            "selected": false,
+            "name": "Змеевик",
+            "image": "/assets/images/controllerPics/02.jpg",
+            "price": 26750
+        },{
+            "id": 2,
+            "selected": false,
+            "name": "Жадеит",
+            "image": "/assets/images/controllerPics/03.jpg",
+            "price": 96530
+        }]
+    },
     fetching: false,
     fetched: false,
     error: null
@@ -52,21 +137,22 @@ export default function reducer(state = {
                 ...state,
                 fetching: false,
                 fetched: true,
-                parameters: action.payload.parameters,
-                materials: action.payload.materials,
-                config: action.payload.config
+                calculation: action.payload
             };
         }
         case "SET_CHANGE_PARAMETER": {
             return {
                 ...state,
-                parameters: action.payload
+                calculation: {
+                    ...state.calculation,
+                    sizing: action.payload
+                }
             };
         }
         case "SET_CHANGE_MATERIAL": {
             return {
                 ...state,
-                materials: action.payload
+                calculation: action.payload
             };
         }
     }
