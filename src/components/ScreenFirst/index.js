@@ -121,7 +121,7 @@ class ScreenFirst extends React.Component {
                         </div>
                         <div className={!this.state.isVisibleOrderPhoneCall ? 'titleBlock open' : 'titleBlock'}>
                             <h1 className="title-page">Строительство<br />и отделка<br />саун <small>«под ключ»</small></h1>
-                            <p className="description">в москве и <nobr>московской области</nobr></p>
+                            <p className="description">в москве и <nobr>московской области.</nobr></p>
                             <div className="screen__center_phone">
                                 <i className="fa fa-phone" />
                                 <a href="tel:74952150546">+7(495) 215-05-46</a>
